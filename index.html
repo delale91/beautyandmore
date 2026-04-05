@@ -7,34 +7,34 @@
 
 <style>
 :root {
-  --pink-light: #f7d7e6;
+  --pink-light: #fbe7ef;
   --pink: #e8a4c9;
   --pink-dark: #b46486;
-  --black-soft: #2a1a1f;
   --gold: #d8b26e;
   --white: #ffffff;
 }
 
-/* BACKGROUND */
+/* BACKGROUND – ROSA MARMOR */
 body {
   margin: 0;
   font-family: "Georgia", serif;
   color: var(--white);
 
-  background:
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1), transparent 40%),
-    linear-gradient(135deg, #2a1a1f, #4a2a35, #b46486);
+  background: url('https://i.imgur.com/8iZpP7G.jpeg');
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
-/* GOLD SPARKLES */
+/* GOLD OVERLAY */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url('https://i.imgur.com/8bFQYkC.png');
-  opacity: 0.25;
+  background: linear-gradient(
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.25)
+    );
   pointer-events: none;
 }
 
@@ -55,7 +55,7 @@ body::before {
   font-size: 3.8rem;
   color: var(--gold);
   letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+  text-shadow: 0 0 10px rgba(255,255,255,0.4);
 }
 
 .hero h2 {
@@ -75,12 +75,12 @@ body::before {
 
 /* BOXEN */
 .card {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.12);
   margin: 15px 0;
   border-radius: 15px;
-  border: 1px solid rgba(216,178,110,0.4);
+  border: 1px solid rgba(216,178,110,0.5);
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
 }
 
 .card button {
