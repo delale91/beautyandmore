@@ -23,13 +23,19 @@
     }
 
     body {
-      margin: 0;
-      font-family: "Georgia", "Times New Roman", serif;
-      color: var(--text);
-      background:
-        linear-gradient(rgba(255,255,255,0.40), rgba(255,255,255,0.40)),
-        linear-gradient(135deg, #f1cfdc 0%, #fff9fb 38%, #efd1dc 70%, #f8e7ee 100%);
-    }
+    margin: 0;
+    font-family: "Georgia", serif;
+    color: #2a1f22;
+
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.25), transparent 25%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.5), transparent 20%),
+        radial-gradient(circle at 30% 80%, rgba(255, 215, 0, 0.18), transparent 25%),
+        radial-gradient(circle at 90% 70%, rgba(255, 240, 245, 0.5), transparent 25%),
+        linear-gradient(135deg, #f4c7d8, #fbe3ec, #f6c9da);
+
+    min-height: 100vh;
+}
 
     .topbar {
       height: 8px;
