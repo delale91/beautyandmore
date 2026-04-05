@@ -3,25 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Delale by More Than Beauty</title>
+<title>Delale – More Than Beauty</title>
 
 <style>
 :root {
-  --gold: #d8b26e;
+  --gold: #e6c27a;
+  --gold-strong: #f5d99f;
   --white: #ffffff;
   --pink-light: #fbe7ef;
 }
 
-/* NEUER HINTERGRUND – DEIN BILD */
+/* HINTERGRUND – DEIN BILD */
 body {
   margin: 0;
   font-family: "Georgia", serif;
   color: var(--white);
 
-  background-image: url('background.jpg'); /* <-- HIER DEIN BILD */
+  background-image: url('background.jpg'); /* <-- DEIN BILD */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+/* OVERLAY optional leicht abdunkeln */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(0,0,0,0.25), transparent 55%);
+  pointer-events: none;
 }
 
 /* CONTAINER */
@@ -29,6 +39,8 @@ body {
   max-width: 1000px;
   margin: auto;
   padding: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 /* HEADER */
@@ -38,63 +50,101 @@ body {
 }
 
 .hero h1 {
-  font-size: 3.8rem;
-  color: var(--gold);
-  letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(0,0,0,0.4);
+  font-size: 4rem;
+  color: var(--gold-strong);
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
 .hero h2 {
   font-style: italic;
   color: var(--pink-light);
-  font-size: 1.6rem;
+  font-size: 1.7rem;
+  text-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
-/* TITEL */
-.section-title {
+/* UNTERTITEL / INTRO */
+.intro {
   text-align: center;
-  margin: 30px 0;
-  font-size: 2rem;
-  color: var(--white);
-}
-
-/* BOXEN */
-.card {
-  background: rgba(0,0,0,0.35);
-  margin: 15px 0;
-  border-radius: 15px;
-  border: 1px solid rgba(216,178,110,0.5);
-  backdrop-filter: blur(6px);
-}
-
-.card button {
-  width: 100%;
-  background: transparent;
-  border: none;
-  padding: 18px;
-  color: var(--white);
-  font-size: 1.2rem;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-.card button span {
-  color: var(--gold);
-}
-
-.content {
-  display: none;
-  padding: 10px 20px 20px;
+  margin-bottom: 25px;
   font-size: 1.1rem;
 }
 
-.price {
-  color: var(--gold);
+/* SEKTIONS-TITEL */
+.section-title {
+  text-align: center;
+  margin: 35px 0 20px;
+  font-size: 2.2rem;
+  color: var(--white);
+  text-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+
+/* LISTE DIENSTLEISTUNGEN */
+.services-list {
+  background: rgba(0,0,0,0.45);
+  border-radius: 18px;
+  border: 2px solid var(--gold-strong);
+  padding: 20px 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.services-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-list li {
+  margin: 6px 0;
+}
+
+/* BOXEN PREISE */
+.card {
+  background: rgba(0,0,0,0.45);
+  margin: 20px 0;
+  border-radius: 18px;
+  border: 2px solid var(--gold-strong);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
+}
+
+/* BUTTONS */
+.card button {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0));
+  border: none;
+  padding: 22px;
+  color: var(--white);
+  font-size: 1.35rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+.card button span {
+  color: var(--gold-strong);
   font-weight: bold;
 }
 
-/* CONTACT */
+/* INHALT */
+.content {
+  display: none;
+  padding: 10px 25px 25px;
+  font-size: 1.15rem;
+}
+
+.price {
+  color: var(--gold-strong);
+  font-weight: bold;
+}
+
+/* KONTAKT BUTTONS */
 .contact {
   margin-top: 40px;
   text-align: center;
@@ -103,11 +153,13 @@ body {
 .btn {
   display: inline-block;
   margin: 10px;
-  padding: 12px 25px;
-  border-radius: 30px;
+  padding: 14px 30px;
+  border-radius: 40px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  border: 2px solid var(--gold-strong);
 }
 
 .instagram {
@@ -126,49 +178,100 @@ body {
 
 <div class="page">
 
-<div class="hero">
-  <h1>Delale</h1>
-  <h2>by More Than Beauty</h2>
-</div>
-
-<h2 class="section-title">Meine Dienstleistungen</h2>
-
-<div class="card" onclick="toggle(this)">
-  <button>Wimpernverlängerung <span>+</span></button>
-  <div class="content">
-    <p>1:1 Technik - <span class="price">65€</span></p>
-    <p>Volumen - <span class="price">80€</span></p>
-    <p>Megavolumen - <span class="price">100€</span></p>
+  <div class="hero">
+    <h1>Delale</h1>
+    <h2>by More Than Beauty</h2>
   </div>
-</div>
 
-<div class="card" onclick="toggle(this)">
-  <button>Permanent Make-up <span>+</span></button>
-  <div class="content">
-    <p>Powder Brows - <span class="price">350€</span></p>
-    <p>Ombre Brows - <span class="price">350€</span></p>
-    <p>Lippen - <span class="price">350€</span></p>
+  <div class="intro">
+    <p>Hallo, ich bin Delale – deine Ansprechpartnerin für Wimpernverlängerung, Permanent Make-up & mehr.</p>
+    <p>Hier findest du eine Übersicht über meine Dienstleistungen und Preise.</p>
   </div>
-</div>
 
-<div class="card" onclick="toggle(this)">
-  <button>Aquafacial <span>+</span></button>
-  <div class="content">
-    <p class="price">Preis auf Anfrage</p>
+  <h2 class="section-title">Meine Dienstleistungen</h2>
+
+  <div class="services-list">
+    <ul>
+      <li>• Wimpernverlängerung</li>
+      <li>• Zahnbleaching</li>
+      <li>• Zahnschmuck</li>
+      <li>• Permanent Make-up</li>
+      <li>• Haarentfernung mit der Fadentechnik im Gesicht</li>
+      <li>• AquaFacial</li>
+      <li>• Microneedling</li>
+    </ul>
   </div>
-</div>
 
-<div class="card" onclick="toggle(this)">
-  <button>Microneedling <span>+</span></button>
-  <div class="content">
-    <p class="price">Preis auf Anfrage</p>
+  <h2 class="section-title">Preisübersicht</h2>
+
+  <!-- 1:1 Technik -->
+  <div class="card" onclick="toggle(this)">
+    <button>1:1 Technik (Natural Look) <span>+</span></button>
+    <div class="content">
+      <p>Neumodellage – <span class="price">69 €</span></p>
+      <p>Auffüllen nach 2 Wochen – <span class="price">39 €</span></p>
+      <p>Auffüllen nach 3 Wochen – <span class="price">49 €</span></p>
+      <p>Auffüllen nach 4 Wochen – <span class="price">59 €</span></p>
+    </div>
   </div>
-</div>
 
-<div class="contact">
-  <a class="btn instagram" href="https://instagram.com/morethanbeautyu2025">Instagram</a>
-  <a class="btn whatsapp" href="https://wa.me/4917682018696">WhatsApp</a>
-</div>
+  <!-- Softvolumen -->
+  <div class="card" onclick="toggle(this)">
+    <button>Softvolumen 2D–5D <span>+</span></button>
+    <div class="content">
+      <p>Neumodellage – <span class="price">79 €</span></p>
+      <p>Auffüllen nach 2 Wochen – <span class="price">49 €</span></p>
+      <p>Auffüllen nach 3 Wochen – <span class="price">59 €</span></p>
+      <p>Auffüllen nach 4 Wochen – <span class="price">69 €</span></p>
+    </div>
+  </div>
+
+  <!-- Volumen -->
+  <div class="card" onclick="toggle(this)">
+    <button>Volumen 5D–10D <span>+</span></button>
+    <div class="content">
+      <p>Neumodellage – <span class="price">89 €</span></p>
+      <p>Auffüllen nach 2 Wochen – <span class="price">59 €</span></p>
+      <p>Auffüllen nach 3 Wochen – <span class="price">69 €</span></p>
+      <p>Auffüllen nach 4 Wochen – <span class="price">79 €</span></p>
+    </div>
+  </div>
+
+  <!-- Megavolumen -->
+  <div class="card" onclick="toggle(this)">
+    <button>Megavolumen ab 10D <span>+</span></button>
+    <div class="content">
+      <p>Neumodellage – <span class="price">99 €</span></p>
+      <p>Auffüllen nach 2 Wochen – <span class="price">69 €</span></p>
+      <p>Auffüllen nach 3 Wochen – <span class="price">79 €</span></p>
+      <p>Auffüllen nach 4 Wochen – <span class="price">89 €</span></p>
+    </div>
+  </div>
+
+  <!-- Permanent Make-up -->
+  <div class="card" onclick="toggle(this)">
+    <button>Permanent Make-up <span>+</span></button>
+    <div class="content">
+      <p>Lippen – <span class="price">250 €</span></p>
+      <p>Augenbrauen – <span class="price">250 €</span></p>
+      <p>Eyeliner – <span class="price">200 €</span></p>
+      <p>Nachbehandlung – <span class="price">65 €</span></p>
+    </div>
+  </div>
+
+  <!-- Extras -->
+  <div class="card" onclick="toggle(this)">
+    <button>Extras <span>+</span></button>
+    <div class="content">
+      <p>Abschminken – <span class="price">10 €</span></p>
+      <p>Wimpern entfernen – <span class="price">15 €</span></p>
+    </div>
+  </div>
+
+  <div class="contact">
+    <a class="btn instagram" href="https://instagram.com/morethanbeautyu2025">Instagram</a>
+    <a class="btn whatsapp" href="https://wa.me/4917682018696">WhatsApp</a>
+  </div>
 
 </div>
 
