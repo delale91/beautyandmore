@@ -1,181 +1,406 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Delale by More Than Beauty</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delale by More Than Beauty</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Georgia', serif;
-    background: linear-gradient(135deg, #f8c8dc, #fde6ef);
-    color: #4a2c2a;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-/* HEADER */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-}
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      color: #4b2d2f;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(255, 215, 0, 0.22) 0, rgba(255, 215, 0, 0) 18%),
+        radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.35) 0, rgba(255, 255, 255, 0) 14%),
+        radial-gradient(circle at 20% 75%, rgba(255, 215, 0, 0.18) 0, rgba(255, 215, 0, 0) 16%),
+        radial-gradient(circle at 90% 70%, rgba(255, 240, 245, 0.45) 0, rgba(255, 240, 245, 0) 20%),
+        linear-gradient(135deg, #f4c7d8 0%, #f9dce7 35%, #f7c7d9 65%, #fcecf3 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
 
-.hero h1 {
-    font-size: 3rem;
-    background: linear-gradient(90deg, #c9a45c, #ffd700);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-.hero h2 {
-    font-size: 1.5rem;
-    margin-top: -10px;
-    color: #8c5c2b;
-}
+    body::before {
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.9) 0 1.5px, transparent 2px),
+        radial-gradient(circle, rgba(255,215,0,0.8) 0 1.5px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.7) 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(212,175,55,0.7) 0 1px, transparent 1.5px);
+      background-size: 180px 180px, 220px 220px, 140px 140px, 260px 260px;
+      background-position: 20px 30px, 100px 140px, 60px 100px, 160px 40px;
+      opacity: 0.7;
+    }
 
-/* BOXEN */
-.container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-}
+    body::after {
+      background:
+        radial-gradient(circle at 15% 25%, rgba(255,255,255,0.35), transparent 12%),
+        radial-gradient(circle at 85% 20%, rgba(255,215,0,0.20), transparent 14%),
+        radial-gradient(circle at 25% 85%, rgba(255,255,255,0.25), transparent 14%),
+        radial-gradient(circle at 90% 80%, rgba(255,215,0,0.18), transparent 12%);
+      filter: blur(14px);
+    }
 
-.box {
-    background: rgba(255,255,255,0.6);
-    margin: 12px 0;
-    padding: 15px;
-    border-radius: 15px;
-    cursor: pointer;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255,215,0,0.3);
-    transition: 0.3s;
-}
+    .wrap {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 28px 18px 50px;
+    }
 
-.box:hover {
-    background: rgba(255,255,255,0.8);
-}
+    .hero {
+      text-align: center;
+      padding: 36px 20px 26px;
+      margin-top: 14px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.30);
+      backdrop-filter: blur(8px);
+      box-shadow:
+        0 10px 30px rgba(168, 92, 125, 0.18),
+        inset 0 0 0 1px rgba(255,255,255,0.35);
+    }
 
-.content {
-    display: none;
-    margin-top: 10px;
-}
+    .hello {
+      font-size: 1.2rem;
+      margin: 0 0 8px;
+      color: #5a3638;
+      letter-spacing: 0.5px;
+    }
 
-.price {
-    color: #b68c2d;
-    font-weight: bold;
-}
+    .name {
+      margin: 0;
+      font-size: 3.5rem;
+      line-height: 1;
+      font-weight: normal;
+      background: linear-gradient(90deg, #8f5a17 0%, #d4af37 35%, #fff1a8 50%, #c9961a 70%, #8b5a1d 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 4px 18px rgba(212, 175, 55, 0.18);
+    }
 
-/* BUTTONS */
-.buttons {
-    text-align: center;
-    margin-top: 30px;
-}
+    .subname {
+      margin: 8px 0 0;
+      font-size: 1.6rem;
+      color: #8b5a1d;
+      font-style: italic;
+    }
 
-.btn {
-    display: inline-block;
-    margin: 8px;
-    padding: 12px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-}
+    .tagline {
+      margin: 16px auto 0;
+      max-width: 560px;
+      font-size: 1rem;
+      color: #684547;
+    }
 
-.instagram {
-    background: linear-gradient(90deg,#833ab4,#fd1d1d,#fcb045);
-    color: white;
-}
+    .section-title {
+      text-align: center;
+      margin: 34px 0 18px;
+      font-size: 1.8rem;
+      color: #7a4b20;
+      text-shadow: 0 2px 10px rgba(255,255,255,0.35);
+    }
 
-.whatsapp {
-    background: #25d366;
-    color: white;
-}
+    .box {
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(212, 175, 55, 0.38);
+      border-radius: 22px;
+      margin: 14px 0;
+      overflow: hidden;
+      box-shadow:
+        0 8px 24px rgba(181, 105, 138, 0.16),
+        inset 0 0 0 1px rgba(255,255,255,0.28);
+      backdrop-filter: blur(6px);
+    }
 
-/* FOOTER */
-.footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 1.1rem;
-}
-</style>
+    .box button {
+      width: 100%;
+      border: none;
+      background: transparent;
+      padding: 18px 20px;
+      font-size: 1.1rem;
+      font-family: inherit;
+      font-weight: bold;
+      color: #6d3f22;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .box button span {
+      font-size: 1.4rem;
+      color: #c79a26;
+      transition: transform 0.3s ease;
+    }
+
+    .box.active button span {
+      transform: rotate(45deg);
+    }
+
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      padding: 0 20px;
+    }
+
+    .inner {
+      padding: 0 0 18px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 11px 0;
+      border-bottom: 1px solid rgba(160, 120, 90, 0.12);
+      font-size: 1rem;
+      color: #523335;
+    }
+
+    .item:last-child {
+      border-bottom: none;
+    }
+
+    .price {
+      color: #b8860b;
+      font-weight: bold;
+      white-space: nowrap;
+      text-shadow: 0 1px 8px rgba(255, 215, 0, 0.18);
+    }
+
+    .note {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255, 248, 251, 0.72);
+      color: #6b4c4e;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .contact {
+      margin-top: 32px;
+      text-align: center;
+      padding: 28px 18px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.42);
+      border: 1px solid rgba(212, 175, 55, 0.34);
+      box-shadow: 0 8px 24px rgba(181, 105, 138, 0.14);
+    }
+
+    .contact h3 {
+      margin: 0 0 10px;
+      font-size: 1.7rem;
+      color: #7a4b20;
+    }
+
+    .contact p {
+      margin: 0 0 18px;
+      color: #6b4c4e;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.96;
+    }
+
+    .instagram {
+      background: linear-gradient(90deg, #833ab4, #c13584, #fd1d1d, #fcb045);
+    }
+
+    .whatsapp {
+      background: linear-gradient(90deg, #22c55e, #25d366);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #6a4a4b;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .name {
+        font-size: 2.8rem;
+      }
+
+      .subname {
+        font-size: 1.3rem;
+      }
+
+      .item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="wrap">
+    <div class="hero">
+      <p class="hello">Hallo, ich bin</p>
+      <h1 class="name">Delale</h1>
+      <p class="subname">by More Than Beauty</p>
+      <p class="tagline">Dein Beauty Studio für strahlendes Aussehen, luxuriöse Behandlungen und ein elegantes Wohlfühl-Erlebnis.</p>
+    </div>
 
-<div class="hero">
-    <h1>Delale</h1>
-    <h2>by More Than Beauty</h2>
-    <p>Dein Beauty Studio für strahlendes Aussehen</p>
-</div>
+    <h2 class="section-title">Meine Dienstleistungen</h2>
 
-<div class="container">
+    <div class="box">
+      <button onclick="toggleBox(this)">
+        Wimpernverlängerung
+        <span>+</span>
+      </button>
+      <div class="content">
+        <div class="inner">
+          <div class="item"><div>1:1 Technik</div><div class="price">65 €</div></div>
+          <div class="item"><div>Volumentechnik</div><div class="price">80 €</div></div>
+          <div class="item"><div>Megavolumen</div><div class="price">100 €</div></div>
+          <div class="note">Das Auffüllen richtet sich nach dem Zeitpunkt der letzten Behandlung.</div>
+        </div>
+      </div>
+    </div>
 
-<div class="box" onclick="toggle(this)">
-<h3>Wimpernverlängerung</h3>
-<div class="content">
-<p>1:1 Technik - <span class="price">65€</span></p>
-<p>Volumentechnik - <span class="price">80€</span></p>
-<p>Megavolumen - <span class="price">100€</span></p>
-</div>
-</div>
+    <div class="box">
+      <button onclick="toggleBox(this)">
+        Permanent Make-up
+        <span>+</span>
+      </button>
+      <div class="content">
+        <div class="inner">
+          <div class="item"><div>Powder Brows</div><div class="price">350 €</div></div>
+          <div class="item"><div>Ombre Brows</div><div class="price">350 €</div></div>
+          <div class="item"><div>Ober- oder Unterlid jeweils</div><div class="price">200 €</div></div>
+          <div class="item"><div>Wimpernkranzverdichtung</div><div class="price">150 €</div></div>
+          <div class="item"><div>Aquarellips</div><div class="price">350 €</div></div>
+          <div class="item"><div>Powderlips</div><div class="price">350 €</div></div>
+          <div class="item"><div>Kontur</div><div class="price">150 €</div></div>
+          <div class="note">Nachbehandlungskosten sind abhängig vom Heilungsprozess und von der zu pigmentierenden Stelle.</div>
+        </div>
+      </div>
+    </div>
 
-<div class="box" onclick="toggle(this)">
-<h3>Permanent Make-up</h3>
-<div class="content">
-<p>Powder Brows - <span class="price">350€</span></p>
-<p>Ombre Brows - <span class="price">350€</span></p>
-<p>Lidstrich - <span class="price">200€</span></p>
-<p>Wimpernkranz - <span class="price">150€</span></p>
-<p>Aquarellips - <span class="price">350€</span></p>
-<p>Powderlips - <span class="price">350€</span></p>
-<p>Kontur - <span class="price">150€</span></p>
-</div>
-</div>
+    <div class="box">
+      <button onclick="toggleBox(this)">
+        Tooth Gem / Zahnschmuck
+        <span>+</span>
+      </button>
+      <div class="content">
+        <div class="inner">
+          <div class="item"><div>Echte Swarovski-Steine</div><div class="price">ab 35 €</div></div>
+          <div class="item"><div>Gold- oder Silberfiguren</div><div class="price">ab 70 €</div></div>
+          <div class="item"><div>Mehrere Steine & individuelle Designs</div><div class="price">auf Anfrage</div></div>
+        </div>
+      </div>
+    </div>
 
-<div class="box" onclick="toggle(this)">
-<h3>Tooth Gem</h3>
-<div class="content">
-<p>ab <span class="price">35€</span></p>
-<p>Gold/Silber ab <span class="price">70€</span></p>
-</div>
-</div>
+    <div class="box">
+      <button onclick="toggleBox(this)">
+        Zahnaufhellung / Bleaching
+        <span>+</span>
+      </button>
+      <div class="content">
+        <div class="inner">
+          <div class="item"><div>Bleaching</div><div class="price">ab 70 €</div></div>
+          <div class="note">Preis abhängig von Dauer der Behandlung, gewünschter Farbaufhellung und Anzahl der Sitzungen.</div>
+        </div>
+      </div>
+    </div>
 
-<div class="box" onclick="toggle(this)">
-<h3>Bleaching</h3>
-<div class="content">
-<p>ab <span class="price">70€</span></p>
-</div>
-</div>
+    <div class="box">
+      <button onclick="toggleBox(this)">
+        Aquafacial
+        <span>+</span>
+      </button>
+      <div class="content">
+        <div class="inner">
+          <div class="item"><div>Tiefenreinigung & Glow Behandlung</div><div class="price">auf Anfrage</div></div>
+        </div>
+      </div>
+    </div>
 
-<div class="box" onclick="toggle(this)">
-<h3>Aquafacial</h3>
-<div class="content">
-<p class="price">Preis auf Anfrage</p>
-</div>
-</div>
+    <div class="box">
+      <button onclick="toggleBox(this)">
+        Microneedling
+        <span>+</span>
+      </button>
+      <div class="content">
+        <div class="inner">
+          <div class="item"><div>Hautverfeinerung & Hauterneuerung</div><div class="price">auf Anfrage</div></div>
+        </div>
+      </div>
+    </div>
 
-<div class="box" onclick="toggle(this)">
-<h3>Microneedling</h3>
-<div class="content">
-<p class="price">Preis auf Anfrage</p>
-</div>
-</div>
+    <div class="contact">
+      <h3>Exklusive Terminvereinbarung</h3>
+      <p>Schreibe mir für deine individuelle Beratung und deinen Wunschtermin.</p>
+      <div class="buttons">
+        <a class="btn instagram" href="https://instagram.com/morethanbeautyu2025" target="_blank">Instagram</a>
+        <a class="btn whatsapp" href="https://wa.me/4917682018696" target="_blank">WhatsApp</a>
+      </div>
+    </div>
 
-<div class="buttons">
-<a class="btn instagram" href="https://instagram.com/morethanbeautyu2025">Instagram</a>
-<a class="btn whatsapp" href="https://wa.me/4917682018696">WhatsApp</a>
-</div>
+    <div class="footer">
+      📞 0176 82018696
+    </div>
+  </div>
 
-<div class="footer">
-📞 0176 82018696
-</div>
+  <script>
+    function toggleBox(button) {
+      const box = button.parentElement;
+      const content = box.querySelector(".content");
+      const isActive = box.classList.contains("active");
 
-</div>
+      document.querySelectorAll(".box").forEach((item) => {
+        item.classList.remove("active");
+        item.querySelector(".content").style.maxHeight = null;
+      });
 
-<script>
-function toggle(el){
-    let c = el.querySelector(".content");
-    c.style.display = c.style.display === "block" ? "none" : "block";
-}
-</script>
-
+      if (!isActive) {
+        box.classList.add("active");
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    }
+  </script>
 </body>
 </html>
