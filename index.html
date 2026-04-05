@@ -7,10 +7,11 @@
 
 <style>
 :root {
-  --pink-dark: #3a1f26;
-  --pink: #7a3f52;
-  --pink-soft: #a86a7b;
-  --gold: #c8a24d;
+  --pink-light: #f7d7e6;
+  --pink: #e8a4c9;
+  --pink-dark: #b46486;
+  --black-soft: #2a1a1f;
+  --gold: #d8b26e;
   --white: #ffffff;
 }
 
@@ -18,12 +19,23 @@
 body {
   margin: 0;
   font-family: "Georgia", serif;
-  color: white;
+  color: var(--white);
 
   background:
-    radial-gradient(circle at 20% 20%, rgba(200,162,77,0.15), transparent 30%),
-    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08), transparent 30%),
-    linear-gradient(135deg, #2b151b, #4a2630, #3a1f26);
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1), transparent 40%),
+    linear-gradient(135deg, #2a1a1f, #4a2a35, #b46486);
+  background-attachment: fixed;
+}
+
+/* GOLD SPARKLES */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url('https://i.imgur.com/8bFQYkC.png');
+  opacity: 0.25;
+  pointer-events: none;
 }
 
 /* CONTAINER */
@@ -40,49 +52,63 @@ body {
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   color: var(--gold);
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
 }
 
 .hero h2 {
   font-style: italic;
-  color: #e6c57a;
+  color: var(--pink-light);
+  font-size: 1.6rem;
 }
 
 /* TITEL */
 .section-title {
   text-align: center;
   margin: 30px 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  color: var(--white);
+  text-shadow: 0 0 8px rgba(255,255,255,0.2);
 }
 
 /* BOXEN */
 .card {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.08);
   margin: 15px 0;
   border-radius: 15px;
-  border: 1px solid rgba(200,162,77,0.3);
+  border: 1px solid rgba(216,178,110,0.4);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
 }
 
 .card button {
   width: 100%;
   background: transparent;
   border: none;
-  padding: 15px;
-  color: white;
-  font-size: 1.1rem;
+  padding: 18px;
+  color: var(--white);
+  font-size: 1.2rem;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.card button span {
+  color: var(--gold);
 }
 
 .content {
   display: none;
-  padding: 10px 15px;
+  padding: 10px 20px 20px;
+  font-size: 1.1rem;
 }
 
 .price {
   color: var(--gold);
+  font-weight: bold;
 }
 
 /* CONTACT */
@@ -98,6 +124,8 @@ body {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .instagram {
