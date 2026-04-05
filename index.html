@@ -15,15 +15,11 @@
 }
 
 /* GLOBAL */
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: "Georgia", serif;
   color: var(--white);
-  background-image: url('background.jpg'); /* dein Hintergrundbild in gleichem Ordner wie index.html */
+  background-image: url('background.jpg'); /* dein Hintergrund */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -37,55 +33,17 @@ body::before {
   pointer-events: none;
 }
 
-/* NAVIGATION */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(0,0,0,0.8);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.nav-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-}
-
-.nav-logo {
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: var(--gold-strong);
-}
-
-.nav-links a {
-  color: var(--white);
-  text-decoration: none;
-  margin-left: 15px;
-  font-size: 0.95rem;
-}
-
-.nav-links a:hover {
-  color: var(--gold-strong);
-}
-
-/* PAGE WRAPPER */
+/* PAGE */
 .page {
   max-width: 1100px;
   margin: auto;
   padding: 30px 20px 60px;
-  position: relative;
-  z-index: 1;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  margin: 30px 0 20px;
+  margin: 20px 0 40px;
 }
 
 .hero h1 {
@@ -99,13 +57,7 @@ body::before {
   font-style: italic;
   color: var(--pink-light);
   font-size: 1.4rem;
-  text-shadow: 0 0 10px rgba(0,0,0,0.4);
-}
-
-.hero p {
-  max-width: 650px;
-  margin: 10px auto 0;
-  font-size: 1rem;
+  margin-top: -10px;
 }
 
 /* SECTION TITLES */
@@ -119,12 +71,7 @@ body::before {
   text-shadow: 0 0 10px rgba(0,0,0,0.6);
 }
 
-.section-sub {
-  font-size: 0.95rem;
-  margin-bottom: 15px;
-}
-
-/* BOX / CARD */
+/* CARD */
 .card {
   background: var(--bg-dark);
   border-radius: 18px;
@@ -135,7 +82,7 @@ body::before {
   margin-bottom: 20px;
 }
 
-/* TOGGLE BUTTON */
+/* BUTTON */
 .toggle-btn {
   width: 100%;
   background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0));
@@ -156,7 +103,7 @@ body::before {
   color: var(--gold-strong);
 }
 
-/* TOGGLE CONTENT */
+/* CONTENT */
 .toggle-content {
   display: none;
   margin-top: 12px;
@@ -175,10 +122,6 @@ body::before {
 /* CONTACT */
 .contact {
   margin-top: 40px;
-}
-
-.contact p {
-  margin: 4px 0;
 }
 
 .btn-row {
@@ -207,7 +150,7 @@ body::before {
   color: white;
 }
 
-/* FOOTER SECTIONS */
+/* FOOTER */
 .footer-section {
   margin-top: 50px;
   font-size: 0.85rem;
@@ -222,30 +165,10 @@ body::before {
   font-size: 1.1rem;
   color: var(--gold-strong);
 }
-
-small {
-  font-size: 0.8rem;
-}
 </style>
 </head>
 
 <body>
-
-<!-- NAVIGATION -->
-<div class="navbar">
-  <div class="nav-inner">
-    <div class="nav-logo">Delale • More Than Beauty</div>
-    <div class="nav-links">
-      <a href="#wimpern">Wimpern</a>
-      <a href="#pmu">Permanent Make-up</a>
-      <a href="#tooth">Tooth Gem</a>
-      <a href="#bleach">Zahnbleaching</a>
-      <a href="#kontakt">Kontakt</a>
-      <a href="#impressum">Impressum</a>
-      <a href="#datenschutz">Datenschutz</a>
-    </div>
-  </div>
-</div>
 
 <div class="page">
 
@@ -253,122 +176,117 @@ small {
   <div class="hero">
     <h1>Delale</h1>
     <h2>by More Than Beauty</h2>
-    <p>Dein Studio für Wimpernverlängerung, Permanent Make-up, Zahnschmuck und Zahnaufhellung – für ein strahlendes, gepflegtes Aussehen jeden Tag.</p>
   </div>
 
   <!-- WIMPERN -->
-  <div id="wimpern" class="section">
+  <div class="section">
     <h2 class="section-title">Wimpernverlängerung</h2>
-    <p class="section-sub">Für einen unwiderstehlichen Blick – von natürlich bis Megavolumen.</p>
 
     <div class="card">
       <button class="toggle-btn" onclick="toggleBox('lash-tech')">
-        Techniken & Preise anzeigen
+        Techniken & Preise
         <span>+</span>
       </button>
       <div id="lash-tech" class="toggle-content">
-        <p><strong>1:1 Technik</strong> – <span class="price">65 €</span></p>
-        <p><strong>Volumentechnik</strong> – <span class="price">80 €</span></p>
-        <p><strong>Megavolumen</strong> – <span class="price">100 €</span></p>
-        <p><small>Das Auffüllen (Refill) richtet sich nach dem Zeitpunkt der letzten Behandlung.</small></p>
+        <p>1:1 Technik – <span class="price">65 €</span></p>
+        <p>Volumentechnik – <span class="price">80 €</span></p>
+        <p>Megavolumen – <span class="price">100 €</span></p>
       </div>
     </div>
   </div>
 
-  <!-- PERMANENT MAKE-UP -->
-  <div id="pmu" class="section">
+  <!-- PMU -->
+  <div class="section">
     <h2 class="section-title">Permanent Make-up</h2>
-    <p class="section-sub">Perfekte Augenbrauen, Lidstrich & Lippen – jeden Tag, ohne Nachschminken.</p>
 
     <div class="card">
       <button class="toggle-btn" onclick="toggleBox('pmu-tech')">
-        Techniken & Preise anzeigen
+        Techniken & Preise
         <span>+</span>
       </button>
       <div id="pmu-tech" class="toggle-content">
-        <p><strong>Augenbrauen</strong></p>
         <p>Powder Brows – <span class="price">350 €</span></p>
         <p>Ombre Brows – <span class="price">350 €</span></p>
-        <br>
-        <p><strong>Lidstrich</strong></p>
-        <p>Ober- oder Unterlid – <span class="price">200 €</span></p>
+        <p>Lidstrich oben/unten – <span class="price">200 €</span></p>
         <p>Wimpernkranzverdichtung – <span class="price">150 €</span></p>
-        <br>
-        <p><strong>Lippen</strong></p>
-        <p>Aquarellips – <span class="price">350 €</span></p>
-        <p>Powderlips – <span class="price">350 €</span></p>
+        <p>Aquarell Lips – <span class="price">350 €</span></p>
+        <p>Powder Lips – <span class="price">350 €</span></p>
         <p>Nacharbeit – <span class="price">150 €</span></p>
-        <p><small>Die Nachbehandlungskosten sind abhängig vom Heilungsprozess und der zu pigmentierenden Stelle.</small></p>
       </div>
     </div>
   </div>
 
   <!-- TOOTH GEM -->
-  <div id="tooth" class="section">
+  <div class="section">
     <h2 class="section-title">Tooth Gem (Zahnschmuck)</h2>
-    <p class="section-sub">Funkelnde Highlights für dein Lächeln.</p>
 
     <div class="card">
       <button class="toggle-btn" onclick="toggleBox('tooth-tech')">
-        Varianten & Preise anzeigen
+        Varianten & Preise
         <span>+</span>
       </button>
       <div id="tooth-tech" class="toggle-content">
-        <p>Echte Swarovski-Steine – <span class="price">ab 35 €</span></p>
-        <p>Gold- oder Silberfiguren – <span class="price">ab 70 €</span></p>
-        <p>Individuelle Designs – <span class="price">Preis auf Anfrage</span></p>
+        <p>Swarovski-Steine – <span class="price">ab 35 €</span></p>
+        <p>Gold-/Silberfiguren – <span class="price">ab 70 €</span></p>
+        <p>Individuelle Designs – Preis auf Anfrage</p>
       </div>
     </div>
   </div>
 
-  <!-- ZAHNBLEACHING -->
-  <div id="bleach" class="section">
+  <!-- BLEACHING -->
+  <div class="section">
     <h2 class="section-title">Zahnaufhellung (Bleaching)</h2>
-    <p class="section-sub">Professionelle Zahnaufhellung für ein strahlend weißes Lächeln.</p>
 
     <div class="card">
       <button class="toggle-btn" onclick="toggleBox('bleach-tech')">
-        Infos & Preise anzeigen
+        Infos & Preise
         <span>+</span>
       </button>
       <div id="bleach-tech" class="toggle-content">
         <p>Behandlung – <span class="price">ab 70 €</span></p>
-        <p><small>Der genaue Preis ist abhängig von Dauer der Behandlung, gewünschter Farbaufhellung und Zahnstruktur.</small></p>
+        <p><small>Preis abhängig von Dauer & gewünschter Aufhellung.</small></p>
       </div>
     </div>
   </div>
 
   <!-- KONTAKT -->
-  <div id="kontakt" class="section contact">
-    <h2 class="section-title">Kontakt & Termin</h2>
-    <p>Für deinen persönlichen Beauty‑Termin schreibe mir gerne direkt:</p>
-    <p>Telefon / WhatsApp: <span class="price">0176 82018696</span></p>
+  <div class="section contact">
+    <h2 class="section-title">Kontakt</h2>
+    <p>WhatsApp / Telefon: <span class="price">0176 82018696</span></p>
     <p>Instagram: <span class="price">@morethanbeautyu2025</span></p>
 
     <div class="btn-row">
-      <a class="btn instagram" href="https://instagram.com/morethanbeautyu2025" target="_blank">Instagram öffnen</a>
-      <a class="btn whatsapp" href="https://wa.me/4917682018696" target="_blank">WhatsApp schreiben</a>
+      <a class="btn instagram" href="https://instagram.com/morethanbeautyu2025" target="_blank">Instagram</a>
+      <a class="btn whatsapp" href="https://wa.me/4917682018696" target="_blank">WhatsApp</a>
     </div>
   </div>
 
   <!-- IMPRESSUM -->
-  <div id="impressum" class="footer-section">
-    <h3>Impressum</h3>
-    <p><strong>Verantwortlich für den Inhalt:</strong><br>
-    Delale – More Than Beauty</p>
-    <p><strong>Kontakt:</strong><br>
-    Telefon: 0176 82018696<br>
-    Instagram: @morethanbeautyu2025</p>
-    <p><small>Hinweis: Bitte ergänze hier bei Bedarf deine vollständige Anschrift und alle rechtlich erforderlichen Angaben nach deutschem Recht.</small></p>
-  </div>
+  <div class="section">
+    <div class="card">
+      <button class="toggle-btn" onclick="toggleBox('impressum-box')">
+        Impressum
+        <span>+</span>
+      </button>
+      <div id="impressum-box" class="toggle-content">
+        <p><strong>Verantwortlich:</strong><br>
+        Delale – More Than Beauty</p>
+        <p>Telefon: 0176 82018696<br>
+        Instagram: @morethanbeautyu2025</p>
+      </div>
+    </div>
 
-  <!-- DATENSCHUTZ -->
-  <div id="datenschutz" class="footer-section">
-    <h3>Datenschutzerklärung (Kurzfassung)</h3>
-    <p>Ich nehme den Schutz deiner persönlichen Daten ernst. Personenbezogene Daten (z.B. Name, Telefonnummer, Instagram‑Account), die du mir freiwillig per WhatsApp, Telefon oder Instagram sendest, werden ausschließlich zur Terminvereinbarung und Beantwortung deiner Anfrage genutzt.</p>
-    <p>Ich gebe deine Daten nicht an Dritte weiter, außer es besteht eine gesetzliche Verpflichtung.</p>
-    <p>Du kannst jederzeit Auskunft über die zu deiner Person gespeicherten Daten verlangen oder die Löschung verlangen, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
-    <p><small>Hinweis: Dies ist eine vereinfachte, allgemeine Formulierung. Für eine rechtssichere Datenschutzerklärung wende dich bitte an eine Rechtsberatung oder nutze einen professionellen Generator.</small></p>
+    <!-- DATENSCHUTZ -->
+    <div class="card">
+      <button class="toggle-btn" onclick="toggleBox('datenschutz-box')">
+        Datenschutzerklärung
+        <span>+</span>
+      </button>
+      <div id="datenschutz-box" class="toggle-content">
+        <p>Personenbezogene Daten werden ausschließlich zur Terminvereinbarung genutzt und nicht an Dritte weitergegeben.</p>
+        <p>Du kannst jederzeit Auskunft oder Löschung deiner Daten verlangen.</p>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -376,8 +294,7 @@ small {
 <script>
 function toggleBox(id) {
   const box = document.getElementById(id);
-  const isOpen = box.style.display === "block";
-  box.style.display = isOpen ? "none" : "block";
+  box.style.display = box.style.display === "block" ? "none" : "block";
 }
 </script>
 
