@@ -7,7 +7,7 @@
   <style>
     :root {
       --rosa: #f3d7e1;
-      --rosa-hell: #fff7fa;
+      --rosa-dunkel: #fff7fa;
       --gold: #c8a24d;
       --gold-dunkel: #9e7b2f;
       --schwarz: #111111;
@@ -35,6 +35,17 @@
         linear-gradient(135deg, #f4c7d8, #fbe3ec, #f6c9da);
 
     min-height: 100vh;
+      body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 2px),
+        radial-gradient(circle, rgba(255,215,0,0.7) 1px, transparent 2px);
+    background-size: 120px 120px, 180px 180px;
+    opacity: 0.5;
+    pointer-events: none;
+}
 }
 
     .topbar {
