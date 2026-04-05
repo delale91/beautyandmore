@@ -3,43 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Döndü Pektaş Beauty</title>
+<title>Delale by More Than Beauty</title>
 
 <style>
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(180deg, #000000, #1a1a1a);
-    color: #fff;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #f8c8dc, #fde6ef);
+    color: #4a2c2a;
 }
 
+/* HEADER */
 .hero {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(135deg, #000000, #2a0f2f);
-    border-bottom: 1px solid rgba(255,215,0,0.3);
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    background: linear-gradient(90deg, gold, pink);
+    font-size: 3rem;
+    background: linear-gradient(90deg, #c9a45c, #ffd700);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+.hero h2 {
+    font-size: 1.5rem;
+    margin-top: -10px;
+    color: #8c5c2b;
+}
+
+/* BOXEN */
 .container {
-    max-width: 900px;
+    max-width: 600px;
     margin: auto;
-    padding: 30px;
+    padding: 20px;
 }
 
 .box {
-    background: rgba(255,255,255,0.05);
-    margin: 15px 0;
-    padding: 18px;
+    background: rgba(255,255,255,0.6);
+    margin: 12px 0;
+    padding: 15px;
     border-radius: 15px;
     cursor: pointer;
-    border: 1px solid rgba(255,215,0,0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,215,0,0.3);
+    transition: 0.3s;
+}
+
+.box:hover {
+    background: rgba(255,255,255,0.8);
 }
 
 .content {
@@ -48,59 +60,54 @@ body {
 }
 
 .price {
-    color: gold;
+    color: #b68c2d;
     font-weight: bold;
 }
 
+/* BUTTONS */
 .buttons {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .btn {
     display: inline-block;
-    margin: 10px;
+    margin: 8px;
     padding: 12px 25px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
 }
 
-.instagram { background: linear-gradient(90deg,#833ab4,#fd1d1d,#fcb045); color: white;}
-.tiktok { background: black; color: white; border:1px solid white;}
-.whatsapp { background: #25d366; color: white;}
+.instagram {
+    background: linear-gradient(90deg,#833ab4,#fd1d1d,#fcb045);
+    color: white;
+}
+
+.whatsapp {
+    background: #25d366;
+    color: white;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
 </style>
 </head>
 
 <body>
 
 <div class="hero">
-    <h1>Döndü Pektaş</h1>
-    <p>Luxury Beauty Studio</p>
+    <h1>Delale</h1>
+    <h2>by More Than Beauty</h2>
+    <p>Dein Beauty Studio für strahlendes Aussehen</p>
 </div>
 
 <div class="container">
 
-<!-- Permanent -->
-<div class="box" onclick="toggle(this)">
-<h3>Permanent Make-up</h3>
-<div class="content">
-<p><b>Augenbrauen:</b></p>
-<p>Powder Brows - <span class="price">350€</span></p>
-<p>Ombre Brows - <span class="price">350€</span></p>
-
-<p><b>Lidstrich:</b></p>
-<p>Ober- oder Unterlid - <span class="price">200€</span></p>
-<p>Wimpernkranzverdichtung - <span class="price">150€</span></p>
-
-<p><b>Lippen:</b></p>
-<p>Aquarellips - <span class="price">350€</span></p>
-<p>Powderlips - <span class="price">350€</span></p>
-<p>Kontur - <span class="price">150€</span></p>
-</div>
-</div>
-
-<!-- Wimpern -->
 <div class="box" onclick="toggle(this)">
 <h3>Wimpernverlängerung</h3>
 <div class="content">
@@ -110,17 +117,27 @@ body {
 </div>
 </div>
 
-<!-- Tooth Gem -->
 <div class="box" onclick="toggle(this)">
-<h3>Tooth Gem</h3>
+<h3>Permanent Make-up</h3>
 <div class="content">
-<p>Swarovski Steine - <span class="price">ab 35€</span></p>
-<p>Gold / Silber - <span class="price">ab 70€</span></p>
-<p>Individuelle Designs - Preis auf Anfrage</p>
+<p>Powder Brows - <span class="price">350€</span></p>
+<p>Ombre Brows - <span class="price">350€</span></p>
+<p>Lidstrich - <span class="price">200€</span></p>
+<p>Wimpernkranz - <span class="price">150€</span></p>
+<p>Aquarellips - <span class="price">350€</span></p>
+<p>Powderlips - <span class="price">350€</span></p>
+<p>Kontur - <span class="price">150€</span></p>
 </div>
 </div>
 
-<!-- Bleaching -->
+<div class="box" onclick="toggle(this)">
+<h3>Tooth Gem</h3>
+<div class="content">
+<p>ab <span class="price">35€</span></p>
+<p>Gold/Silber ab <span class="price">70€</span></p>
+</div>
+</div>
+
 <div class="box" onclick="toggle(this)">
 <h3>Bleaching</h3>
 <div class="content">
@@ -128,29 +145,27 @@ body {
 </div>
 </div>
 
-<!-- Aquafacial -->
 <div class="box" onclick="toggle(this)">
 <h3>Aquafacial</h3>
 <div class="content">
-<p>Glow & Tiefenreinigung</p>
 <p class="price">Preis auf Anfrage</p>
 </div>
 </div>
 
-<!-- Microneedling -->
 <div class="box" onclick="toggle(this)">
 <h3>Microneedling</h3>
 <div class="content">
-<p>Hautverjüngung & Akne Behandlung</p>
 <p class="price">Preis auf Anfrage</p>
 </div>
 </div>
 
-<!-- Buttons -->
 <div class="buttons">
 <a class="btn instagram" href="https://instagram.com/morethanbeautyu2025">Instagram</a>
-<a class="btn tiktok" href="https://tiktok.com/@goldenesherz77">TikTok</a>
 <a class="btn whatsapp" href="https://wa.me/4917682018696">WhatsApp</a>
+</div>
+
+<div class="footer">
+📞 0176 82018696
 </div>
 
 </div>
