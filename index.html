@@ -19,7 +19,7 @@ body {
   margin: 0;
   font-family: "Georgia", serif;
   color: var(--white);
-  background-image: url('background.jpg'); /* dein Hintergrund */
+  background-image: url('background.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -60,7 +60,7 @@ body::before {
   margin-top: -10px;
 }
 
-/* SECTION TITLES */
+/* SECTION */
 .section {
   margin-top: 40px;
 }
@@ -150,20 +150,17 @@ body::before {
   color: white;
 }
 
-/* FOOTER */
-.footer-section {
-  margin-top: 50px;
-  font-size: 0.85rem;
-  background: rgba(0,0,0,0.7);
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 18px 20px;
+/* FOOTER – 2 CARDS NEBENEINANDER */
+.legal-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
-.footer-section h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
-  color: var(--gold-strong);
+.legal-card {
+  flex: 1;
+  min-width: 250px;
 }
 </style>
 </head>
@@ -261,32 +258,42 @@ body::before {
     </div>
   </div>
 
-  <!-- IMPRESSUM -->
-  <div class="section">
-    <div class="card">
+  <!-- IMPRESSUM + DATENSCHUTZ NEBENEINANDER -->
+  <div class="legal-wrapper">
+
+    <!-- IMPRESSUM -->
+    <div class="card legal-card">
       <button class="toggle-btn" onclick="toggleBox('impressum-box')">
         Impressum
         <span>+</span>
       </button>
       <div id="impressum-box" class="toggle-content">
+        <p><strong>Angaben gemäß § 5 TMG</strong></p>
         <p><strong>Verantwortlich:</strong><br>
         Delale – More Than Beauty</p>
         <p>Telefon: 0176 82018696<br>
         Instagram: @morethanbeautyu2025</p>
+        <p><strong>Kleinunternehmer gemäß §19 UStG</strong></p>
+        <p><strong>Haftung:</strong><br>
+        Keine Gewähr für Vollständigkeit oder Aktualität.</p>
+        <p><strong>Urheberrecht:</strong><br>
+        Inhalte dieser Seite sind geschützt.</p>
       </div>
     </div>
 
     <!-- DATENSCHUTZ -->
-    <div class="card">
+    <div class="card legal-card">
       <button class="toggle-btn" onclick="toggleBox('datenschutz-box')">
-        Datenschutzerklärung
+        Datenschutz
         <span>+</span>
       </button>
       <div id="datenschutz-box" class="toggle-content">
-        <p>Personenbezogene Daten werden ausschließlich zur Terminvereinbarung genutzt und nicht an Dritte weitergegeben.</p>
+        <p>Personenbezogene Daten werden ausschließlich zur Terminvereinbarung genutzt.</p>
+        <p>Keine Weitergabe an Dritte, außer gesetzlich vorgeschrieben.</p>
         <p>Du kannst jederzeit Auskunft oder Löschung deiner Daten verlangen.</p>
       </div>
     </div>
+
   </div>
 
 </div>
