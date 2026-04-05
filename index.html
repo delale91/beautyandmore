@@ -121,15 +121,21 @@
     }
 
     .section {
-      margin-top: 28px;
+      margin-top: 34px;
     }
 
     .section-title {
       text-align: center;
       font-size: clamp(1.5rem, 4vw, 2.1rem);
-      margin: 0 0 14px;
+      margin: 0 0 18px;
       color: var(--brown);
       font-weight: 500;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
     }
 
     .card {
@@ -139,73 +145,34 @@
       box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      padding: 14px;
+      padding: 20px 18px;
       margin-bottom: 16px;
     }
 
-    .toggle-btn {
-      width: 100%;
-      border: none;
-      background: rgba(255,255,255,0.10);
+    .service-name {
+      margin: 0 0 10px;
       color: var(--brown);
-      border-radius: 18px;
-      padding: 16px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 1.05rem;
+      font-size: 1.18rem;
       font-weight: 700;
-      transition: transform 0.2s ease, background 0.2s ease;
     }
 
-    .toggle-btn:hover {
-      transform: translateY(-1px);
-      background: rgba(255,255,255,0.18);
-    }
-
-    .toggle-btn .icon {
-      color: var(--gold);
-      font-size: 1.4rem;
-      line-height: 1;
-      min-width: 24px;
-      text-align: center;
-    }
-
-    .toggle-content {
-      display: none;
-      padding: 16px 10px 8px;
+    .service-desc {
+      margin: 0 0 14px;
       color: var(--brown-soft);
       line-height: 1.65;
       font-size: 1rem;
     }
 
-    .toggle-content p {
-      margin: 8px 0;
-      padding-bottom: 8px;
-      border-bottom: 1px dashed rgba(184, 132, 63, 0.20);
-    }
-
-    .toggle-content p:last-of-type {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .service-desc {
-      font-size: 0.98rem;
+    .service-price {
+      margin: 0 0 16px;
+      color: var(--brown-soft);
+      font-size: 1rem;
+      line-height: 1.5;
     }
 
     .price {
       color: var(--gold);
       font-weight: bold;
-    }
-
-    .service-actions {
-      margin-top: 14px;
-      display: flex;
-      justify-content: flex-start;
     }
 
     .contact-card {
@@ -325,22 +292,16 @@
       }
 
       .card {
-        padding: 12px;
+        padding: 16px 14px;
         border-radius: 20px;
-      }
-
-      .toggle-btn {
-        padding: 14px 14px;
-        font-size: 0.98rem;
       }
 
       .btn {
         width: 100%;
-        max-width: 280px;
       }
 
-      .service-actions {
-        justify-content: center;
+      .service-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -358,227 +319,134 @@
     <main>
       <section class="section">
         <h2 class="section-title">Wimpernverlängerung</h2>
+        <div class="service-grid">
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('lash-1', this)">
-            <span>1:1 Technik (Natural Look)</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="lash-1" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">1:1 Technik (Natural Look)</h3>
             <p class="service-desc">Bei dieser Technik wird eine künstliche Wimper auf eine Naturwimper gesetzt. Das Ergebnis ist besonders natürlich, elegant und alltagstauglich.</p>
-            <p>Neumodellage – <span class="price">69 €</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20die%201:1%20Technik%20(Natural%20Look)%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Neumodellage – <span class="price">69 €</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20die%201:1%20Technik%20(Natural%20Look)%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
-        </div>
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('lash-2', this)">
-            <span>Softvolumen (2D–5D)</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="lash-2" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">Softvolumen (2D–5D)</h3>
             <p class="service-desc">Mehrere feine Wimpern werden auf eine Naturwimper gesetzt. So entsteht ein weicher, vollerer Look, der trotzdem natürlich wirkt.</p>
-            <p>Neumodellage – <span class="price">79 €</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Softvolumen%20(2D%E2%80%935D)%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Neumodellage – <span class="price">79 €</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Softvolumen%20(2D%E2%80%935D)%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
-        </div>
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('lash-3', this)">
-            <span>Volumen (5D–10D)</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="lash-3" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">Volumen (5D–10D)</h3>
             <p class="service-desc">Diese Technik sorgt für deutlich mehr Fülle und einen glamourösen, intensiveren Augenaufschlag.</p>
-            <p>Neumodellage – <span class="price">89 €</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Volumen%20(5D%E2%80%9310D)%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Neumodellage – <span class="price">89 €</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Volumen%20(5D%E2%80%9310D)%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
-        </div>
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('lash-4', this)">
-            <span>Megavolumen (ab 10D)</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="lash-4" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">Megavolumen (ab 10D)</h3>
             <p class="service-desc">Für einen auffälligen, dramatischen Look mit maximaler Dichte und besonderer Ausdrucksstärke.</p>
-            <p>Neumodellage – <span class="price">99 €</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Megavolumen%20(ab%2010D)%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Neumodellage – <span class="price">99 €</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Megavolumen%20(ab%2010D)%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
+
         </div>
       </section>
 
       <section class="section">
         <h2 class="section-title">Permanent Make-up</h2>
+        <div class="service-grid">
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('pmu-1', this)">
-            <span>Powder Brows</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="pmu-1" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">Powder Brows</h3>
             <p class="service-desc">Sanft schattierte Augenbrauen mit einem pudrigen Effekt. Ideal für ein gepflegtes, dauerhaft definiertes Ergebnis.</p>
-            <p>Preis – <span class="price">350 €</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Powder%20Brows%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Preis – <span class="price">350 €</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Powder%20Brows%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
-        </div>
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('pmu-2', this)">
-            <span>Ombre Brows</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="pmu-2" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">Ombre Brows</h3>
             <p class="service-desc">Ein weicher Farbverlauf sorgt für einen modernen und gleichmäßigen Brauen-Look mit sanfter Schattierung.</p>
-            <p>Preis – <span class="price">350 €</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Ombre%20Brows%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Preis – <span class="price">350 €</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Ombre%20Brows%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
-        </div>
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('pmu-3', this)">
-            <span>Lidstrich oben / unten</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="pmu-3" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">Lidstrich oben / unten</h3>
             <p class="service-desc">Dauerhafte Betonung der Augen durch einen feinen oder intensiveren Lidstrich – für einen ausdrucksstarken Blick.</p>
-            <p>Preis – <span class="price">200 €</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Lidstrich%20oben%20/%20unten%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Preis – <span class="price">200 €</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Lidstrich%20oben%20/%20unten%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
-        </div>
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('pmu-4', this)">
-            <span>Wimpernkranzverdichtung</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="pmu-4" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">Wimpernkranzverdichtung</h3>
             <p class="service-desc">Eine dezente Pigmentierung direkt am Wimpernansatz für optisch dichtere Wimpern und einen natürlichen Effekt.</p>
-            <p>Preis – <span class="price">150 €</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Wimpernkranzverdichtung%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Preis – <span class="price">150 €</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Wimpernkranzverdichtung%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
-        </div>
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('pmu-5', this)">
-            <span>Aquarell Lips</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="pmu-5" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">Aquarell Lips</h3>
             <p class="service-desc">Zarte, natürliche Lippenpigmentierung für mehr Frische, Farbe und eine harmonische Lippenkontur.</p>
-            <p>Preis – <span class="price">350 €</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Aquarell%20Lips%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Preis – <span class="price">350 €</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Aquarell%20Lips%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
-        </div>
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('pmu-6', this)">
-            <span>Powder Lips</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="pmu-6" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">Powder Lips</h3>
             <p class="service-desc">Gleichmäßige Lippenpigmentierung mit weichem Farbauftrag für voller und frischer wirkende Lippen.</p>
-            <p>Preis – <span class="price">350 €</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Powder%20Lips%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Preis – <span class="price">350 €</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Powder%20Lips%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
-        </div>
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('pmu-7', this)">
-            <span>Nacharbeit</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="pmu-7" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">Nacharbeit</h3>
             <p class="service-desc">Auffrischung oder Korrektur der bereits behandelten Pigmentierung für ein langanhaltend schönes Ergebnis.</p>
-            <p>Preis – <span class="price">150 €</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20eine%20Nacharbeit%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Preis – <span class="price">150 €</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20eine%20Nacharbeit%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
+
         </div>
       </section>
 
       <section class="section">
         <h2 class="section-title">Tooth Gem (Zahnschmuck)</h2>
+        <div class="service-grid">
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('tooth-1', this)">
-            <span>Swarovski-Steine</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="tooth-1" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">Swarovski-Steine</h3>
             <p class="service-desc">Funkelnder Zahnschmuck mit Swarovski-Steinen für einen stilvollen und eleganten Hingucker.</p>
-            <p>Preis – <span class="price">ab 35 €</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Swarovski-Steine%20als%20Tooth%20Gem%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Preis – <span class="price">ab 35 €</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Swarovski-Steine%20als%20Tooth%20Gem%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
-        </div>
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('tooth-2', this)">
-            <span>Gold-/Silberfiguren</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="tooth-2" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">Gold-/Silberfiguren</h3>
             <p class="service-desc">Exklusive Gold- oder Silberfiguren als Zahnschmuck für einen auffälligen und individuellen Look.</p>
-            <p>Preis – <span class="price">ab 70 €</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Gold-/Silberfiguren%20als%20Tooth%20Gem%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Preis – <span class="price">ab 70 €</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20Gold-/Silberfiguren%20als%20Tooth%20Gem%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
-        </div>
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('tooth-3', this)">
-            <span>Individuelle Designs</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="tooth-3" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">Individuelle Designs</h3>
             <p class="service-desc">Persönlich angepasste Zahnschmuck-Designs nach Wunsch – individuell, kreativ und einzigartig.</p>
-            <p>Preis – <span class="price">Preis auf Anfrage</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20ein%20individuelles%20Tooth%20Gem%20Design%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Preis – <span class="price">Preis auf Anfrage</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20ein%20individuelles%20Tooth%20Gem%20Design%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
+
         </div>
       </section>
 
       <section class="section">
         <h2 class="section-title">Zahnaufhellung (Bleaching)</h2>
+        <div class="service-grid">
 
-        <div class="card">
-          <button class="toggle-btn" onclick="toggleBox('bleach-1', this)">
-            <span>Bleaching</span>
-            <span class="icon">+</span>
-          </button>
-          <div id="bleach-1" class="toggle-content">
+          <div class="card">
+            <h3 class="service-name">Bleaching</h3>
             <p class="service-desc">Schonende Zahnaufhellung für ein frischeres, strahlenderes Lächeln. Der Preis richtet sich nach Dauer und gewünschter Aufhellung.</p>
-            <p>Preis – <span class="price">ab 70 €</span></p>
-            <div class="service-actions">
-              <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20ein%20Bleaching%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
-            </div>
+            <p class="service-price">Preis – <span class="price">ab 70 €</span></p>
+            <a class="btn" href="https://wa.me/4917682018696?text=Hallo,%20ich%20möchte%20ein%20Bleaching%20anfragen." target="_blank" rel="noopener noreferrer">Auswählen</a>
           </div>
+
         </div>
       </section>
 
@@ -648,19 +516,6 @@
   </div>
 
   <script>
-    function toggleBox(id, button) {
-      const box = document.getElementById(id);
-      const icon = button.querySelector(".icon");
-
-      if (box.style.display === "block") {
-        box.style.display = "none";
-        icon.textContent = "+";
-      } else {
-        box.style.display = "block";
-        icon.textContent = "−";
-      }
-    }
-
     function toggleFooter(id) {
       const content = document.getElementById(id);
       const allFooterContents = document.querySelectorAll(".footer-content");
