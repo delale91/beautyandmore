@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Delale – More Than Beauty</title>
 
   <style>
     :root {
-      --gold: #e6c27a;
-      --gold-strong: #f5d99f;
-      --white: #ffffff;
-      --pink-light: #fbe7ef;
-      --bg-dark: rgba(0, 0, 0, 0.55);
-      --bg-soft: rgba(0, 0, 0, 0.35);
+      --rose-1: #f4d7e2;
+      --rose-2: #e9bccd;
+      --rose-3: #d89db4;
+      --gold: #b8843f;
+      --gold-light: #d8b06d;
+      --brown: #5a3b34;
+      --brown-soft: #6e4c45;
+      --white: #fffafc;
+      --glass: rgba(255, 255, 255, 0.18);
+      --glass-strong: rgba(255, 255, 255, 0.28);
+      --shadow: 0 12px 35px rgba(95, 52, 67, 0.18);
     }
 
     * {
@@ -21,204 +26,273 @@
 
     html, body {
       margin: 0;
-      min-height: 100%;
+      padding: 0;
     }
 
     body {
       font-family: "Georgia", serif;
-      color: var(--white);
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      color: var(--brown);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.38) 0, rgba(255,255,255,0) 25%),
+        radial-gradient(circle at 85% 22%, rgba(255,240,220,0.35) 0, rgba(255,240,220,0) 20%),
+        radial-gradient(circle at 20% 80%, rgba(255,225,170,0.22) 0, rgba(255,225,170,0) 18%),
+        radial-gradient(circle at 80% 85%, rgba(255,255,255,0.25) 0, rgba(255,255,255,0) 22%),
+        linear-gradient(180deg, #efc8d8 0%, #e6b5c8 45%, #dca6bd 100%);
+      min-height: 100vh;
       position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      pointer-events: none;
+      z-index: 0;
     }
 
     body::before {
-      content: "";
-      position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.28);
-      pointer-events: none;
-      z-index: 0;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.35) 0 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,220,160,0.30) 0 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.28) 0 2px, transparent 2px);
+      background-size: 120px 120px, 180px 180px, 240px 240px;
+      background-position: 0 0, 40px 70px, 100px 140px;
+      opacity: 0.45;
+    }
+
+    body::after {
+      top: 0;
+      right: 0;
+      width: 280px;
+      height: 220px;
+      background:
+        radial-gradient(circle at 30% 70%, rgba(212,168,95,0.28), transparent 30%),
+        linear-gradient(135deg, rgba(212,168,95,0.22), transparent 60%);
+      filter: blur(8px);
+      opacity: 0.8;
     }
 
     .page {
       position: relative;
       z-index: 1;
-      max-width: 1100px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: 30px 20px 60px;
+      padding: 28px 18px 50px;
     }
 
     .hero {
       text-align: center;
-      margin: 20px 0 50px;
+      padding: 30px 20px 20px;
     }
 
-    .hero h1 {
+    .hero-top {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--brown-soft);
+      margin: 0 0 8px;
+      font-weight: 400;
+    }
+
+    .hero-brand {
+      font-size: clamp(3.4rem, 9vw, 6rem);
+      line-height: 0.95;
+      color: var(--gold);
       margin: 0;
-      font-size: clamp(2.4rem, 6vw, 3.4rem);
-      color: var(--gold-strong);
-      letter-spacing: 3px;
-      text-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 10px rgba(255,255,255,0.22);
     }
 
-    .hero h2 {
+    .hero-sub {
       margin: 10px 0 0;
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      color: var(--gold);
       font-style: italic;
-      color: var(--pink-light);
-      font-size: clamp(1.1rem, 3vw, 1.5rem);
-      font-weight: normal;
+      font-weight: 400;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 18px auto 0;
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--brown-soft);
     }
 
     .section {
-      margin-top: 45px;
+      margin-top: 28px;
     }
 
     .section-title {
-      margin-bottom: 14px;
-      font-size: clamp(1.5rem, 4vw, 2rem);
-      color: var(--white);
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+      text-align: center;
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      margin: 0 0 14px;
+      color: var(--brown);
+      font-weight: 500;
     }
 
     .card {
-      background: var(--bg-dark);
-      border-radius: 18px;
-      border: 2px solid var(--gold-strong);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(8px);
-      padding: 18px 22px;
-      margin-bottom: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0.12));
+      border: 1px solid rgba(255,255,255,0.36);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 14px;
+      margin-bottom: 16px;
     }
 
     .toggle-btn {
       width: 100%;
-      background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0));
       border: none;
+      background: rgba(255,255,255,0.10);
+      color: var(--brown);
+      border-radius: 18px;
       padding: 16px 18px;
-      color: var(--white);
-      font-size: 1.05rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 12px;
       cursor: pointer;
-      letter-spacing: 0.4px;
-      font-weight: bold;
-      text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-      border-radius: 12px;
-      transition: background 0.2s ease;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
     .toggle-btn:hover {
-      background: linear-gradient(90deg, rgba(255,255,255,0.14), rgba(255,255,255,0.03));
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.18);
     }
 
-    .toggle-btn span {
-      color: var(--gold-strong);
-      font-size: 1.2rem;
+    .toggle-btn .icon {
+      color: var(--gold);
+      font-size: 1.4rem;
+      line-height: 1;
       min-width: 24px;
-      text-align: right;
+      text-align: center;
     }
 
     .toggle-content {
       display: none;
-      margin-top: 14px;
-      font-size: 0.98rem;
-      line-height: 1.6;
-    }
-
-    .toggle-content p {
-      margin: 7px 0;
-    }
-
-    .price {
-      color: var(--gold-strong);
-      font-weight: bold;
-    }
-
-    .contact p {
-      margin: 8px 0;
+      padding: 14px 10px 6px;
+      color: var(--brown-soft);
+      line-height: 1.65;
       font-size: 1rem;
     }
 
+    .toggle-content p {
+      margin: 8px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed rgba(184, 132, 63, 0.20);
+    }
+
+    .toggle-content p:last-child {
+      border-bottom: none;
+    }
+
+    .price {
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    .contact-card {
+      text-align: center;
+      padding: 24px 16px 22px;
+    }
+
+    .contact-text {
+      margin: 0 0 18px;
+      font-size: 1.08rem;
+      color: var(--brown-soft);
+      line-height: 1.6;
+    }
+
     .btn-row {
-      margin-top: 18px;
       display: flex;
+      justify-content: center;
+      gap: 14px;
       flex-wrap: wrap;
-      gap: 10px;
     }
 
     .btn {
-      display: inline-block;
-      padding: 11px 22px;
-      border-radius: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-width: 180px;
+      padding: 13px 24px;
+      border-radius: 999px;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 0.95rem;
-      border: 2px solid var(--gold-strong);
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-      transition: transform 0.2s ease, opacity 0.2s ease;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--brown);
+      background: rgba(255, 255, 255, 0.24);
+      border: 1px solid rgba(255,255,255,0.42);
+      box-shadow:
+        0 8px 18px rgba(90, 59, 52, 0.10),
+        inset 0 1px 0 rgba(255,255,255,0.5);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: all 0.25s ease;
     }
 
     .btn:hover {
-      transform: translateY(-1px);
-      opacity: 0.95;
+      transform: translateY(-2px);
+      color: var(--gold);
+      border-color: rgba(184, 132, 63, 0.34);
+      background: rgba(255,255,255,0.34);
+      box-shadow:
+        0 14px 24px rgba(90, 59, 52, 0.12),
+        0 0 18px rgba(216,176,109,0.10);
     }
 
-    .instagram {
-      background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
-      color: white;
-    }
-
-    .whatsapp {
-      background: #25d366;
-      color: white;
+    .btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      flex-shrink: 0;
     }
 
     .site-footer {
-      margin-top: 60px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.22);
+      margin-top: 42px;
       text-align: center;
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.85);
+      font-size: 0.82rem;
+      color: var(--brown-soft);
+      padding-bottom: 20px;
     }
 
     .footer-links {
       display: flex;
-      justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
+      flex-wrap: wrap;
     }
 
     .footer-link {
       background: none;
       border: none;
-      color: var(--gold-strong);
-      font-size: 0.8rem;
-      cursor: pointer;
-      text-decoration: underline;
-      padding: 0;
       font-family: inherit;
-    }
-
-    .footer-link:hover {
-      opacity: 0.9;
+      font-size: 0.82rem;
+      color: var(--gold);
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 0;
     }
 
     .footer-content {
       display: none;
       max-width: 760px;
-      margin: 14px auto 0;
-      padding: 14px 16px;
-      background: var(--bg-soft);
-      border: 1px solid rgba(230, 194, 122, 0.45);
-      border-radius: 12px;
+      margin: 12px auto 0;
       text-align: left;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 16px;
+      padding: 14px 16px;
       line-height: 1.6;
+      box-shadow: 0 10px 24px rgba(90, 59, 52, 0.08);
     }
 
     .footer-content p {
@@ -226,52 +300,53 @@
     }
 
     .footer-note {
-      margin-top: 14px;
-      opacity: 0.8;
+      margin-top: 12px;
+      opacity: 0.85;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       .page {
-        padding: 22px 14px 40px;
+        padding: 20px 12px 36px;
+      }
+
+      .hero {
+        padding-top: 18px;
       }
 
       .card {
-        padding: 15px 16px;
+        padding: 12px;
+        border-radius: 20px;
       }
 
       .toggle-btn {
-        font-size: 1rem;
-        padding: 14px 15px;
-      }
-
-      .btn-row {
-        flex-direction: column;
+        padding: 14px 14px;
+        font-size: 0.98rem;
       }
 
       .btn {
-        text-align: center;
+        width: 100%;
+        max-width: 280px;
       }
     }
   </style>
 </head>
 <body>
-
   <div class="page">
 
     <header class="hero">
-      <h1>Delale</h1>
-      <h2>by More Than Beauty</h2>
+      <p class="hero-top">Hallo, ich bin</p>
+      <h1 class="hero-brand">Delale</h1>
+      <h2 class="hero-sub">by More Than Beauty</h2>
+      <p class="intro">Entdecke meine Beauty-Dienstleistungen in einem stilvollen, femininen Look – inspiriert von deinem Flyer.</p>
     </header>
 
     <main>
-
       <section class="section">
         <h2 class="section-title">Wimpernverlängerung</h2>
-
         <div class="card">
           <button class="toggle-btn" onclick="toggleBox('lash-tech', this)">
-            <span style="all: unset;">Techniken & Preise</span>
-            <span>+</span>
+            <span>Techniken & Preise</span>
+            <span class="icon">+</span>
           </button>
           <div id="lash-tech" class="toggle-content">
             <p>1:1 Technik – <span class="price">65 €</span></p>
@@ -283,11 +358,10 @@
 
       <section class="section">
         <h2 class="section-title">Permanent Make-up</h2>
-
         <div class="card">
           <button class="toggle-btn" onclick="toggleBox('pmu-tech', this)">
-            <span style="all: unset;">Techniken & Preise</span>
-            <span>+</span>
+            <span>Techniken & Preise</span>
+            <span class="icon">+</span>
           </button>
           <div id="pmu-tech" class="toggle-content">
             <p>Powder Brows – <span class="price">350 €</span></p>
@@ -303,11 +377,10 @@
 
       <section class="section">
         <h2 class="section-title">Tooth Gem (Zahnschmuck)</h2>
-
         <div class="card">
           <button class="toggle-btn" onclick="toggleBox('tooth-tech', this)">
-            <span style="all: unset;">Varianten & Preise</span>
-            <span>+</span>
+            <span>Varianten & Preise</span>
+            <span class="icon">+</span>
           </button>
           <div id="tooth-tech" class="toggle-content">
             <p>Swarovski-Steine – <span class="price">ab 35 €</span></p>
@@ -319,11 +392,10 @@
 
       <section class="section">
         <h2 class="section-title">Zahnaufhellung (Bleaching)</h2>
-
         <div class="card">
           <button class="toggle-btn" onclick="toggleBox('bleach-tech', this)">
-            <span style="all: unset;">Infos & Preise</span>
-            <span>+</span>
+            <span>Infos & Preise</span>
+            <span class="icon">+</span>
           </button>
           <div id="bleach-tech" class="toggle-content">
             <p>Behandlung – <span class="price">ab 70 €</span></p>
@@ -332,77 +404,75 @@
         </div>
       </section>
 
-      <section class="section contact">
+      <section class="section">
         <h2 class="section-title">Kontakt</h2>
-
-        <div class="card">
-          <p>WhatsApp / Telefon: <span class="price">0176 82018696</span></p>
-          <p>Instagram: <span class="price">@morethanbeautyu2025</span></p>
+        <div class="card contact-card">
+          <p class="contact-text">
+            Für deine persönliche Terminvereinbarung erreichst du mich direkt über WhatsApp oder Instagram.
+          </p>
 
           <div class="btn-row">
             <a
-              class="btn instagram"
-              href="https://instagram.com/morethanbeautyu2025"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
-
-            <a
-              class="btn whatsapp"
+              class="btn"
               href="https://wa.me/4917682018696"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="WhatsApp öffnen"
             >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.52 3.48A11.8 11.8 0 0 0 12.07 0C5.5 0 .16 5.33.16 11.91c0 2.1.55 4.15 1.6 5.96L0 24l6.29-1.65a11.87 11.87 0 0 0 5.78 1.48h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.24-6.16-3.47-8.44ZM12.08 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.73.98 1-3.64-.24-.38a9.84 9.84 0 0 1-1.51-5.26c0-5.44 4.43-9.87 9.88-9.87 2.64 0 5.12 1.03 6.98 2.89a9.8 9.8 0 0 1 2.88 6.98c0 5.44-4.43 9.87-9.86 9.87Zm5.42-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.48-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.48 0 1.45 1.07 2.86 1.22 3.06.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.71.22 1.35.19 1.86.11.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+              </svg>
               WhatsApp
+            </a>
+
+            <a
+              class="btn"
+              href="https://instagram.com/morethanbeautyu2025"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram öffnen"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7Zm0 2h10c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3Zm11.5 1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z"/>
+              </svg>
+              Instagram
             </a>
           </div>
         </div>
       </section>
-
     </main>
 
     <footer class="site-footer">
       <div class="footer-links">
-        <button class="footer-link" onclick="toggleFooter('datenschutz-box', this)">Datenschutz</button>
+        <button class="footer-link" onclick="toggleFooter('datenschutz-box')">Datenschutz</button>
         <span>•</span>
-        <button class="footer-link" onclick="toggleFooter('impressum-box', this)">Impressum</button>
+        <button class="footer-link" onclick="toggleFooter('impressum-box')">Impressum</button>
       </div>
 
       <div id="datenschutz-box" class="footer-content">
         <p><strong>Datenschutz</strong></p>
-        <p>Personenbezogene Daten werden ausschließlich zur Terminvereinbarung und zur Kommunikation mit Kundinnen und Kunden genutzt.</p>
+        <p>Personenbezogene Daten werden ausschließlich zur Terminvereinbarung und zur Kommunikation genutzt.</p>
         <p>Eine Weitergabe an Dritte erfolgt nicht, außer wenn dies gesetzlich vorgeschrieben ist.</p>
-        <p>Du kannst jederzeit Auskunft über deine gespeicherten Daten sowie deren Berichtigung oder Löschung verlangen.</p>
+        <p>Du kannst jederzeit Auskunft, Berichtigung oder Löschung deiner Daten verlangen.</p>
       </div>
 
       <div id="impressum-box" class="footer-content">
         <p><strong>Impressum</strong></p>
         <p><strong>Angaben gemäß § 5 TMG</strong></p>
-        <p>
-          Verantwortlich:<br>
-          Delale – More Than Beauty
-        </p>
-        <p>
-          Telefon: 0176 82018696<br>
-          Instagram: @morethanbeautyu2025
-        </p>
+        <p>Verantwortlich:<br>Delale – More Than Beauty</p>
+        <p>Telefon: 0176 82018696<br>Instagram: @morethanbeautyu2025</p>
         <p><strong>Kleinunternehmer gemäß § 19 UStG</strong></p>
         <p>Keine Gewähr für Vollständigkeit oder Aktualität der Inhalte.</p>
       </div>
 
-      <div class="footer-note">
-        © Delale – More Than Beauty
-      </div>
+      <div class="footer-note">© Delale – More Than Beauty</div>
     </footer>
-
   </div>
 
   <script>
     function toggleBox(id, button) {
       const box = document.getElementById(id);
-      const icon = button.querySelectorAll("span")[1];
+      const icon = button.querySelector(".icon");
 
       if (box.style.display === "block") {
         box.style.display = "none";
@@ -413,7 +483,7 @@
       }
     }
 
-    function toggleFooter(id, clickedButton) {
+    function toggleFooter(id) {
       const content = document.getElementById(id);
       const allFooterContents = document.querySelectorAll(".footer-content");
 
@@ -423,13 +493,8 @@
         }
       });
 
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
+      content.style.display = content.style.display === "block" ? "none" : "block";
     }
   </script>
-
 </body>
 </html>
