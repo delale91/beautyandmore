@@ -4,18 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Delale by More Than Beauty</title>
+
   <style>
     :root {
-      --rosa: #f3d7e1;
-      --rosa-dunkel: #fff7fa;
-      --gold: #c8a24d;
-      --gold-dunkel: #9e7b2f;
-      --schwarz: #111111;
+      --rosa: #f4c7d8;
+      --rosa-hell: #fbe3ec;
+      --rosa-soft: #fff7fa;
+      --gold: #c9a24d;
+      --gold-dunkel: #9c7427;
+      --schwarz: #171214;
+      --text: #3e2b30;
       --weiß: #ffffff;
-      --text: #2a1f22;
-      --karte: rgba(255, 255, 255, 0.92);
-      --shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
-      --radius: 22px;
     }
 
     * {
@@ -23,114 +22,117 @@
     }
 
     body {
-    margin: 0;
-    font-family: "Georgia", serif;
-    color: #2a1f22;
-
-    background:
-        radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.25), transparent 25%),
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.5), transparent 20%),
-        radial-gradient(circle at 30% 80%, rgba(255, 215, 0, 0.18), transparent 25%),
-        radial-gradient(circle at 90% 70%, rgba(255, 240, 245, 0.5), transparent 25%),
+      margin: 0;
+      font-family: "Georgia", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.22), transparent 25%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.45), transparent 20%),
+        radial-gradient(circle at 30% 80%, rgba(255, 215, 0, 0.16), transparent 25%),
+        radial-gradient(circle at 90% 70%, rgba(255, 240, 245, 0.55), transparent 25%),
         linear-gradient(135deg, #f4c7d8, #fbe3ec, #f6c9da);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
 
-    min-height: 100vh;
-      body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image:
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
         radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 2px),
-        radial-gradient(circle, rgba(255,215,0,0.7) 1px, transparent 2px);
-    background-size: 120px 120px, 180px 180px;
-    opacity: 0.5;
-    pointer-events: none;
-}
-}
+        radial-gradient(circle, rgba(255,215,0,0.65) 1px, transparent 2px);
+      background-size: 120px 120px, 180px 180px;
+      opacity: 0.45;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-    .topbar {
-      height: 8px;
-      background: linear-gradient(90deg, var(--schwarz), var(--gold), #f3d7e1, var(--gold), var(--schwarz));
+    .leaf-top,
+    .leaf-bottom {
+      position: fixed;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.75;
+    }
+
+    .leaf-top {
+      top: 0;
+      right: 0;
+      width: 220px;
+      height: 180px;
+    }
+
+    .leaf-bottom {
+      bottom: 0;
+      right: 0;
+      width: 240px;
+      height: 200px;
+      transform: rotate(8deg);
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
     }
 
     .hero {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 70px 22px 40px;
       text-align: center;
+      padding: 40px 20px 30px;
     }
 
     .hello {
-      font-size: 1.2rem;
-      color: #5f4b50;
       margin: 0 0 10px;
-      letter-spacing: 0.5px;
+      font-size: 1.25rem;
+      color: #5e444b;
     }
 
     .brand {
       margin: 0;
-      font-size: clamp(3rem, 8vw, 5.8rem);
+      font-size: clamp(3rem, 8vw, 5.5rem);
       line-height: 0.95;
+      color: var(--gold-dunkel);
       font-weight: 400;
-      color: var(--schwarz);
     }
 
-    .brand span {
+    .subbrand {
+      margin: 8px 0 0;
+      font-size: clamp(1.5rem, 4vw, 2.3rem);
       color: var(--gold-dunkel);
       font-style: italic;
     }
 
-    .subtitle {
-      margin: 10px 0 0;
-      font-size: clamp(1.2rem, 3.5vw, 2rem);
-      color: var(--gold-dunkel);
-      font-style: italic;
-    }
-
-    .hero-line {
-      width: 140px;
-      height: 2px;
-      margin: 24px auto 20px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-
-    .hero-text {
-      max-width: 720px;
-      margin: 0 auto;
+    .intro {
+      max-width: 700px;
+      margin: 22px auto 0;
       font-size: 1.05rem;
       line-height: 1.8;
-      color: #584348;
-    }
-
-    .section {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 10px 22px 70px;
+      color: #5a4147;
     }
 
     .section-title {
       text-align: center;
+      margin: 24px 0 26px;
       font-size: 2rem;
-      margin: 18px 0 34px;
-      color: var(--schwarz);
+      color: #4b3137;
     }
 
-    .section-title span {
-      color: var(--gold-dunkel);
-      font-style: italic;
-    }
-
-    .grid {
+    .services {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
+      gap: 20px;
     }
 
     .card {
-      background: var(--karte);
-      border: 1px solid rgba(200, 162, 77, 0.35);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(201, 162, 77, 0.35);
+      border-radius: 22px;
+      box-shadow: 0 10px 28px rgba(121, 76, 94, 0.10);
+      backdrop-filter: blur(6px);
       overflow: hidden;
     }
 
@@ -138,28 +140,28 @@
       width: 100%;
       border: none;
       background: transparent;
-      color: var(--schwarz);
-      padding: 22px 22px;
+      padding: 20px;
       font: inherit;
-      font-size: 1.2rem;
-      font-weight: 700;
+      font-size: 1.13rem;
+      font-weight: bold;
+      color: #593940;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       cursor: pointer;
+      text-align: left;
     }
 
     .card button:hover {
-      background: rgba(243, 215, 225, 0.28);
+      background: rgba(255,255,255,0.35);
     }
 
     .plus {
+      font-size: 1.5rem;
       color: var(--gold-dunkel);
-      font-size: 1.6rem;
-      line-height: 1;
       transition: transform 0.25s ease;
-      margin-left: 12px;
       flex-shrink: 0;
+      margin-left: 12px;
     }
 
     .card.active .plus {
@@ -170,57 +172,56 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease;
-      padding: 0 22px;
+      padding: 0 20px;
     }
 
     .content-inner {
-      padding: 0 0 22px;
+      padding: 0 0 18px;
     }
 
-    .service-row {
+    .row {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 16px;
-      padding: 12px 0;
+      gap: 14px;
+      padding: 11px 0;
       border-bottom: 1px solid rgba(0,0,0,0.08);
-      font-size: 1rem;
       line-height: 1.5;
     }
 
-    .service-row:last-child {
+    .row:last-child {
       border-bottom: none;
     }
 
     .price {
       color: var(--gold-dunkel);
-      font-weight: 700;
+      font-weight: bold;
       white-space: nowrap;
     }
 
     .note {
       margin-top: 14px;
-      padding: 13px 14px;
+      padding: 12px 14px;
       border-left: 3px solid var(--gold);
-      background: var(--rosa-hell);
+      background: var(--rosa-soft);
       border-radius: 12px;
-      color: #5c474b;
       font-size: 0.95rem;
+      color: #61464d;
       line-height: 1.6;
     }
 
     .contact {
       margin-top: 34px;
-      background: linear-gradient(135deg, rgba(17,17,17,0.96), rgba(40,31,35,0.94));
+      background: linear-gradient(135deg, rgba(18,14,16,0.96), rgba(45,31,36,0.96));
       border-radius: 28px;
-      padding: 34px 24px;
-      box-shadow: var(--shadow);
+      padding: 34px 22px;
       text-align: center;
-      color: white;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
     }
 
     .contact h3 {
       margin: 0 0 10px;
+      color: white;
       font-size: 2rem;
       font-weight: 400;
     }
@@ -231,28 +232,29 @@
     }
 
     .contact p {
-      margin: 0 auto 24px;
-      max-width: 680px;
+      max-width: 650px;
+      margin: 0 auto 22px;
       color: #eadfe3;
       line-height: 1.7;
     }
 
-    .button-wrap {
+    .buttons {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 14px;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
 
     .btn {
       display: inline-block;
+      min-width: 180px;
       padding: 14px 24px;
       border-radius: 999px;
       text-decoration: none;
-      font-weight: 700;
+      font-weight: bold;
       transition: transform 0.2s ease, opacity 0.2s ease;
-      min-width: 180px;
+      color: white;
     }
 
     .btn:hover {
@@ -260,79 +262,103 @@
       opacity: 0.96;
     }
 
-    .btn-instagram {
+    .instagram {
       background: linear-gradient(90deg, #833ab4, #c13584, #fd1d1d, #fcb045);
-      color: white;
     }
 
-    .btn-whatsapp {
+    .whatsapp {
       background: linear-gradient(90deg, #1fa855, #25d366);
-      color: white;
     }
 
     .phone {
-      font-size: 1.1rem;
       color: var(--gold);
-      font-weight: 700;
+      font-size: 1.1rem;
+      font-weight: bold;
     }
 
     .footer {
       text-align: center;
-      padding: 0 22px 40px;
-      color: #5b474c;
-      font-size: 0.98rem;
+      margin-top: 22px;
+      color: #5d4349;
+      font-size: 1rem;
     }
 
     @media (max-width: 820px) {
-      .grid {
+      .services {
         grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 560px) {
-      .hero {
-        padding-top: 50px;
-      }
-
-      .card button {
-        font-size: 1.08rem;
-        padding: 18px;
-      }
-
-      .content {
-        padding: 0 18px;
-      }
-
-      .service-row {
+      .row {
         flex-direction: column;
         gap: 4px;
       }
 
       .btn {
         width: 100%;
-        max-width: 320px;
+        max-width: 300px;
+      }
+
+      .leaf-top {
+        width: 160px;
+        height: 130px;
+      }
+
+      .leaf-bottom {
+        width: 170px;
+        height: 140px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="topbar"></div>
 
-  <section class="hero">
-    <p class="hello">Hallo, ich bin</p>
-    <h1 class="brand">Delale <span>by</span></h1>
-    <p class="subtitle">More Than Beauty</p>
-    <div class="hero-line"></div>
-    <p class="hero-text">
-      Dein Beauty Studio für elegante Behandlungen, sichtbare Ergebnisse und ein rundum
-      luxuriöses Wohlfühl-Erlebnis.
-    </p>
-  </section>
+  <!-- Goldene Blätter oben -->
+  <svg class="leaf-top" viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.95">
+      <path d="M210 10 C180 20, 160 40, 150 70 C180 60, 200 40, 210 10Z" fill="#d9b15f"/>
+      <path d="M180 18 C155 28, 138 45, 130 70 C155 60, 173 42, 180 18Z" fill="#efcf8b"/>
+      <path d="M150 24 C128 32, 112 49, 105 72 C127 63, 143 47, 150 24Z" fill="#c89b46"/>
+      <path d="M122 32 C102 40, 88 56, 82 78 C102 69, 116 53, 122 32Z" fill="#efcf8b"/>
+      <path d="M195 58 C170 65, 150 82, 142 105 C168 98, 186 82, 195 58Z" fill="#c89b46"/>
+      <path d="M166 70 C145 76, 128 91, 120 112 C141 106, 158 91, 166 70Z" fill="#efcf8b"/>
+      <path d="M138 84 C120 90, 107 104, 100 122 C118 117, 131 104, 138 84Z" fill="#d9b15f"/>
+      <path d="M78 20 C92 48, 100 74, 102 102" stroke="#b98a31" stroke-width="2"/>
+      <path d="M102 102 C128 92, 152 78, 176 60" stroke="#b98a31" stroke-width="2"/>
+      <path d="M102 102 C124 111, 146 120, 168 132" stroke="#b98a31" stroke-width="2"/>
+    </g>
+  </svg>
 
-  <section class="section">
-    <h2 class="section-title">Meine <span>Dienstleistungen</span></h2>
+  <!-- Goldene Blätter unten -->
+  <svg class="leaf-bottom" viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.95">
+      <path d="M230 150 C205 135, 180 130, 152 136 C176 156, 202 162, 230 150Z" fill="#d9b15f"/>
+      <path d="M205 126 C182 114, 160 110, 135 114 C156 132, 178 138, 205 126Z" fill="#efcf8b"/>
+      <path d="M178 108 C156 98, 138 95, 116 100 C134 116, 154 122, 178 108Z" fill="#c89b46"/>
+      <path d="M150 92 C132 84, 116 82, 96 86 C111 101, 128 106, 150 92Z" fill="#efcf8b"/>
+      <path d="M220 88 C198 98, 180 116, 170 140 C194 132, 212 114, 220 88Z" fill="#c89b46"/>
+      <path d="M192 72 C172 82, 156 100, 146 122 C168 114, 183 97, 192 72Z" fill="#efcf8b"/>
+      <path d="M164 58 C146 67, 132 82, 122 102 C142 96, 156 81, 164 58Z" fill="#d9b15f"/>
+      <path d="M84 170 C110 150, 128 130, 140 105" stroke="#b98a31" stroke-width="2"/>
+      <path d="M140 105 C162 116, 183 130, 205 146" stroke="#b98a31" stroke-width="2"/>
+      <path d="M140 105 C151 84, 162 67, 177 52" stroke="#b98a31" stroke-width="2"/>
+    </g>
+  </svg>
 
-    <div class="grid">
+  <div class="page">
+    <section class="hero">
+      <p class="hello">Hallo, ich bin</p>
+      <h1 class="brand">Delale</h1>
+      <p class="subbrand">by More Than Beauty</p>
+      <p class="intro">
+        Dein Beauty Studio für elegante Behandlungen, luxuriöse Ergebnisse und einen stilvollen Auftritt.
+      </p>
+    </section>
+
+    <h2 class="section-title">Meine Dienstleistungen</h2>
+
+    <section class="services">
       <div class="card">
         <button onclick="toggleCard(this)">
           <span>Wimpernverlängerung</span>
@@ -340,9 +366,9 @@
         </button>
         <div class="content">
           <div class="content-inner">
-            <div class="service-row"><span>1:1 Technik</span><span class="price">65 €</span></div>
-            <div class="service-row"><span>Volumentechnik</span><span class="price">80 €</span></div>
-            <div class="service-row"><span>Megavolumen</span><span class="price">100 €</span></div>
+            <div class="row"><span>1:1 Technik</span><span class="price">65 €</span></div>
+            <div class="row"><span>Volumentechnik</span><span class="price">80 €</span></div>
+            <div class="row"><span>Megavolumen</span><span class="price">100 €</span></div>
             <div class="note">Das Auffüllen richtet sich nach dem Zeitpunkt der letzten Behandlung.</div>
           </div>
         </div>
@@ -355,13 +381,13 @@
         </button>
         <div class="content">
           <div class="content-inner">
-            <div class="service-row"><span>Powder Brows</span><span class="price">350 €</span></div>
-            <div class="service-row"><span>Ombre Brows</span><span class="price">350 €</span></div>
-            <div class="service-row"><span>Ober- oder Unterlid jeweils</span><span class="price">200 €</span></div>
-            <div class="service-row"><span>Wimpernkranzverdichtung</span><span class="price">150 €</span></div>
-            <div class="service-row"><span>Aquarellips</span><span class="price">350 €</span></div>
-            <div class="service-row"><span>Powderlips</span><span class="price">350 €</span></div>
-            <div class="service-row"><span>Kontur</span><span class="price">150 €</span></div>
+            <div class="row"><span>Powder Brows</span><span class="price">350 €</span></div>
+            <div class="row"><span>Ombre Brows</span><span class="price">350 €</span></div>
+            <div class="row"><span>Ober- oder Unterlid jeweils</span><span class="price">200 €</span></div>
+            <div class="row"><span>Wimpernkranzverdichtung</span><span class="price">150 €</span></div>
+            <div class="row"><span>Aquarellips</span><span class="price">350 €</span></div>
+            <div class="row"><span>Powderlips</span><span class="price">350 €</span></div>
+            <div class="row"><span>Kontur</span><span class="price">150 €</span></div>
             <div class="note">Nachbehandlungskosten sind abhängig vom Heilungsprozess und von der zu pigmentierenden Stelle.</div>
           </div>
         </div>
@@ -374,9 +400,9 @@
         </button>
         <div class="content">
           <div class="content-inner">
-            <div class="service-row"><span>Echte Swarovski-Steine</span><span class="price">ab 35 €</span></div>
-            <div class="service-row"><span>Gold- oder Silberfiguren</span><span class="price">ab 70 €</span></div>
-            <div class="service-row"><span>Mehrere Steine & individuelle Designs</span><span class="price">auf Anfrage</span></div>
+            <div class="row"><span>Echte Swarovski-Steine</span><span class="price">ab 35 €</span></div>
+            <div class="row"><span>Gold- oder Silberfiguren</span><span class="price">ab 70 €</span></div>
+            <div class="row"><span>Mehrere Steine & individuelle Designs</span><span class="price">auf Anfrage</span></div>
           </div>
         </div>
       </div>
@@ -388,7 +414,7 @@
         </button>
         <div class="content">
           <div class="content-inner">
-            <div class="service-row"><span>Bleaching</span><span class="price">ab 70 €</span></div>
+            <div class="row"><span>Bleaching</span><span class="price">ab 70 €</span></div>
             <div class="note">Preis abhängig von Dauer der Behandlung, gewünschter Farbaufhellung und Anzahl der Sitzungen.</div>
           </div>
         </div>
@@ -401,7 +427,7 @@
         </button>
         <div class="content">
           <div class="content-inner">
-            <div class="service-row"><span>Tiefenreinigung & Glow Behandlung</span><span class="price">auf Anfrage</span></div>
+            <div class="row"><span>Tiefenreinigung & Glow Behandlung</span><span class="price">auf Anfrage</span></div>
           </div>
         </div>
       </div>
@@ -413,27 +439,23 @@
         </button>
         <div class="content">
           <div class="content-inner">
-            <div class="service-row"><span>Hautverfeinerung & Hauterneuerung</span><span class="price">auf Anfrage</span></div>
+            <div class="row"><span>Hautverfeinerung & Hauterneuerung</span><span class="price">auf Anfrage</span></div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="contact">
+    <section class="contact">
       <h3>Exklusive <span>Terminvereinbarung</span></h3>
-      <p>
-        Schreibe mir gerne für deine individuelle Beratung und deinen Wunschtermin.
-      </p>
-      <div class="button-wrap">
-        <a class="btn btn-instagram" href="https://instagram.com/morethanbeautyu2025" target="_blank">Instagram</a>
-        <a class="btn btn-whatsapp" href="https://wa.me/4917682018696" target="_blank">WhatsApp</a>
+      <p>Schreibe mir gerne für deine individuelle Beratung und deinen Wunschtermin.</p>
+      <div class="buttons">
+        <a class="btn instagram" href="https://instagram.com/morethanbeautyu2025" target="_blank">Instagram</a>
+        <a class="btn whatsapp" href="https://wa.me/4917682018696" target="_blank">WhatsApp</a>
       </div>
       <div class="phone">0176 82018696</div>
-    </div>
-  </section>
+    </section>
 
-  <div class="footer">
-    Delale by More Than Beauty
+    <div class="footer">Delale by More Than Beauty</div>
   </div>
 
   <script>
