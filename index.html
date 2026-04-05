@@ -7,35 +7,21 @@
 
 <style>
 :root {
-  --pink-light: #fbe7ef;
-  --pink: #e8a4c9;
-  --pink-dark: #b46486;
   --gold: #d8b26e;
   --white: #ffffff;
+  --pink-light: #fbe7ef;
 }
 
-/* BACKGROUND – ROSA MARMOR */
+/* NEUER HINTERGRUND – DEIN BILD */
 body {
   margin: 0;
   font-family: "Georgia", serif;
   color: var(--white);
 
-  background: url('https://i.imgur.com/8iZpP7G.jpeg');
+  background-image: url('background.jpg'); /* <-- HIER DEIN BILD */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
-
-/* GOLD OVERLAY */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(
-      rgba(0,0,0,0.25),
-      rgba(0,0,0,0.25)
-    );
-  pointer-events: none;
 }
 
 /* CONTAINER */
@@ -55,7 +41,7 @@ body::before {
   font-size: 3.8rem;
   color: var(--gold);
   letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(255,255,255,0.4);
+  text-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
 .hero h2 {
@@ -70,17 +56,15 @@ body::before {
   margin: 30px 0;
   font-size: 2rem;
   color: var(--white);
-  text-shadow: 0 0 8px rgba(255,255,255,0.2);
 }
 
 /* BOXEN */
 .card {
-  background: rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.35);
   margin: 15px 0;
   border-radius: 15px;
   border: 1px solid rgba(216,178,110,0.5);
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
 }
 
 .card button {
@@ -93,7 +77,6 @@ body::before {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  letter-spacing: 1px;
 }
 
 .card button span {
@@ -125,7 +108,6 @@ body::before {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .instagram {
