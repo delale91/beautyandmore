@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light only" />
 <meta name="supported-color-schemes" content="light" />
-<meta name="theme-color" content="#fdf3ec" />
+<meta name="theme-color" content="#fde4ec" />
 <title>Delale – More Than Beauty | Beauty Studio Mosbach</title>
 <meta name="description" content="Delale – More Than Beauty in Mosbach. Wimpernverlängerung, Permanent Make-up, Aquafacial, Microneedling, Zahnbleaching & Zahnschmuck. Jetzt Termin per WhatsApp." />
 
@@ -17,18 +17,18 @@
 <style>
   :root {
     color-scheme: light only;
-    --bg: #fdf3ec;
-    --bg-deep: #f5d9c9;
-    --rose: #d88aa3;
-    --rose-deep: #c46b8a;
-    --ink: #2a1a16;
-    --ink-soft: #5a3a32;
+    --bg: #fde4ec;
+    --bg-deep: #fbd0de;
+    --rose: #e88aa7;
+    --rose-deep: #d06184;
+    --ink: #2a1a20;
+    --ink-soft: #5a3a44;
     --gold: #a06820;
     --gold-bright: #c89240;
     --gold-deep: #6e4814;
-    --cream: #fffaf5;
+    --cream: #fff5f8;
     --line: rgba(160, 104, 32, 0.35);
-    --shadow-soft: 0 30px 60px -20px rgba(80, 40, 50, 0.25);
+    --shadow-soft: 0 30px 60px -20px rgba(180, 80, 110, 0.25);
     --whatsapp: #25d366;
   }
 
@@ -37,8 +37,8 @@
 
   body {
     font-family: 'Jost', sans-serif;
-    background: #fdf3ec;
-    background-color: #fdf3ec;
+    background: #fde4ec;
+    background-color: #fde4ec;
     color: var(--ink);
     font-weight: 300;
     line-height: 1.6;
@@ -47,7 +47,7 @@
   }
 
   html {
-    background: #fdf3ec;
+    background: #fde4ec;
   }
 
   /* Soft background gradients */
@@ -58,8 +58,8 @@
     pointer-events: none;
     z-index: -1;
     background:
-      radial-gradient(circle at 15% 20%, rgba(245, 217, 201, 0.5) 0%, transparent 50%),
-      radial-gradient(circle at 85% 85%, rgba(232, 195, 154, 0.4) 0%, transparent 50%);
+      radial-gradient(circle at 15% 20%, rgba(251, 208, 222, 0.5) 0%, transparent 50%),
+      radial-gradient(circle at 85% 85%, rgba(232, 138, 167, 0.35) 0%, transparent 50%);
   }
 
   /* ===== Navigation ===== */
@@ -155,15 +155,15 @@
 
   /* ===== Hero ===== */
   .hero {
-    min-height: 100vh;
-    padding: 8rem 3rem 4rem;
+    min-height: 70vh;
+    padding: 5rem 3rem 4rem;
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 4rem;
     align-items: center;
     position: relative;
     overflow: hidden;
-    background: #fdf3ec;
+    background: #fde4ec;
   }
 
   .hero::before {
@@ -305,26 +305,42 @@
     width: 100%;
     height: 100%;
     background:
-      radial-gradient(circle at 30% 40%, rgba(255, 250, 240, 0.6) 0%, transparent 50%),
-      radial-gradient(circle at 70% 70%, rgba(200, 146, 64, 0.25) 0%, transparent 50%),
-      linear-gradient(135deg, #fef0e4 0%, #f5dac3 50%, #e8c39a 100%);
+      radial-gradient(circle at 30% 40%, rgba(255, 240, 245, 0.5) 0%, transparent 50%),
+      linear-gradient(135deg, #fbd0de 0%, #f5b6c9 50%, #e88aa7 100%);
     border-radius: 4px;
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .hero-image::after {
-    content: 'D';
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+  .image-placeholder {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.85);
     font-family: 'Cormorant Garamond', serif;
+  }
+
+  .placeholder-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+  }
+
+  .placeholder-text {
+    font-size: 1.6rem;
     font-style: italic;
-    font-size: 22rem;
-    color: rgba(160, 104, 32, 0.25);
-    font-weight: 300;
-    line-height: 1;
+    line-height: 1.3;
+  }
+
+  .placeholder-text span {
+    font-size: 0.8rem;
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-style: normal;
+    opacity: 0.85;
   }
 
   .hero-image-deco {
@@ -439,11 +455,11 @@
 
   /* ===== About Quote ===== */
   .about {
-    padding: 7rem 3rem;
+    padding: 6rem 3rem 4rem;
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
-    background: #fdf3ec;
+    background: transparent;
   }
 
   .about-quote {
@@ -470,7 +486,7 @@
 
   /* ===== Services ===== */
   .services {
-    padding: 7rem 3rem;
+    padding: 5rem 3rem 7rem;
     background: var(--bg-deep);
     position: relative;
   }
@@ -650,18 +666,18 @@
 
   /* ===== Stats Strip ===== */
   .stats-strip {
-    background: var(--ink);
+    background: var(--rose);
     padding: 3rem 3rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    color: var(--cream);
+    color: #fff5f8;
   }
 
   .stat {
     text-align: center;
     padding: 0.5rem 1rem;
-    border-right: 1px solid rgba(216, 176, 109, 0.2);
+    border-right: 1px solid rgba(255, 245, 248, 0.3);
   }
 
   .stat:last-child { border-right: none; }
@@ -670,7 +686,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.8rem;
     font-weight: 500;
-    color: var(--gold-bright);
+    color: #fff5f8;
     line-height: 1;
     margin-bottom: 0.5rem;
   }
@@ -679,14 +695,14 @@
     font-size: 0.72rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    opacity: 0.75;
+    opacity: 0.9;
   }
 
   /* ===== Contact ===== */
   .contact {
     padding: 7rem 3rem;
     text-align: center;
-    background: var(--cream);
+    background: #fde4ec;
   }
 
   .contact-content {
@@ -707,7 +723,7 @@
     border: 1px solid var(--line);
     border-radius: 2px;
     transition: all 0.3s ease;
-    background: var(--bg);
+    background: #fff5f8;
   }
 
   .contact-block:hover {
@@ -771,8 +787,8 @@
 
   /* ===== Footer ===== */
   footer {
-    background: var(--ink);
-    color: var(--cream);
+    background: var(--rose-deep);
+    color: #fff5f8;
     padding: 4rem 3rem 2rem;
   }
 
@@ -785,15 +801,15 @@
   }
 
   .footer-brand .logo {
-    color: var(--gold-bright);
+    color: #fff5f8;
     font-size: 2.2rem;
   }
 
-  .footer-brand .logo-sub { color: rgba(255, 250, 247, 0.6); }
+  .footer-brand .logo-sub { color: rgba(255, 245, 248, 0.7); }
 
   .footer-brand p {
     margin-top: 1rem;
-    opacity: 0.7;
+    opacity: 0.85;
     line-height: 1.7;
     max-width: 400px;
     font-size: 0.95rem;
@@ -802,7 +818,7 @@
   footer h5 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.3rem;
-    color: var(--gold-bright);
+    color: #fff5f8;
     margin-bottom: 1.3rem;
     font-style: italic;
     font-weight: 500;
@@ -810,10 +826,10 @@
 
   .footer-list { list-style: none; }
 
-  .footer-list li { padding: 0.35rem 0; opacity: 0.8; font-size: 0.92rem; }
+  .footer-list li { padding: 0.35rem 0; opacity: 0.9; font-size: 0.92rem; }
 
   .footer-list a {
-    color: var(--cream);
+    color: #fff5f8;
     text-decoration: none;
     transition: color 0.3s ease;
     background: none;
@@ -824,14 +840,14 @@
     padding: 0;
   }
 
-  .footer-list a:hover { color: var(--gold-bright); }
+  .footer-list a:hover { color: #fff; text-decoration: underline; }
 
   .footer-bottom {
-    border-top: 1px solid rgba(216, 176, 109, 0.2);
+    border-top: 1px solid rgba(255, 245, 248, 0.25);
     padding-top: 2rem;
     text-align: center;
     font-size: 0.82rem;
-    opacity: 0.5;
+    opacity: 0.7;
     letter-spacing: 0.1em;
   }
 
@@ -971,18 +987,17 @@
   </symbol>
 </svg>
 
-<!-- Navigation -->
+<!-- Navigation entfernt -->
 
-<nav id="navbar">
-  <div class="logo">Delale<span class="logo-sub">More Than Beauty</span></div>
-  <ul class="nav-links">
-    <li><a href="#wimpern">Wimpern</a></li>
-    <li><a href="#pmu">Permanent Make-up</a></li>
-    <li><a href="#skincare">Skincare</a></li>
-    <li><a href="#zahn">Zahn</a></li>
-    <li><a href="#kontakt">Kontakt</a></li>
-  </ul>
-</nav>
+<!-- Willkommen Quote -->
+
+<section class="about">
+  <div class="section-eyebrow">Willkommen</div>
+  <p class="about-quote">
+    „Schönheit ist <em>kein Luxus</em> — sie ist ein Moment der Zeit, den du dir selbst schenkst."
+  </p>
+  <div class="signature">— Delale</div>
+</section>
 
 <!-- Hero -->
 
@@ -996,46 +1011,23 @@
       Schön, dass du da bist – hier findest du meine Behandlungen und Preise auf einen Blick. Lass dich verwöhnen mit ausdrucksstarken Wimpern, perfektem Permanent Make-up, glatter Haut und einem strahlenden Lächeln.
     </p>
     <div class="hero-cta-group">
-      <a href="https://wa.me/4917682018696" class="btn-primary" target="_blank" rel="noopener">
-        <svg width="14" height="14"><use href="#wa-icon"/></svg>
-        Termin per WhatsApp
-      </a>
-      <a href="#wimpern" class="btn-secondary">Behandlungen entdecken →</a>
+      <a href="#wimpern" class="btn-primary">Behandlungen entdecken →</a>
     </div>
   </div>
   <div class="hero-visual">
     <div class="hero-image-deco"></div>
-    <div class="hero-image"></div>
-    <div class="hero-badge">
-      <div class="hero-badge-stars">★★★★★</div>
-      <div class="hero-badge-text">
-        <strong>Mosbach</strong>
-        Premium Beauty
+    <div class="hero-image">
+      <div class="image-placeholder">
+        <div class="placeholder-icon">📷</div>
+        <div class="placeholder-text">Studio-Foto<br /><span>hier einfügen</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- About Quote -->
-
-<section class="about">
-  <div class="section-eyebrow">Willkommen</div>
-  <p class="about-quote">
-    „Schönheit ist <em>kein Luxus</em> — sie ist ein Moment der Zeit, den du dir selbst schenkst."
-  </p>
-  <div class="signature">— Delale</div>
-</section>
-
 <!-- Services -->
 
 <section class="services">
-  <div class="section-header">
-    <div class="section-eyebrow">Behandlungen &amp; Preise</div>
-    <h2 class="section-title">Alles für deine <em>Schönheit</em></h2>
-    <p class="section-sub">
-      Hochwertige Behandlungen mit Liebe zum Detail — wähle deinen persönlichen Wohlfühlmoment.
-    </p>
-  </div>
 
   <!-- Wimpernverlängerung -->
 
@@ -1060,7 +1052,7 @@
       <li><span class="price-name">Auffüllen nach 4 Wochen</span><span class="price-value">59 €</span></li>
     </ul>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20die%201:1%20Technik%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1074,7 +1066,7 @@
       <li><span class="price-name">Auffüllen nach 4 Wochen</span><span class="price-value">69 €</span></li>
     </ul>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Softvolumen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1088,7 +1080,7 @@
       <li><span class="price-name">Auffüllen nach 4 Wochen</span><span class="price-value">79 €</span></li>
     </ul>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Volumen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1102,7 +1094,7 @@
       <li><span class="price-name">Auffüllen nach 4 Wochen</span><span class="price-value">89 €</span></li>
     </ul>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Megavolumen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1129,10 +1121,10 @@
     <p class="service-card-desc">Dauerhafte Lippenpigmentierung für mehr Farbe, Frische und eine schöne Lippenkontur.</p>
     <div class="single-price">
       <span class="single-price-label">Preis</span>
-      <span class="single-price-value">250 €</span>
+      <span class="single-price-value">350 €</span>
     </div>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Permanent%20Make-up%20Lippen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1141,10 +1133,10 @@
     <p class="service-card-desc">Für dauerhaft definierte, gepflegte und natürlich schöne Augenbrauen.</p>
     <div class="single-price">
       <span class="single-price-label">Preis</span>
-      <span class="single-price-value">250 €</span>
+      <span class="single-price-value">350 €</span>
     </div>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Permanent%20Make-up%20Augenbrauen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1156,7 +1148,7 @@
       <span class="single-price-value">200 €</span>
     </div>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Permanent%20Make-up%20Eyeliner%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1168,7 +1160,7 @@
       <span class="single-price-value">65 €</span>
     </div>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20eine%20Permanent%20Make-up%20Nachbehandlung%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1198,7 +1190,7 @@
       <span class="single-price-value">auf Anfrage</span>
     </div>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20ein%20Aquafacial%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1210,7 +1202,7 @@
       <span class="single-price-value">auf Anfrage</span>
     </div>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Microneedling%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1240,7 +1232,7 @@
       <span class="single-price-value">ab 70 €</span>
     </div>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Zahnbleaching%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1252,7 +1244,7 @@
       <span class="single-price-value">ab 35 €</span>
     </div>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Swarovski-Zahnschmuck%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1264,7 +1256,7 @@
       <span class="single-price-value">ab 70 €</span>
     </div>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Gold-%20oder%20Silber-Zahnschmuck%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1276,7 +1268,7 @@
       <span class="single-price-value">auf Anfrage</span>
     </div>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20individuellen%20Zahnschmuck%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1306,7 +1298,7 @@
       <span class="single-price-value">10 €</span>
     </div>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Abschminken%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1318,7 +1310,7 @@
       <span class="single-price-value">15 €</span>
     </div>
     <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Wimpern%20entfernen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Auswählen
+      <svg><use href="#wa-icon"/></svg> Buchen
     </a>
   </div>
 
@@ -1327,27 +1319,6 @@
 
   </div>
 
-</section>
-
-<!-- Stats Strip -->
-
-<section class="stats-strip">
-  <div class="stat">
-    <div class="stat-number">5+</div>
-    <div class="stat-label">Service-Bereiche</div>
-  </div>
-  <div class="stat">
-    <div class="stat-number">20+</div>
-    <div class="stat-label">Behandlungen</div>
-  </div>
-  <div class="stat">
-    <div class="stat-number">100%</div>
-    <div class="stat-label">Hingabe</div>
-  </div>
-  <div class="stat">
-    <div class="stat-number">★★★★★</div>
-    <div class="stat-label">Premium Service</div>
-  </div>
 </section>
 
 <!-- Contact -->
@@ -1364,8 +1335,9 @@
 <div class="contact-info">
   <div class="contact-block">
     <h4>Standort</h4>
-    <p>📍 <strong>Mosbach</strong><br /><br />
-    <a href="https://www.google.com/maps?q=Mosbach" target="_blank" rel="noopener">Standort auf Google Maps öffnen</a></p>
+    <p>📍 <strong>Heidelbergerstraße 28</strong><br />
+    74821 Mosbach<br /><br />
+    <a href="https://www.google.com/maps?q=Heidelbergerstra%C3%9Fe+28,+74821+Mosbach" target="_blank" rel="noopener">Route auf Google Maps öffnen</a></p>
   </div>
   <div class="contact-block">
     <h4>Erreichbarkeit</h4>
@@ -1450,13 +1422,6 @@
 </div>
 
 <script>
-  // Navbar scroll
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) navbar.classList.add('scrolled');
-    else navbar.classList.remove('scrolled');
-  });
-
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]:not([onclick])').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
