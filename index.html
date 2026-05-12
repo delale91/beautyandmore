@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="de">
 <head>
 <meta charset="UTF-8" />
@@ -7,1451 +6,1123 @@
 <meta name="color-scheme" content="light only" />
 <meta name="supported-color-schemes" content="light" />
 <meta name="theme-color" content="#fbd6e1" />
+
 <title>Delale – More Than Beauty | Beauty Studio Mosbach</title>
-<meta name="description" content="Delale – More Than Beauty in Mosbach. Wimpernverlängerung, Permanent Make-up, Aquafacial, Microneedling, Zahnbleaching & Zahnschmuck. Jetzt Termin per WhatsApp." />
+<meta name="description" content="Delale – More Than Beauty in Mosbach. UV Wimpernverlängerung, Permanent Make-up, Aquafacial, Microneedling, Zahnbleaching & Zahnschmuck. Jetzt Termin per WhatsApp." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
 <style>
-  :root {
-    color-scheme: light only;
-    --bg: #fbd6e1;
-    --bg-deep: #f5b8ca;
-    --rose: #e88aa7;
-    --rose-deep: #d06184;
-    --ink: #2a1a20;
-    --ink-soft: #5a3a44;
-    --gold: #a06820;
-    --gold-bright: #c89240;
-    --gold-deep: #6e4814;
-    --cream: #fff5f8;
-    --line: rgba(160, 104, 32, 0.35);
-    --shadow-soft: 0 30px 60px -20px rgba(180, 80, 110, 0.25);
-    --whatsapp: #25d366;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Jost', sans-serif;
-    background: #fbd6e1;
-    background-color: #fbd6e1;
-    color: var(--ink);
-    font-weight: 300;
-    line-height: 1.6;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  html {
-    background: #fbd6e1;
-  }
-
-  /* Hintergrund einheitlich rosa */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: -1;
-    background: #fbd6e1;
-  }
-
-  /* ===== Navigation ===== */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    padding: 1.3rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    background: rgba(253, 246, 241, 0.85);
-    border-bottom: 1px solid var(--line);
-    transition: padding 0.3s ease;
-  }
-
-  nav.scrolled { padding: 0.9rem 3rem; }
-
-  .logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.7rem;
-    font-style: italic;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    color: var(--gold);
-    line-height: 1;
-  }
-
-  .logo-sub {
-    display: block;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.6rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    font-style: normal;
-    margin-top: 2px;
-    font-weight: 400;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    color: var(--ink-soft);
-    text-decoration: none;
-    font-size: 0.78rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    font-weight: 400;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-
-  .nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -6px; left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--gold);
-    transition: width 0.4s ease;
-  }
-
-  .nav-links a:hover { color: var(--gold); }
-  .nav-links a:hover::after { width: 100%; }
-
-  .nav-cta {
-    padding: 0.7rem 1.4rem;
-    background: var(--gold);
-    color: var(--cream);
-    text-decoration: none;
-    font-size: 0.75rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    border: 1px solid var(--gold);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .nav-cta:hover {
-    background: var(--gold-deep);
-    border-color: var(--gold-deep);
-  }
-
-  /* ===== Hero ===== */
-  .hero {
-    min-height: 70vh;
-    padding: 5rem 3rem 4rem;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    background: #fbd6e1;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 10%; right: -15%;
-    width: 700px; height: 700px;
-    background: radial-gradient(circle, rgba(216, 176, 109, 0.18) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-  }
-
-  .hero-text { position: relative; z-index: 2; }
-
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 0.72rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--gold-deep);
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.2s forwards;
-  }
-
-  .eyebrow::before {
-    content: '';
-    width: 40px;
-    height: 1px;
-    background: var(--gold);
-  }
-
-  .hero-greeting {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 1.6rem;
-    color: var(--ink-soft);
-    margin-bottom: 0.3rem;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.3s forwards;
-  }
-
-  h1.hero-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(4rem, 9vw, 7rem);
-    font-weight: 400;
-    line-height: 0.95;
-    letter-spacing: 0.02em;
-    color: var(--gold);
-    margin-bottom: 0.4rem;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.4s forwards;
-    text-shadow: 0 2px 20px rgba(216, 176, 109, 0.2);
-  }
-
-  .hero-tagline {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-    color: var(--gold);
-    margin-bottom: 2rem;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.5s forwards;
-  }
-
-  .hero-sub {
-    font-size: 1.1rem;
-    color: var(--ink-soft);
-    max-width: 480px;
-    margin-bottom: 2.5rem;
-    line-height: 1.7;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.6s forwards;
-  }
-
-  .hero-cta-group {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.8s forwards;
-  }
-
-  .btn-primary {
-    padding: 1.1rem 2.2rem;
-    background: var(--ink);
-    color: var(--cream);
-    text-decoration: none;
-    font-size: 0.82rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: all 0.4s ease;
-    border: 1px solid var(--ink);
-    position: relative;
-    overflow: hidden;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-  }
-
-  .btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0; left: -100%;
-    width: 100%; height: 100%;
-    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
-    transition: left 0.4s ease;
-    z-index: -1;
-  }
-
-  .btn-primary:hover { border-color: var(--gold); }
-  .btn-primary:hover::before { left: 0; }
-
-  .btn-secondary {
-    color: var(--ink);
-    text-decoration: none;
-    font-size: 0.82rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 1.1rem 0;
-    border-bottom: 1px solid var(--gold);
-    transition: color 0.3s ease;
-  }
-
-  .btn-secondary:hover { color: var(--gold); }
-
-  .hero-visual {
-    position: relative;
-    height: 80vh;
-    opacity: 0;
-    animation: fadeIn 1.2s ease 0.6s forwards;
-  }
-
-  .hero-image {
-    width: 100%;
-    height: 100%;
-    background:
-      radial-gradient(circle at 30% 40%, rgba(255, 240, 245, 0.5) 0%, transparent 50%),
-      linear-gradient(135deg, #fbd0de 0%, #f5b6c9 50%, #e88aa7 100%);
-    border-radius: 4px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--shadow-soft);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .image-placeholder {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.85);
-    font-family: 'Cormorant Garamond', serif;
-  }
-
-  .placeholder-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    opacity: 0.7;
-  }
-
-  .placeholder-text {
-    font-size: 1.6rem;
-    font-style: italic;
-    line-height: 1.3;
-  }
-
-  .placeholder-text span {
-    font-size: 0.8rem;
-    font-family: 'Jost', sans-serif;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    font-style: normal;
-    opacity: 0.85;
-  }
-
-  .hero-image-deco {
-    position: absolute;
-    top: -20px; left: -20px;
-    width: 100%; height: 100%;
-    border: 1px solid var(--gold);
-    border-radius: 4px;
-    z-index: -1;
-  }
-
-  .hero-badge {
-    position: absolute;
-    bottom: 40px; left: -40px;
-    background: var(--cream);
-    padding: 1.2rem 1.8rem;
-    border-radius: 2px;
-    box-shadow: var(--shadow-soft);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    z-index: 3;
-    border: 1px solid var(--line);
-  }
-
-  .hero-badge-stars {
-    color: var(--gold);
-    font-size: 1rem;
-    letter-spacing: 0.15em;
-  }
-
-  .hero-badge-text {
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-  }
-
-  .hero-badge-text strong {
-    display: block;
-    color: var(--ink);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem;
-    text-transform: none;
-    letter-spacing: 0;
-    font-weight: 500;
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  /* ===== Section Headers ===== */
-  .section-header {
-    text-align: center;
-    margin-bottom: 4.5rem;
-  }
-
-  .section-eyebrow {
-    display: inline-block;
-    font-size: 0.72rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--gold-deep);
-    margin-bottom: 1.2rem;
-    position: relative;
-    padding: 0 2rem;
-  }
-
-  .section-eyebrow::before,
-  .section-eyebrow::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 30px;
-    height: 1px;
-    background: var(--gold);
-  }
-
-  .section-eyebrow::before { left: -30px; }
-  .section-eyebrow::after { right: -30px; }
-
-  h2.section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-    font-weight: 400;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.2rem;
-    color: var(--ink);
-  }
-
-  h2.section-title em {
-    font-style: italic;
-    color: var(--gold);
-    font-weight: 500;
-  }
-
-  .section-sub {
-    font-size: 1.05rem;
-    color: var(--ink-soft);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.7;
-  }
-
-  /* ===== About Quote ===== */
-  .about {
-    padding: 6rem 3rem 4rem;
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-    background: transparent;
-  }
-
-  .welcome-heading {
-    display: inline-block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4.5vw, 3rem);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold-deep);
-    margin-bottom: 2rem;
-    position: relative;
-    padding: 0 3.5rem;
-    font-weight: 500;
-    font-style: italic;
-  }
-
-  .welcome-heading::before,
-  .welcome-heading::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 50px;
-    height: 2px;
-    background: var(--gold);
-  }
-
-  .welcome-heading::before { left: -10px; }
-  .welcome-heading::after { right: -10px; }
-
-  .about-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: clamp(1.9rem, 3.2vw, 2.8rem);
-    line-height: 1.4;
-    color: var(--gold-deep);
-    margin: 2rem 0;
-    font-weight: 500;
-  }
-
-  .about-quote em {
-    color: var(--gold);
-    font-style: italic;
-    font-weight: 600;
-  }
-
-  .signature {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 2rem;
-    color: var(--gold);
-    margin-top: 2rem;
-    font-weight: 500;
-  }
-
-  /* ===== Services ===== */
-  .services {
-    padding: 5rem 3rem 7rem;
-    background: var(--bg-deep);
-    position: relative;
-  }
-
-  .service-category {
-    max-width: 1400px;
-    margin: 0 auto 5rem;
-  }
-
-  .service-category:last-child { margin-bottom: 0; }
-
-  .category-header {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .category-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 3rem;
-    color: var(--gold);
-    line-height: 1;
-    font-weight: 400;
-  }
-
-  .category-title-wrap { flex: 1; }
-
-  .category-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.2rem;
-    font-weight: 500;
-    color: var(--ink);
-    line-height: 1.1;
-  }
-
-  .category-sub {
-    font-size: 0.75rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--gold-deep);
-    margin-top: 0.5rem;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .service-card {
-    background: var(--cream);
-    padding: 2.2rem 1.8rem;
-    border-radius: 2px;
-    border: 1px solid var(--line);
-    transition: all 0.5s ease;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 2px;
-    background: linear-gradient(90deg, var(--gold), var(--gold-bright));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease;
-  }
-
-  .service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-soft);
-    border-color: var(--gold);
-  }
-
-  .service-card:hover::before { transform: scaleX(1); }
-
-  .service-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.45rem;
-    font-weight: 500;
-    margin-bottom: 0.7rem;
-    color: var(--ink);
-  }
-
-  .lash-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin: 0.5rem 0 1.2rem;
-    border: 1px solid var(--line);
-    display: block;
-  }
-
-  .service-card-desc {
-    color: var(--ink-soft);
-    margin-bottom: 1.3rem;
-    line-height: 1.65;
-    font-size: 0.9rem;
-    flex: 1;
-  }
-
-  .price-list {
-    list-style: none;
-    margin-bottom: 1.5rem;
-  }
-
-  .price-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0.6rem 0;
-    border-bottom: 1px dashed var(--line);
-    font-size: 0.88rem;
-    gap: 0.8rem;
-  }
-
-  .price-list li:last-child { border-bottom: none; }
-
-  .price-name { color: var(--ink-soft); flex: 1; }
-
-  .price-value {
-    color: var(--gold);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-
-  .single-price {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    padding: 0.9rem 0;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    margin-bottom: 1.5rem;
-  }
-
-  .single-price-label {
-    font-size: 0.78rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-  }
-
-  .single-price-value {
-    color: var(--gold);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-
-  .btn-whatsapp {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.85rem 1.3rem;
-    background: var(--ink);
-    color: var(--cream);
-    text-decoration: none;
-    font-size: 0.75rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    border: 1px solid var(--ink);
-    margin-top: auto;
-    font-weight: 500;
-  }
-
-  .btn-whatsapp:hover {
-    background: var(--gold);
-    border-color: var(--gold);
-  }
-
-  .btn-whatsapp svg { width: 14px; height: 14px; }
-
-  /* ===== Stats Strip ===== */
-  .stats-strip {
-    background: var(--rose);
-    padding: 3rem 3rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    color: #fff5f8;
-  }
-
-  .stat {
-    text-align: center;
-    padding: 0.5rem 1rem;
-    border-right: 1px solid rgba(255, 245, 248, 0.3);
-  }
-
-  .stat:last-child { border-right: none; }
-
-  .stat-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.8rem;
-    font-weight: 500;
-    color: #fff5f8;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-  }
-
-  .stat-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    opacity: 0.9;
-  }
-
-  /* ===== Contact ===== */
-  .contact {
-    padding: 7rem 3rem;
-    text-align: center;
-    background: #fbd6e1;
-  }
-
-  .contact-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .contact-info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin-top: 3.5rem;
-    text-align: left;
-  }
-
-  .contact-block {
-    padding: 2.2rem 1.8rem;
-    border: 1px solid var(--line);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    background: #fff5f8;
-  }
-
-  .contact-block:hover {
-    border-color: var(--gold);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-soft);
-  }
-
-  .contact-block h4 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: var(--gold);
-    margin-bottom: 1rem;
-    font-style: italic;
-  }
-
-  .contact-block p {
-    color: var(--ink-soft);
-    font-size: 0.98rem;
-    line-height: 1.8;
-  }
-
-  .contact-block a {
-    color: var(--ink);
-    text-decoration: none;
-    border-bottom: 1px solid var(--gold);
-    transition: color 0.3s ease;
-    font-weight: 400;
-  }
-
-  .contact-block a:hover { color: var(--gold); }
-
-  .contact-cta {
-    margin-top: 2.5rem;
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* ===== Floating WhatsApp ===== */
-  .float-whatsapp {
-    position: fixed;
-    bottom: 2rem; right: 2rem;
-    width: 58px; height: 58px;
-    background: var(--whatsapp);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
-    z-index: 50;
-    transition: transform 0.3s ease;
-  }
-
-  .float-whatsapp:hover { transform: scale(1.1); }
-  .float-whatsapp svg { width: 30px; height: 30px; }
-
-  /* ===== Footer ===== */
-  footer {
-    background: var(--rose-deep);
-    color: #fff5f8;
-    padding: 4rem 3rem 2rem;
-  }
-
-  .footer-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 3rem;
-    max-width: 1400px;
-    margin: 0 auto 3rem;
-  }
-
-  .footer-brand .logo {
-    color: #fff5f8;
-    font-size: 2.2rem;
-  }
-
-  .footer-brand .logo-sub { color: rgba(255, 245, 248, 0.7); }
-
-  .footer-brand p {
-    margin-top: 1rem;
-    opacity: 0.85;
-    line-height: 1.7;
-    max-width: 400px;
-    font-size: 0.95rem;
-  }
-
-  footer h5 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    color: #fff5f8;
-    margin-bottom: 1.3rem;
-    font-style: italic;
-    font-weight: 500;
-  }
-
-  .footer-list { list-style: none; }
-
-  .footer-list li { padding: 0.35rem 0; opacity: 0.9; font-size: 0.92rem; }
-
-  .footer-list a {
-    color: #fff5f8;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: inherit;
-    padding: 0;
-  }
-
-  .footer-list a:hover { color: #fff; text-decoration: underline; }
-
-  .footer-bottom {
-    border-top: 1px solid rgba(255, 245, 248, 0.25);
-    padding-top: 2rem;
-    text-align: center;
-    font-size: 0.82rem;
-    opacity: 0.7;
-    letter-spacing: 0.1em;
-  }
-
-  /* ===== Legal modals ===== */
-  .legal-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 200;
-    background: rgba(60, 40, 35, 0.6);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-  }
-
-  .legal-modal.active { display: flex; }
-
-  .legal-content {
-    background: var(--cream);
-    max-width: 700px;
-    width: 100%;
-    max-height: 85vh;
-    overflow-y: auto;
-    padding: 3rem;
-    border-radius: 4px;
-    position: relative;
-    border: 1px solid var(--line);
-  }
-
-  .legal-close {
-    position: absolute;
-    top: 1.5rem; right: 1.5rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: var(--ink-soft);
-    cursor: pointer;
-    width: 40px; height: 40px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-  }
-
-  .legal-close:hover { background: var(--bg-deep); color: var(--ink); }
-
-  .legal-content h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    color: var(--gold);
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-    font-style: italic;
-  }
-
-  .legal-content h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    color: var(--ink);
-    margin: 1.5rem 0 0.8rem;
-    font-weight: 500;
-  }
-
-  .legal-content p {
-    color: var(--ink-soft);
-    margin-bottom: 1rem;
-    line-height: 1.8;
-    font-size: 0.95rem;
-  }
-
-  /* ===== Responsive ===== */
-  @media (max-width: 968px) {
-    nav { padding: 1rem 1.2rem; }
-    nav.scrolled { padding: 0.8rem 1.2rem; }
-
-    .nav-links { display: none; }
-    .nav-cta { padding: 0.6rem 1rem; font-size: 0.7rem; }
-
-    .hero {
-      grid-template-columns: 1fr;
-      padding: 7rem 1.2rem 3rem;
-      gap: 3rem;
-    }
-
-    .hero-visual { height: 60vh; }
-    .hero-image::after { font-size: 14rem; }
-    .hero-badge { left: 50%; bottom: -25px; transform: translateX(-50%); }
-
-    .services, .contact, .about { padding: 5rem 1.2rem; }
-
-    .category-header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem;
-      text-align: left;
-    }
-
-    .category-number { font-size: 2.3rem; }
-    .category-title { font-size: 1.7rem; }
-
-    .stats-strip {
-      grid-template-columns: repeat(2, 1fr);
-      padding: 2rem 1rem;
-      gap: 1rem;
-    }
-
-    .stat { border-right: none; border-bottom: 1px solid rgba(216, 176, 109, 0.2); padding: 1.2rem 0.5rem; }
-    .stat:nth-last-child(-n+2) { border-bottom: none; }
-    .stat-number { font-size: 2.2rem; }
-
-    .contact-info { grid-template-columns: 1fr; }
-
-    .footer-content { grid-template-columns: 1fr; gap: 2rem; padding: 0 1rem; }
-    footer { padding: 3rem 1rem 1.5rem; }
-
-    .hero-cta-group { flex-direction: column; align-items: stretch; width: 100%; }
-    .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
-
-    .float-whatsapp { bottom: 1rem; right: 1rem; width: 54px; height: 54px; }
-    .float-whatsapp svg { width: 28px; height: 28px; }
-
-    .legal-content { padding: 2rem 1.5rem; }
-  }
+:root{
+--bg:#fbd6e1;
+--bg-deep:#f5b8ca;
+--rose:#e88aa7;
+--rose-deep:#d06184;
+--ink:#2a1a20;
+--ink-soft:#5a3a44;
+--gold:#a06820;
+--gold-bright:#c89240;
+--gold-deep:#6e4814;
+--cream:#fff5f8;
+--line:rgba(160,104,32,.35);
+--shadow-soft:0 30px 60px -20px rgba(180,80,110,.25);
+--whatsapp:#25d366;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;background:#fbd6e1}
+body{
+font-family:'Jost',sans-serif;
+background:#fbd6e1;
+color:var(--ink);
+font-weight:300;
+line-height:1.6;
+overflow-x:hidden;
+-webkit-font-smoothing:antialiased;
+}
+
+.about{
+padding:6rem 3rem 4rem;
+text-align:center;
+max-width:900px;
+margin:0 auto;
+}
+
+.welcome-heading{
+display:inline-block;
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(2rem,4.5vw,3rem);
+letter-spacing:.15em;
+text-transform:uppercase;
+color:var(--gold-deep);
+margin-bottom:2rem;
+font-weight:500;
+font-style:italic;
+}
+
+.about-quote{
+font-family:'Cormorant Garamond',serif;
+font-style:italic;
+font-size:clamp(1.9rem,3.2vw,2.8rem);
+line-height:1.4;
+color:var(--gold-deep);
+margin:2rem 0;
+font-weight:500;
+}
+
+.about-quote em{color:var(--gold);font-weight:600}
+.signature{
+font-family:'Cormorant Garamond',serif;
+font-style:italic;
+font-size:2rem;
+color:var(--gold);
+margin-top:2rem;
+font-weight:500;
+}
+
+.hero{
+min-height:70vh;
+padding:5rem 3rem 4rem;
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:4rem;
+align-items:center;
+position:relative;
+overflow:hidden;
+background:#fbd6e1;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+top:10%;
+right:-15%;
+width:700px;
+height:700px;
+background:radial-gradient(circle,rgba(216,176,109,.18) 0%,transparent 70%);
+border-radius:50%;
+pointer-events:none;
+}
+
+.hero-text{position:relative;z-index:2}
+
+.eyebrow{
+display:inline-flex;
+align-items:center;
+gap:1rem;
+font-size:.72rem;
+letter-spacing:.3em;
+text-transform:uppercase;
+color:var(--gold-deep);
+margin-bottom:1.5rem;
+}
+
+.eyebrow::before{
+content:'';
+width:40px;
+height:1px;
+background:var(--gold);
+}
+
+.hero-greeting{
+font-family:'Cormorant Garamond',serif;
+font-style:italic;
+font-size:1.6rem;
+color:var(--ink-soft);
+margin-bottom:.3rem;
+}
+
+.hero-title{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(4rem,9vw,7rem);
+font-weight:400;
+line-height:.95;
+letter-spacing:.02em;
+color:var(--gold);
+margin-bottom:.4rem;
+text-shadow:0 2px 20px rgba(216,176,109,.2);
+}
+
+.hero-tagline{
+font-family:'Cormorant Garamond',serif;
+font-style:italic;
+font-size:clamp(1.4rem,2.5vw,1.9rem);
+color:var(--gold);
+margin-bottom:2rem;
+}
+
+.hero-sub{
+font-size:1.1rem;
+color:var(--ink-soft);
+max-width:480px;
+margin-bottom:2.5rem;
+line-height:1.7;
+}
+
+.hero-cta-group{
+display:flex;
+gap:1.5rem;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.btn-primary{
+padding:1.1rem 2.2rem;
+background:var(--ink);
+color:var(--cream);
+text-decoration:none;
+font-size:.82rem;
+letter-spacing:.2em;
+text-transform:uppercase;
+border-radius:2px;
+transition:.3s;
+border:1px solid var(--ink);
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:.6rem;
+}
+
+.btn-primary:hover{background:var(--gold);border-color:var(--gold)}
+
+.btn-secondary{
+color:var(--ink);
+text-decoration:none;
+font-size:.82rem;
+letter-spacing:.2em;
+text-transform:uppercase;
+padding:1.1rem 0;
+border-bottom:1px solid var(--gold);
+transition:.3s;
+}
+
+.btn-secondary:hover{color:var(--gold)}
+
+.hero-visual{
+position:relative;
+height:80vh;
+}
+
+.hero-image{
+width:100%;
+height:100%;
+background:linear-gradient(135deg,#fbd0de 0%,#f5b6c9 50%,#e88aa7 100%);
+border-radius:4px;
+position:relative;
+overflow:hidden;
+box-shadow:var(--shadow-soft);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.hero-image img{
+width:100%;
+height:100%;
+object-fit:contain;
+background:#fbd6e1;
+padding:10px;
+display:block;
+}
+
+.image-placeholder{
+text-align:center;
+color:rgba(255,255,255,.85);
+font-family:'Cormorant Garamond',serif;
+}
+
+.placeholder-icon{font-size:3rem;margin-bottom:1rem;opacity:.7}
+.placeholder-text{font-size:1.6rem;font-style:italic;line-height:1.3}
+.placeholder-text span{
+font-size:.8rem;
+font-family:'Jost',sans-serif;
+letter-spacing:.25em;
+text-transform:uppercase;
+font-style:normal;
+opacity:.85;
+}
+
+.hero-image-deco{
+position:absolute;
+top:-20px;
+left:-20px;
+width:100%;
+height:100%;
+border:1px solid var(--gold);
+border-radius:4px;
+z-index:-1;
+}
+
+.section-header{text-align:center;margin-bottom:4.5rem}
+
+.section-eyebrow{
+display:inline-block;
+font-size:.72rem;
+letter-spacing:.3em;
+text-transform:uppercase;
+color:var(--gold-deep);
+margin-bottom:1.2rem;
+position:relative;
+padding:0 2rem;
+}
+
+.section-eyebrow::before,
+.section-eyebrow::after{
+content:'';
+position:absolute;
+top:50%;
+width:30px;
+height:1px;
+background:var(--gold);
+}
+
+.section-eyebrow::before{left:-30px}
+.section-eyebrow::after{right:-30px}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(2.4rem,4.5vw,3.8rem);
+font-weight:400;
+line-height:1.1;
+letter-spacing:-.02em;
+margin-bottom:1.2rem;
+color:var(--ink);
+}
+
+.section-title em{
+font-style:italic;
+color:var(--gold);
+font-weight:500;
+}
+
+.section-sub{
+font-size:1.05rem;
+color:var(--ink-soft);
+max-width:600px;
+margin:0 auto;
+line-height:1.7;
+}
+
+.services{
+padding:5rem 3rem 7rem;
+background:var(--bg-deep);
+position:relative;
+}
+
+.service-category{
+max-width:1400px;
+margin:0 auto 5rem;
+}
+
+.service-category:last-child{margin-bottom:0}
+
+.category-header{
+display:flex;
+align-items:center;
+gap:2rem;
+margin-bottom:2.5rem;
+padding-bottom:1.5rem;
+border-bottom:1px solid var(--line);
+}
+
+.category-number{
+font-family:'Cormorant Garamond',serif;
+font-style:italic;
+font-size:3rem;
+color:var(--gold);
+line-height:1;
+font-weight:400;
+}
+
+.category-title{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-weight:500;
+color:var(--ink);
+line-height:1.1;
+}
+
+.category-sub{
+font-size:.75rem;
+letter-spacing:.25em;
+text-transform:uppercase;
+color:var(--gold-deep);
+margin-top:.5rem;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
+gap:1.5rem;
+}
+
+.service-card{
+background:var(--cream);
+padding:2.2rem 1.8rem;
+border-radius:2px;
+border:1px solid var(--line);
+transition:.4s;
+position:relative;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+}
+
+.service-card:hover{
+transform:translateY(-6px);
+box-shadow:var(--shadow-soft);
+border-color:var(--gold);
+}
+
+.service-card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:1.45rem;
+font-weight:500;
+margin-bottom:.7rem;
+color:var(--ink);
+}
+
+.lash-image{
+width:100%;
+height:240px;
+object-fit:contain;
+background:#fff5f8;
+border-radius:8px;
+margin:.5rem 0 1.2rem;
+border:1px solid var(--line);
+padding:10px;
+display:block;
+}
+
+.service-card-desc{
+color:var(--ink-soft);
+margin-bottom:1.3rem;
+line-height:1.65;
+font-size:.9rem;
+flex:1;
+}
+
+.price-list{
+list-style:none;
+margin-bottom:1.5rem;
+}
+
+.price-list li{
+display:flex;
+justify-content:space-between;
+align-items:baseline;
+padding:.6rem 0;
+border-bottom:1px dashed var(--line);
+font-size:.88rem;
+gap:.8rem;
+}
+
+.price-list li:last-child{border-bottom:none}
+.price-name{color:var(--ink-soft);flex:1}
+
+.price-value{
+color:var(--gold);
+font-family:'Cormorant Garamond',serif;
+font-size:1.15rem;
+font-weight:600;
+white-space:nowrap;
+}
+
+.single-price{
+display:flex;
+align-items:baseline;
+justify-content:space-between;
+padding:.9rem 0;
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
+margin-bottom:1.5rem;
+gap:1rem;
+}
+
+.single-price-label{
+font-size:.78rem;
+letter-spacing:.15em;
+text-transform:uppercase;
+color:var(--ink-soft);
+}
+
+.single-price-value{
+color:var(--gold);
+font-family:'Cormorant Garamond',serif;
+font-size:1.5rem;
+font-weight:600;
+text-align:right;
+}
+
+.btn-whatsapp{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:.5rem;
+padding:.85rem 1.3rem;
+background:var(--ink);
+color:var(--cream);
+text-decoration:none;
+font-size:.75rem;
+letter-spacing:.18em;
+text-transform:uppercase;
+border-radius:2px;
+transition:.3s;
+border:1px solid var(--ink);
+margin-top:auto;
+font-weight:500;
+}
+
+.btn-whatsapp:hover{
+background:var(--gold);
+border-color:var(--gold);
+}
+
+.btn-whatsapp svg{width:14px;height:14px}
+
+.contact{
+padding:7rem 3rem;
+text-align:center;
+background:#fbd6e1;
+}
+
+.contact-content{
+max-width:800px;
+margin:0 auto;
+}
+
+.contact-info{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:1.5rem;
+margin-top:3.5rem;
+text-align:left;
+}
+
+.contact-block{
+padding:2.2rem 1.8rem;
+border:1px solid var(--line);
+border-radius:2px;
+transition:.3s;
+background:#fff5f8;
+}
+
+.contact-block:hover{
+border-color:var(--gold);
+transform:translateY(-4px);
+box-shadow:var(--shadow-soft);
+}
+
+.contact-block h4{
+font-family:'Cormorant Garamond',serif;
+font-size:1.4rem;
+font-weight:500;
+color:var(--gold);
+margin-bottom:1rem;
+font-style:italic;
+}
+
+.contact-block p{
+color:var(--ink-soft);
+font-size:.98rem;
+line-height:1.8;
+}
+
+.contact-block a{
+color:var(--ink);
+text-decoration:none;
+border-bottom:1px solid var(--gold);
+transition:.3s;
+font-weight:400;
+}
+
+.contact-block a:hover{color:var(--gold)}
+
+.contact-cta{
+margin-top:2.5rem;
+display:flex;
+gap:1.5rem;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.float-whatsapp{
+position:fixed;
+bottom:2rem;
+right:2rem;
+width:58px;
+height:58px;
+background:var(--whatsapp);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-decoration:none;
+box-shadow:0 8px 24px rgba(37,211,102,.4);
+z-index:50;
+transition:.3s;
+}
+
+.float-whatsapp:hover{transform:scale(1.1)}
+.float-whatsapp svg{width:30px;height:30px}
+
+footer{
+background:var(--rose-deep);
+color:#fff5f8;
+padding:4rem 3rem 2rem;
+}
+
+.footer-content{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:3rem;
+max-width:1400px;
+margin:0 auto 3rem;
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+font-style:italic;
+font-weight:500;
+letter-spacing:.04em;
+color:#fff5f8;
+line-height:1;
+}
+
+.logo-sub{
+display:block;
+font-family:'Jost',sans-serif;
+font-size:.6rem;
+letter-spacing:.3em;
+text-transform:uppercase;
+color:rgba(255,245,248,.7);
+font-style:normal;
+margin-top:2px;
+font-weight:400;
+}
+
+.footer-brand p{
+margin-top:1rem;
+opacity:.85;
+line-height:1.7;
+max-width:400px;
+font-size:.95rem;
+}
+
+footer h5{
+font-family:'Cormorant Garamond',serif;
+font-size:1.3rem;
+color:#fff5f8;
+margin-bottom:1.3rem;
+font-style:italic;
+font-weight:500;
+}
+
+.footer-list{list-style:none}
+.footer-list li{padding:.35rem 0;opacity:.9;font-size:.92rem}
+
+.footer-list a{
+color:#fff5f8;
+text-decoration:none;
+transition:.3s;
+background:none;
+border:none;
+cursor:pointer;
+font-family:inherit;
+font-size:inherit;
+padding:0;
+}
+
+.footer-list a:hover{color:#fff;text-decoration:underline}
+
+.footer-bottom{
+border-top:1px solid rgba(255,245,248,.25);
+padding-top:2rem;
+text-align:center;
+font-size:.82rem;
+opacity:.7;
+letter-spacing:.1em;
+}
+
+.legal-modal{
+display:none;
+position:fixed;
+inset:0;
+z-index:200;
+background:rgba(60,40,35,.6);
+backdrop-filter:blur(8px);
+-webkit-backdrop-filter:blur(8px);
+align-items:center;
+justify-content:center;
+padding:2rem;
+}
+
+.legal-modal.active{display:flex}
+
+.legal-content{
+background:var(--cream);
+max-width:700px;
+width:100%;
+max-height:85vh;
+overflow-y:auto;
+padding:3rem;
+border-radius:4px;
+position:relative;
+border:1px solid var(--line);
+}
+
+.legal-close{
+position:absolute;
+top:1.5rem;
+right:1.5rem;
+background:none;
+border:none;
+font-size:1.5rem;
+color:var(--ink-soft);
+cursor:pointer;
+width:40px;
+height:40px;
+border-radius:50%;
+transition:.3s;
+}
+
+.legal-close:hover{background:var(--bg-deep);color:var(--ink)}
+
+.legal-content h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+color:var(--gold);
+margin-bottom:1.5rem;
+font-weight:500;
+font-style:italic;
+}
+
+.legal-content h3{
+font-family:'Cormorant Garamond',serif;
+font-size:1.2rem;
+color:var(--ink);
+margin:1.5rem 0 .8rem;
+font-weight:500;
+}
+
+.legal-content p{
+color:var(--ink-soft);
+margin-bottom:1rem;
+line-height:1.8;
+font-size:.95rem;
+}
+
+@media(max-width:968px){
+.hero{
+grid-template-columns:1fr;
+padding:5rem 1.2rem 3rem;
+gap:3rem;
+}
+
+.hero-visual{height:55vh}
+.services,.contact,.about{padding:5rem 1.2rem}
+
+.category-header{
+flex-direction:column;
+align-items:flex-start;
+gap:.5rem;
+text-align:left;
+}
+
+.category-number{font-size:2.3rem}
+.category-title{font-size:1.7rem}
+.contact-info{grid-template-columns:1fr}
+.footer-content{grid-template-columns:1fr;gap:2rem;padding:0 1rem}
+footer{padding:3rem 1rem 1.5rem}
+
+.hero-cta-group{
+flex-direction:column;
+align-items:stretch;
+width:100%;
+}
+
+.btn-primary,.btn-secondary{text-align:center;justify-content:center}
+.float-whatsapp{bottom:1rem;right:1rem;width:54px;height:54px}
+.float-whatsapp svg{width:28px;height:28px}
+.legal-content{padding:2rem 1.5rem}
+}
 </style>
-
 </head>
+
 <body>
 
-<!-- WhatsApp Icon SVG (Reusable) -->
-
 <svg style="display:none">
-  <symbol id="wa-icon" viewBox="0 0 24 24">
-    <path fill="currentColor" d="M20.52 3.48A11.8 11.8 0 0 0 12.07 0C5.5 0 .16 5.33.16 11.91c0 2.1.55 4.15 1.6 5.96L0 24l6.29-1.65a11.87 11.87 0 0 0 5.78 1.48h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.24-6.16-3.47-8.44ZM12.08 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.73.98 1-3.64-.24-.38a9.84 9.84 0 0 1-1.51-5.26c0-5.44 4.43-9.87 9.88-9.87 2.64 0 5.12 1.03 6.98 2.89a9.8 9.8 0 0 1 2.88 6.98c0 5.44-4.43 9.87-9.86 9.87Zm5.42-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.48-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.48 0 1.45 1.07 2.86 1.22 3.06.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.71.22 1.35.19 1.86.11.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
-  </symbol>
-  <symbol id="ig-icon" viewBox="0 0 24 24">
-    <path fill="currentColor" d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7Zm0 2h10c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3Zm11.5 1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z"/>
-  </symbol>
+<symbol id="wa-icon" viewBox="0 0 24 24">
+<path fill="currentColor" d="M20.52 3.48A11.8 11.8 0 0 0 12.07 0C5.5 0 .16 5.33.16 11.91c0 2.1.55 4.15 1.6 5.96L0 24l6.29-1.65a11.87 11.87 0 0 0 5.78 1.48h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.24-6.16-3.47-8.44ZM12.08 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.73.98 1-3.64-.24-.38a9.84 9.84 0 0 1-1.51-5.26c0-5.44 4.43-9.87 9.88-9.87 2.64 0 5.12 1.03 6.98 2.89a9.8 9.8 0 0 1 2.88 6.98c0 5.44-4.43 9.87-9.86 9.87Zm5.42-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.48-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.48 0 1.45 1.07 2.86 1.22 3.06.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.71.22 1.35.19 1.86.11.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+</symbol>
 </svg>
 
-<!-- Navigation entfernt -->
-
-<!-- Willkommen Quote -->
-
 <section class="about">
-  <div class="welcome-heading">Willkommen</div>
-  <p class="about-quote">
-    „Schönheit ist <em>kein Luxus</em> — sie ist ein Moment der Zeit, den du dir selbst schenkst."
-  </p>
-  <div class="signature">— Delale</div>
+<div class="welcome-heading">Willkommen</div>
+<p class="about-quote">
+„Schönheit ist <em>kein Luxus</em> — sie ist ein Moment der Zeit, den du dir selbst schenkst."
+</p>
+<div class="signature">— Delale</div>
 </section>
-
-<!-- Hero -->
 
 <section class="hero">
-  <div class="hero-text">
-    <div class="eyebrow">Beauty Studio · Mosbach</div>
-    <div class="hero-greeting">Hallo, ich bin</div>
-    <h1 class="hero-title">Delale</h1>
-    <div class="hero-tagline">by More Than Beauty</div>
-    <p class="hero-sub">
-      Schön, dass du da bist – hier findest du meine Behandlungen und Preise auf einen Blick. Lass dich verwöhnen mit ausdrucksstarken Wimpern, perfektem Permanent Make-up, glatter Haut und einem strahlenden Lächeln.
-    </p>
-    <div class="hero-cta-group">
-      <a href="#wimpern" class="btn-primary">Behandlungen entdecken →</a>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="hero-image-deco"></div>
-    <div class="hero-image">
-      <div class="image-placeholder">
-        <div class="placeholder-icon">📷</div>
-        <div class="placeholder-text">Studio-Foto<br /><span>hier einfügen</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="hero-text">
+<div class="eyebrow">Beauty Studio · Mosbach</div>
+<div class="hero-greeting">Hallo, ich bin</div>
+<h1 class="hero-title">Delale</h1>
+<div class="hero-tagline">by More Than Beauty</div>
+<p class="hero-sub">
+Schön, dass du da bist – hier findest du meine Behandlungen und Preise auf einen Blick. Lass dich verwöhnen mit ausdrucksstarken UV Wimpernverlängerungen, perfektem Permanent Make-up, glatter Haut und einem strahlenden Lächeln.
+</p>
+<div class="hero-cta-group">
+<a href="#wimpern" class="btn-primary">Behandlungen entdecken →</a>
+</div>
+</div>
 
-<!-- Services -->
+<div class="hero-visual">
+<div class="hero-image-deco"></div>
+<div class="hero-image">
+<img src="hero.webp" alt="Beauty Studio Delale" />
+</div>
+</div>
+</section>
 
 <section class="services">
 
-  <!-- Wimpernverlängerung -->
+<div class="service-category" id="wimpern">
+<div class="category-header">
+<div class="category-number">01</div>
+<div>
+<div class="category-title">UV Wimpernverlängerung</div>
+<div class="category-sub">Ausdrucksstarke Augen</div>
+</div>
+</div>
 
-  <div class="service-category" id="wimpern">
-    <div class="category-header">
-      <div class="category-number">01</div>
-      <div class="category-title-wrap">
-        <div class="category-title">Wimpernverlängerung</div>
-        <div class="category-sub">Ausdrucksstarke Augen</div>
-      </div>
-    </div>
-    <div class="services-grid">
+<div class="services-grid">
 
-```
-  <div class="service-card">
-    <h3>1:1 Technik <span style="font-size:0.85rem;color:var(--gold);font-style:italic;">— Natural Look</span></h3>
-    <img class="lash-image" src="wimpern-1zu1.jpeg" alt="1:1 Technik Natural Look — Wimpernverlängerung" loading="lazy" />
-    <p class="service-card-desc">Bei dieser Technik wird eine künstliche Wimper auf eine Naturwimper gesetzt. Das Ergebnis ist besonders natürlich und elegant.</p>
-    <ul class="price-list">
-      <li><span class="price-name">Neumodellage</span><span class="price-value">69 €</span></li>
-      <li><span class="price-name">Auffüllen nach 2 Wochen</span><span class="price-value">39 €</span></li>
-      <li><span class="price-name">Auffüllen nach 3 Wochen</span><span class="price-value">49 €</span></li>
-      <li><span class="price-name">Auffüllen nach 4 Wochen</span><span class="price-value">59 €</span></li>
-    </ul>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20die%201:1%20Technik%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
+<div class="service-card">
+<h3>1:1 Technik <span style="font-size:.85rem;color:var(--gold);font-style:italic;">— Natural Look</span></h3>
+<img class="lash-image" src="wimpern-1zu1.jpeg" alt="1:1 Technik Natural Look — UV Wimpernverlängerung" loading="lazy" />
+<p class="service-card-desc">Bei dieser Technik wird eine künstliche Wimper auf eine Naturwimper gesetzt. Das Ergebnis ist besonders natürlich und elegant.</p>
+<ul class="price-list">
+<li><span class="price-name">Neumodellage</span><span class="price-value">69 €</span></li>
+<li><span class="price-name">Auffüllen nach 2 Wochen</span><span class="price-value">39 €</span></li>
+<li><span class="price-name">Auffüllen nach 3 Wochen</span><span class="price-value">49 €</span></li>
+<li><span class="price-name">Auffüllen nach 4 Wochen</span><span class="price-value">59 €</span></li>
+</ul>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20die%201:1%20Technik%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
-  <div class="service-card">
-    <h3>Softvolumen 2D–5D</h3>
-    <img class="lash-image" src="wimpern-softvolumen.jpeg" alt="Softvolumen 2D-5D — Wimpernverlängerung" loading="lazy" />
-    <p class="service-card-desc">Mehrere feine Wimpern werden auf eine Naturwimper gesetzt. So entsteht ein weicher, vollerer Look.</p>
-    <ul class="price-list">
-      <li><span class="price-name">Neumodellage</span><span class="price-value">79 €</span></li>
-      <li><span class="price-name">Auffüllen nach 2 Wochen</span><span class="price-value">49 €</span></li>
-      <li><span class="price-name">Auffüllen nach 3 Wochen</span><span class="price-value">59 €</span></li>
-      <li><span class="price-name">Auffüllen nach 4 Wochen</span><span class="price-value">69 €</span></li>
-    </ul>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Softvolumen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
+<div class="service-card">
+<h3>Softvolumen 2D–5D</h3>
+<img class="lash-image" src="wimpern-softvolumen.jpeg" alt="Softvolumen 2D-5D — UV Wimpernverlängerung" loading="lazy" />
+<p class="service-card-desc">Mehrere feine Wimpern werden auf eine Naturwimper gesetzt. So entsteht ein weicher, vollerer Look.</p>
+<ul class="price-list">
+<li><span class="price-name">Neumodellage</span><span class="price-value">79 €</span></li>
+<li><span class="price-name">Auffüllen nach 2 Wochen</span><span class="price-value">49 €</span></li>
+<li><span class="price-name">Auffüllen nach 3 Wochen</span><span class="price-value">59 €</span></li>
+<li><span class="price-name">Auffüllen nach 4 Wochen</span><span class="price-value">69 €</span></li>
+</ul>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Softvolumen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
-  <div class="service-card">
-    <h3>Volumen 5D–10D</h3>
-    <img class="lash-image" src="wimpern-volumen.jpeg" alt="Volumen 5D-10D — Wimpernverlängerung" loading="lazy" />
-    <p class="service-card-desc">Diese Technik sorgt für deutlich mehr Fülle und einen glamourösen, intensiveren Augenaufschlag.</p>
-    <ul class="price-list">
-      <li><span class="price-name">Neumodellage</span><span class="price-value">89 €</span></li>
-      <li><span class="price-name">Auffüllen nach 2 Wochen</span><span class="price-value">59 €</span></li>
-      <li><span class="price-name">Auffüllen nach 3 Wochen</span><span class="price-value">69 €</span></li>
-      <li><span class="price-name">Auffüllen nach 4 Wochen</span><span class="price-value">79 €</span></li>
-    </ul>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Volumen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
+<div class="service-card">
+<h3>Volumen 5D–10D</h3>
+<img class="lash-image" src="wimpern-volumen.jpeg" alt="Volumen 5D-10D — UV Wimpernverlängerung" loading="lazy" />
+<p class="service-card-desc">Diese Technik sorgt für deutlich mehr Fülle und einen glamourösen, intensiveren Augenaufschlag.</p>
+<ul class="price-list">
+<li><span class="price-name">Neumodellage</span><span class="price-value">89 €</span></li>
+<li><span class="price-name">Auffüllen nach 2 Wochen</span><span class="price-value">59 €</span></li>
+<li><span class="price-name">Auffüllen nach 3 Wochen</span><span class="price-value">69 €</span></li>
+<li><span class="price-name">Auffüllen nach 4 Wochen</span><span class="price-value">79 €</span></li>
+</ul>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Volumen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
-  <div class="service-card">
-    <h3>Megavolumen ab 10D</h3>
-    <p class="service-card-desc">Für einen auffälligen, dramatischen Look mit maximaler Dichte und besonderer Ausdrucksstärke.</p>
-    <ul class="price-list">
-      <li><span class="price-name">Neumodellage</span><span class="price-value">99 €</span></li>
-      <li><span class="price-name">Auffüllen nach 2 Wochen</span><span class="price-value">69 €</span></li>
-      <li><span class="price-name">Auffüllen nach 3 Wochen</span><span class="price-value">79 €</span></li>
-      <li><span class="price-name">Auffüllen nach 4 Wochen</span><span class="price-value">89 €</span></li>
-    </ul>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Megavolumen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
+<div class="service-card">
+<h3>Megavolumen ab 10D</h3>
+<p class="service-card-desc">Für einen auffälligen, dramatischen Look mit maximaler Dichte und besonderer Ausdrucksstärke.</p>
+<ul class="price-list">
+<li><span class="price-name">Neumodellage</span><span class="price-value">99 €</span></li>
+<li><span class="price-name">Auffüllen nach 2 Wochen</span><span class="price-value">69 €</span></li>
+<li><span class="price-name">Auffüllen nach 3 Wochen</span><span class="price-value">79 €</span></li>
+<li><span class="price-name">Auffüllen nach 4 Wochen</span><span class="price-value">89 €</span></li>
+</ul>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Megavolumen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
 </div>
-```
+</div>
 
-  </div>
+<div class="service-category" id="pmu">
+<div class="category-header">
+<div class="category-number">02</div>
+<div>
+<div class="category-title">Permanent Make-up</div>
+<div class="category-sub">Schönheit, die bleibt</div>
+</div>
+</div>
 
-  <!-- Permanent Make-up -->
+<div class="services-grid">
 
-  <div class="service-category" id="pmu">
-    <div class="category-header">
-      <div class="category-number">02</div>
-      <div class="category-title-wrap">
-        <div class="category-title">Permanent Make-up</div>
-        <div class="category-sub">Schönheit, die bleibt</div>
-      </div>
-    </div>
-    <div class="services-grid">
+<div class="service-card">
+<h3>Lippen</h3>
+<p class="service-card-desc">Dauerhafte Lippenpigmentierung für mehr Farbe, Frische und eine schöne Lippenkontur.</p>
+<div class="single-price"><span class="single-price-label">Preis</span><span class="single-price-value">350 €</span></div>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Permanent%20Make-up%20Lippen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
-```
-  <div class="service-card">
-    <h3>Lippen</h3>
-    <p class="service-card-desc">Dauerhafte Lippenpigmentierung für mehr Farbe, Frische und eine schöne Lippenkontur.</p>
-    <div class="single-price">
-      <span class="single-price-label">Preis</span>
-      <span class="single-price-value">350 €</span>
-    </div>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Permanent%20Make-up%20Lippen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
+<div class="service-card">
+<h3>Augenbrauen</h3>
+<p class="service-card-desc">Für dauerhaft definierte, gepflegte und natürlich schöne Augenbrauen.</p>
+<div class="single-price"><span class="single-price-label">Preis</span><span class="single-price-value">350 €</span></div>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Permanent%20Make-up%20Augenbrauen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
-  <div class="service-card">
-    <h3>Augenbrauen</h3>
-    <p class="service-card-desc">Für dauerhaft definierte, gepflegte und natürlich schöne Augenbrauen.</p>
-    <div class="single-price">
-      <span class="single-price-label">Preis</span>
-      <span class="single-price-value">350 €</span>
-    </div>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Permanent%20Make-up%20Augenbrauen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
+<div class="service-card">
+<h3>Eyeliner</h3>
+<p class="service-card-desc">Dauerhafte Betonung der Augen für einen ausdrucksstarken Blick.</p>
+<div class="single-price"><span class="single-price-label">Preis</span><span class="single-price-value">200 €</span></div>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Permanent%20Make-up%20Eyeliner%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
-  <div class="service-card">
-    <h3>Eyeliner</h3>
-    <p class="service-card-desc">Dauerhafte Betonung der Augen für einen ausdrucksstarken Blick.</p>
-    <div class="single-price">
-      <span class="single-price-label">Preis</span>
-      <span class="single-price-value">200 €</span>
-    </div>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Permanent%20Make-up%20Eyeliner%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
-
-  <div class="service-card">
-    <h3>Nachbehandlung</h3>
-    <p class="service-card-desc">Nachbehandlung zur Auffrischung oder Korrektur des Ergebnisses.</p>
-    <div class="single-price">
-      <span class="single-price-label">Preis</span>
-      <span class="single-price-value">65 €</span>
-    </div>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20eine%20Permanent%20Make-up%20Nachbehandlung%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
+<div class="service-card">
+<h3>Nachbehandlung</h3>
+<p class="service-card-desc">Nachbehandlung zur Auffrischung oder Korrektur des Ergebnisses.</p>
+<div class="single-price"><span class="single-price-label">Preis</span><span class="single-price-value">65 €</span></div>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20eine%20Permanent%20Make-up%20Nachbehandlung%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
 </div>
-```
+</div>
 
-  </div>
+<div class="service-category" id="skincare">
+<div class="category-header">
+<div class="category-number">03</div>
+<div>
+<div class="category-title">Skincare</div>
+<div class="category-sub">Strahlende Haut</div>
+</div>
+</div>
 
-  <!-- Skincare -->
+<div class="services-grid">
 
-  <div class="service-category" id="skincare">
-    <div class="category-header">
-      <div class="category-number">03</div>
-      <div class="category-title-wrap">
-        <div class="category-title">Skincare</div>
-        <div class="category-sub">Strahlende Haut</div>
-      </div>
-    </div>
-    <div class="services-grid">
+<div class="service-card">
+<h3>Aquafacial</h3>
+<p class="service-card-desc">Tiefenreinigung, Peeling und Feuchtigkeitsversorgung für ein frisches, reines und strahlendes Hautbild.</p>
+<div class="single-price"><span class="single-price-label">Preis</span><span class="single-price-value">auf Anfrage</span></div>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20ein%20Aquafacial%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
-```
-  <div class="service-card">
-    <h3>Aquafacial</h3>
-    <p class="service-card-desc">Tiefenreinigung, Peeling und Feuchtigkeitsversorgung für ein frisches, reines und strahlendes Hautbild.</p>
-    <div class="single-price">
-      <span class="single-price-label">Preis</span>
-      <span class="single-price-value">auf Anfrage</span>
-    </div>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20ein%20Aquafacial%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
-
-  <div class="service-card">
-    <h3>Microneedling</h3>
-    <p class="service-card-desc">Zur Verbesserung des Hautbildes, für mehr Frische, feinere Poren und ein ebenmäßigeres Hautgefühl.</p>
-    <div class="single-price">
-      <span class="single-price-label">Preis</span>
-      <span class="single-price-value">auf Anfrage</span>
-    </div>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Microneedling%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
+<div class="service-card">
+<h3>Microneedling</h3>
+<p class="service-card-desc">Zur Verbesserung des Hautbildes, für mehr Frische, feinere Poren und ein ebenmäßigeres Hautgefühl.</p>
+<div class="single-price"><span class="single-price-label">Preis</span><span class="single-price-value">auf Anfrage</span></div>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Microneedling%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
 </div>
-```
+</div>
 
-  </div>
+<div class="service-category" id="zahn">
+<div class="category-header">
+<div class="category-number">04</div>
+<div>
+<div class="category-title">Zahnbleaching &amp; Zahnschmuck</div>
+<div class="category-sub">Ein strahlendes Lächeln</div>
+</div>
+</div>
 
-  <!-- Zahn -->
+<div class="services-grid">
 
-  <div class="service-category" id="zahn">
-    <div class="category-header">
-      <div class="category-number">04</div>
-      <div class="category-title-wrap">
-        <div class="category-title">Zahnbleaching &amp; Zahnschmuck</div>
-        <div class="category-sub">Ein strahlendes Lächeln</div>
-      </div>
-    </div>
-    <div class="services-grid">
+<div class="service-card">
+<h3>Zahnbleaching</h3>
+<p class="service-card-desc">Schonende Zahnaufhellung für ein frischeres, strahlenderes Lächeln.</p>
+<div class="single-price"><span class="single-price-label">Preis</span><span class="single-price-value">ab 70 €</span></div>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Zahnbleaching%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
-```
-  <div class="service-card">
-    <h3>Zahnbleaching</h3>
-    <p class="service-card-desc">Schonende Zahnaufhellung für ein frischeres, strahlenderes Lächeln.</p>
-    <div class="single-price">
-      <span class="single-price-label">Preis</span>
-      <span class="single-price-value">ab 70 €</span>
-    </div>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Zahnbleaching%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
+<div class="service-card">
+<h3>Swarovski-Steine</h3>
+<p class="service-card-desc">Funkelnder Zahnschmuck mit Swarovski-Steinen für einen stilvollen und eleganten Hingucker.</p>
+<div class="single-price"><span class="single-price-label">Preis</span><span class="single-price-value">ab 35 €</span></div>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Swarovski-Zahnschmuck%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
-  <div class="service-card">
-    <h3>Swarovski-Steine</h3>
-    <p class="service-card-desc">Funkelnder Zahnschmuck mit Swarovski-Steinen für einen stilvollen und eleganten Hingucker.</p>
-    <div class="single-price">
-      <span class="single-price-label">Preis</span>
-      <span class="single-price-value">ab 35 €</span>
-    </div>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Swarovski-Zahnschmuck%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
+<div class="service-card">
+<h3>Gold-/Silberfiguren</h3>
+<p class="service-card-desc">Exklusive Gold- oder Silberfiguren als Zahnschmuck für einen auffälligen und individuellen Look.</p>
+<div class="single-price"><span class="single-price-label">Preis</span><span class="single-price-value">ab 70 €</span></div>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Gold-%20oder%20Silber-Zahnschmuck%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
-  <div class="service-card">
-    <h3>Gold-/Silberfiguren</h3>
-    <p class="service-card-desc">Exklusive Gold- oder Silberfiguren als Zahnschmuck für einen auffälligen und individuellen Look.</p>
-    <div class="single-price">
-      <span class="single-price-label">Preis</span>
-      <span class="single-price-value">ab 70 €</span>
-    </div>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Gold-%20oder%20Silber-Zahnschmuck%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
-
-  <div class="service-card">
-    <h3>Individuelle Designs</h3>
-    <p class="service-card-desc">Persönlich angepasste Zahnschmuck-Designs nach Wunsch — individuell, kreativ und einzigartig.</p>
-    <div class="single-price">
-      <span class="single-price-label">Preis</span>
-      <span class="single-price-value">auf Anfrage</span>
-    </div>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20individuellen%20Zahnschmuck%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
+<div class="service-card">
+<h3>Individuelle Designs</h3>
+<p class="service-card-desc">Persönlich angepasste Zahnschmuck-Designs nach Wunsch — individuell, kreativ und einzigartig.</p>
+<div class="single-price"><span class="single-price-label">Preis</span><span class="single-price-value">auf Anfrage</span></div>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20individuellen%20Zahnschmuck%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
 </div>
-```
+</div>
 
-  </div>
+<div class="service-category" id="extras">
+<div class="category-header">
+<div class="category-number">05</div>
+<div>
+<div class="category-title">Extras</div>
+<div class="category-sub">Zusatzleistungen</div>
+</div>
+</div>
 
-  <!-- Extras -->
+<div class="services-grid">
 
-  <div class="service-category" id="extras">
-    <div class="category-header">
-      <div class="category-number">05</div>
-      <div class="category-title-wrap">
-        <div class="category-title">Extras</div>
-        <div class="category-sub">Zusatzleistungen</div>
-      </div>
-    </div>
-    <div class="services-grid">
+<div class="service-card">
+<h3>Abschminken</h3>
+<p class="service-card-desc">Vorbereitung der Behandlung durch Abschminken vor Ort.</p>
+<div class="single-price"><span class="single-price-label">Preis</span><span class="single-price-value">10 €</span></div>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Abschminken%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
-```
-  <div class="service-card">
-    <h3>Abschminken</h3>
-    <p class="service-card-desc">Vorbereitung der Behandlung durch Abschminken vor Ort.</p>
-    <div class="single-price">
-      <span class="single-price-label">Preis</span>
-      <span class="single-price-value">10 €</span>
-    </div>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Abschminken%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
-
-  <div class="service-card">
-    <h3>Wimpern entfernen</h3>
-    <p class="service-card-desc">Schonendes Entfernen vorhandener Wimpernextensions.</p>
-    <div class="single-price">
-      <span class="single-price-label">Preis</span>
-      <span class="single-price-value">15 €</span>
-    </div>
-    <a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Wimpern%20entfernen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
-      <svg><use href="#wa-icon"/></svg> Buchen
-    </a>
-  </div>
+<div class="service-card">
+<h3>UV Wimpern entfernen</h3>
+<p class="service-card-desc">Schonendes Entfernen vorhandener Wimpernextensions.</p>
+<div class="single-price"><span class="single-price-label">Preis</span><span class="single-price-value">15 €</span></div>
+<a href="https://wa.me/4917682018696?text=Hallo,%20ich%20m%C3%B6chte%20Wimpern%20entfernen%20anfragen." class="btn-whatsapp" target="_blank" rel="noopener">
+<svg><use href="#wa-icon"/></svg> Buchen
+</a>
+</div>
 
 </div>
-```
-
-  </div>
+</div>
 
 </section>
 
-<!-- Contact -->
-
 <section class="contact" id="kontakt">
-  <div class="contact-content">
-    <div class="section-eyebrow">Kontakt &amp; Termin</div>
-    <h2 class="section-title">Bereit für deinen <em>Beauty-Moment?</em></h2>
-    <p class="section-sub">
-      Für deine persönliche Terminvereinbarung erreichst du mich direkt über WhatsApp oder Instagram. Ich freue mich auf dich!
-    </p>
+<div class="contact-content">
+<div class="section-eyebrow">Kontakt &amp; Termin</div>
+<h2 class="section-title">Bereit für deinen <em>Beauty-Moment?</em></h2>
+<p class="section-sub">
+Für deine persönliche Terminvereinbarung erreichst du mich direkt über WhatsApp oder Instagram. Ich freue mich auf dich!
+</p>
 
-```
 <div class="contact-info">
-  <div class="contact-block">
-    <h4>Standort</h4>
-    <p>📍 <strong>Heidelbergerstraße 28</strong><br />
-    74821 Mosbach<br /><br />
-    <a href="https://www.google.com/maps?q=Heidelbergerstra%C3%9Fe+28,+74821+Mosbach" target="_blank" rel="noopener">Route auf Google Maps öffnen</a></p>
-  </div>
-  <div class="contact-block">
-    <h4>Erreichbarkeit</h4>
-    <p>
-      📱 <a href="tel:+4917682018696">0176 82018696</a><br />
-      💬 <a href="https://wa.me/4917682018696" target="_blank" rel="noopener">WhatsApp Chat</a><br />
-      📷 <a href="https://www.instagram.com/morethanbeauty2025/" target="_blank" rel="noopener">@morethanbeauty2025</a>
-    </p>
-  </div>
+<div class="contact-block">
+<h4>Standort</h4>
+<p>📍 <strong>Heidelbergerstraße 28</strong><br />
+74821 Mosbach<br /><br />
+<a href="https://www.google.com/maps?q=Heidelbergerstra%C3%9Fe+28,+74821+Mosbach" target="_blank" rel="noopener">Route auf Google Maps öffnen</a></p>
+</div>
+
+<div class="contact-block">
+<h4>Erreichbarkeit</h4>
+<p>
+📱 <a href="tel:+4917682018696">0176 82018696</a><br />
+💬 <a href="https://wa.me/4917682018696" target="_blank" rel="noopener">WhatsApp Chat</a><br />
+📷 <a href="https://www.instagram.com/morethanbeauty2025/" target="_blank" rel="noopener">@morethanbeauty2025</a>
+</p>
+</div>
 </div>
 
 <div class="contact-cta">
-  <a href="https://wa.me/4917682018696" class="btn-primary" target="_blank" rel="noopener">
-    <svg width="14" height="14"><use href="#wa-icon"/></svg>
-    WhatsApp
-  </a>
-  <a href="https://www.instagram.com/morethanbeauty2025/" class="btn-secondary" target="_blank" rel="noopener">Instagram →</a>
+<a href="https://wa.me/4917682018696" class="btn-primary" target="_blank" rel="noopener">
+<svg width="14" height="14"><use href="#wa-icon"/></svg>
+WhatsApp
+</a>
+<a href="https://www.instagram.com/morethanbeauty2025/" class="btn-secondary" target="_blank" rel="noopener">Instagram →</a>
 </div>
-```
-
-  </div>
+</div>
 </section>
 
-<!-- Footer -->
+<a href="https://wa.me/4917682018696" class="float-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp öffnen">
+<svg><use href="#wa-icon"/></svg>
+</a>
 
 <footer>
-  <div class="footer-content">
-    <div class="footer-brand">
-      <div class="logo">Delale<span class="logo-sub">More Than Beauty</span></div>
-      <p>Dein Beauty Studio in Mosbach — für Wimpern, Permanent Make-up, Skincare und ein strahlendes Lächeln. Mit Leidenschaft, Präzision und Liebe zum Detail.</p>
-    </div>
-    <div>
-      <h5>Behandlungen</h5>
-      <ul class="footer-list">
-        <li><a href="#wimpern">Wimpernverlängerung</a></li>
-        <li><a href="#pmu">Permanent Make-up</a></li>
-        <li><a href="#skincare">Aquafacial &amp; Microneedling</a></li>
-        <li><a href="#zahn">Zahn &amp; Schmuck</a></li>
-        <li><a href="#extras">Extras</a></li>
-      </ul>
-    </div>
-    <div>
-      <h5>Info</h5>
-      <ul class="footer-list">
-        <li><a href="#kontakt">Kontakt</a></li>
-        <li><a href="https://wa.me/4917682018696" target="_blank" rel="noopener">WhatsApp</a></li>
-        <li><a href="https://www.instagram.com/morethanbeauty2025/" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="#" onclick="openLegal('datenschutz'); return false;">Datenschutz</a></li>
-        <li><a href="#" onclick="openLegal('impressum'); return false;">Impressum</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    © 2026 Delale – More Than Beauty · bella-mia-studio.de
-  </div>
+<div class="footer-content">
+<div class="footer-brand">
+<div class="logo">Delale<span class="logo-sub">More Than Beauty</span></div>
+<p>Dein Beauty Studio in Mosbach — für UV Wimpernverlängerung, Permanent Make-up, Skincare und ein strahlendes Lächeln. Mit Leidenschaft, Präzision und Liebe zum Detail.</p>
+</div>
+
+<div>
+<h5>Behandlungen</h5>
+<ul class="footer-list">
+<li><a href="#wimpern">UV Wimpernverlängerung</a></li>
+<li><a href="#pmu">Permanent Make-up</a></li>
+<li><a href="#skincare">Aquafacial &amp; Microneedling</a></li>
+<li><a href="#zahn">Zahn &amp; Schmuck</a></li>
+<li><a href="#extras">Extras</a></li>
+</ul>
+</div>
+
+<div>
+<h5>Info</h5>
+<ul class="footer-list">
+<li><a href="#kontakt">Kontakt</a></li>
+<li><a href="https://wa.me/4917682018696" target="_blank" rel="noopener">WhatsApp</a></li>
+<li><a href="https://www.instagram.com/morethanbeauty2025/" target="_blank" rel="noopener">Instagram</a></li>
+<li><a href="#" onclick="openLegal('datenschutz'); return false;">Datenschutz</a></li>
+<li><a href="#" onclick="openLegal('impressum'); return false;">Impressum</a></li>
+</ul>
+</div>
+</div>
+
+<div class="footer-bottom">
+© 2026 Delale – More Than Beauty · bella-mia-studio.de
+</div>
 </footer>
 
-<!-- Datenschutz Modal -->
-
 <div class="legal-modal" id="datenschutz-modal">
-  <div class="legal-content">
-    <button class="legal-close" onclick="closeLegal('datenschutz')" aria-label="Schließen">×</button>
-    <h2>Datenschutz</h2>
-    <h3>Verantwortliche Stelle</h3>
-    <p>Delale – More Than Beauty<br />
-    Inhaberin: Döndü Pektas<br />
-    Heidelbergerstraße 28<br />
-    74821 Mosbach<br />
-    Telefon: 0176 82018696</p>
+<div class="legal-content">
+<button class="legal-close" onclick="closeLegal('datenschutz')" aria-label="Schließen">×</button>
+<h2>Datenschutz</h2>
 
-```
+<h3>Verantwortliche Stelle</h3>
+<p>
+Delale – More Than Beauty<br />
+Inhaberin: Döndü Pektas<br />
+Heidelbergerstraße 28<br />
+74821 Mosbach<br />
+Telefon: 0176 82018696
+</p>
+
 <h3>Erhebung und Verwendung von Daten</h3>
-<p>Personenbezogene Daten (z.B. Name, Telefonnummer) werden ausschließlich zur Terminvereinbarung und Kommunikation genutzt.</p>
+<p>Personenbezogene Daten, zum Beispiel Name und Telefonnummer, werden ausschließlich zur Terminvereinbarung und Kommunikation genutzt.</p>
 <p>Eine Weitergabe an Dritte erfolgt nicht, außer wenn dies gesetzlich vorgeschrieben ist.</p>
 
 <h3>Deine Rechte</h3>
@@ -1459,88 +1130,85 @@
 
 <h3>Kontakt über WhatsApp &amp; Instagram</h3>
 <p>Bei der Kontaktaufnahme über WhatsApp oder Instagram gelten zusätzlich die Datenschutzbestimmungen der jeweiligen Anbieter.</p>
-```
-
-  </div>
+</div>
 </div>
 
-<!-- Impressum Modal -->
-
 <div class="legal-modal" id="impressum-modal">
-  <div class="legal-content">
-    <button class="legal-close" onclick="closeLegal('impressum')" aria-label="Schließen">×</button>
-    <h2>Impressum</h2>
-    <h3>Angaben gemäß § 5 TMG</h3>
-    <p><strong>Delale – More Than Beauty</strong><br />
-    Inhaberin: Döndü Pektas<br />
-    Heidelbergerstraße 28<br />
-    74821 Mosbach<br />
-    Deutschland</p>
+<div class="legal-content">
+<button class="legal-close" onclick="closeLegal('impressum')" aria-label="Schließen">×</button>
+<h2>Impressum</h2>
 
-```
+<h3>Angaben gemäß § 5 TMG</h3>
+<p>
+<strong>Delale – More Than Beauty</strong><br />
+Inhaberin: Döndü Pektas<br />
+Heidelbergerstraße 28<br />
+74821 Mosbach<br />
+Deutschland
+</p>
+
 <h3>Kontakt</h3>
-<p>Telefon: 0176 82018696<br />
+<p>
+Telefon: 0176 82018696<br />
 WhatsApp: 0176 82018696<br />
-Instagram: @morethanbeauty2025</p>
+Instagram: @morethanbeauty2025
+</p>
 
 <h3>Umsatzsteuer</h3>
 <p>Kleinunternehmerin gemäß § 19 UStG — es wird keine Umsatzsteuer ausgewiesen.</p>
 
 <h3>Haftungsausschluss</h3>
 <p>Keine Gewähr für Vollständigkeit oder Aktualität der Inhalte.</p>
-```
-
-  </div>
+</div>
 </div>
 
 <script>
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]:not([onclick])').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href === '#') return;
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
+document.querySelectorAll('a[href^="#"]:not([onclick])').forEach(anchor=>{
+anchor.addEventListener('click',function(e){
+const href=this.getAttribute('href');
+if(href==='#')return;
+const target=document.querySelector(href);
+if(target){
+e.preventDefault();
+target.scrollIntoView({behavior:'smooth',block:'start'});
+}
+});
+});
 
-  // Legal modals
-  function openLegal(id) {
-    document.getElementById(id + '-modal').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLegal(id) {
-    document.getElementById(id + '-modal').classList.remove('active');
-    document.body.style.overflow = '';
-  }
-  document.querySelectorAll('.legal-modal').forEach(m => {
-    m.addEventListener('click', (e) => {
-      if (e.target === m) {
-        m.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    });
-  });
+function openLegal(id){
+document.getElementById(id+'-modal').classList.add('active');
+document.body.style.overflow='hidden';
+}
 
-  // Reveal animation
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+function closeLegal(id){
+document.getElementById(id+'-modal').classList.remove('active');
+document.body.style.overflow='';
+}
 
-  document.querySelectorAll('.service-card, .stat, .contact-block, .service-category').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-    observer.observe(el);
-  });
+document.querySelectorAll('.legal-modal').forEach(m=>{
+m.addEventListener('click',(e)=>{
+if(e.target===m){
+m.classList.remove('active');
+document.body.style.overflow='';
+}
+});
+});
+
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.opacity='1';
+entry.target.style.transform='translateY(0)';
+}
+});
+},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+
+document.querySelectorAll('.service-card,.contact-block,.service-category').forEach(el=>{
+el.style.opacity='0';
+el.style.transform='translateY(30px)';
+el.style.transition='opacity .8s ease, transform .8s ease';
+observer.observe(el);
+});
 </script>
 
 </body>
