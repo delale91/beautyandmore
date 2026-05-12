@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light only" />
 <meta name="supported-color-schemes" content="light" />
-<meta name="theme-color" content="#fde4ec" />
+<meta name="theme-color" content="#fbd6e1" />
 <title>Delale – More Than Beauty | Beauty Studio Mosbach</title>
 <meta name="description" content="Delale – More Than Beauty in Mosbach. Wimpernverlängerung, Permanent Make-up, Aquafacial, Microneedling, Zahnbleaching & Zahnschmuck. Jetzt Termin per WhatsApp." />
 
@@ -17,8 +17,8 @@
 <style>
   :root {
     color-scheme: light only;
-    --bg: #fde4ec;
-    --bg-deep: #fbd0de;
+    --bg: #fbd6e1;
+    --bg-deep: #f5b8ca;
     --rose: #e88aa7;
     --rose-deep: #d06184;
     --ink: #2a1a20;
@@ -37,8 +37,8 @@
 
   body {
     font-family: 'Jost', sans-serif;
-    background: #fde4ec;
-    background-color: #fde4ec;
+    background: #fbd6e1;
+    background-color: #fbd6e1;
     color: var(--ink);
     font-weight: 300;
     line-height: 1.6;
@@ -47,19 +47,17 @@
   }
 
   html {
-    background: #fde4ec;
+    background: #fbd6e1;
   }
 
-  /* Soft background gradients */
+  /* Hintergrund einheitlich rosa */
   body::before {
     content: '';
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: -1;
-    background:
-      radial-gradient(circle at 15% 20%, rgba(251, 208, 222, 0.5) 0%, transparent 50%),
-      radial-gradient(circle at 85% 85%, rgba(232, 138, 167, 0.35) 0%, transparent 50%);
+    background: #fbd6e1;
   }
 
   /* ===== Navigation ===== */
@@ -163,7 +161,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    background: #fde4ec;
+    background: #fbd6e1;
   }
 
   .hero::before {
@@ -462,26 +460,56 @@
     background: transparent;
   }
 
+  .welcome-heading {
+    display: inline-block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 0 3.5rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .welcome-heading::before,
+  .welcome-heading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+  }
+
+  .welcome-heading::before { left: -10px; }
+  .welcome-heading::after { right: -10px; }
+
   .about-quote {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    font-size: clamp(1.9rem, 3.2vw, 2.8rem);
     line-height: 1.4;
-    color: var(--ink);
+    color: var(--gold-deep);
     margin: 2rem 0;
+    font-weight: 500;
   }
 
   .about-quote em {
     color: var(--gold);
     font-style: italic;
+    font-weight: 600;
   }
 
   .signature {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--gold);
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    font-weight: 500;
   }
 
   /* ===== Services ===== */
@@ -577,6 +605,16 @@
     font-weight: 500;
     margin-bottom: 0.7rem;
     color: var(--ink);
+  }
+
+  .lash-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 0.5rem 0 1.2rem;
+    border: 1px solid var(--line);
+    display: block;
   }
 
   .service-card-desc {
@@ -702,7 +740,7 @@
   .contact {
     padding: 7rem 3rem;
     text-align: center;
-    background: #fde4ec;
+    background: #fbd6e1;
   }
 
   .contact-content {
@@ -992,7 +1030,7 @@
 <!-- Willkommen Quote -->
 
 <section class="about">
-  <div class="section-eyebrow">Willkommen</div>
+  <div class="welcome-heading">Willkommen</div>
   <p class="about-quote">
     „Schönheit ist <em>kein Luxus</em> — sie ist ein Moment der Zeit, den du dir selbst schenkst."
   </p>
@@ -1044,6 +1082,7 @@
 ```
   <div class="service-card">
     <h3>1:1 Technik <span style="font-size:0.85rem;color:var(--gold);font-style:italic;">— Natural Look</span></h3>
+    <img class="lash-image" src="wimpern-1zu1.jpeg" alt="1:1 Technik Natural Look — Wimpernverlängerung" loading="lazy" />
     <p class="service-card-desc">Bei dieser Technik wird eine künstliche Wimper auf eine Naturwimper gesetzt. Das Ergebnis ist besonders natürlich und elegant.</p>
     <ul class="price-list">
       <li><span class="price-name">Neumodellage</span><span class="price-value">69 €</span></li>
@@ -1058,6 +1097,7 @@
 
   <div class="service-card">
     <h3>Softvolumen 2D–5D</h3>
+    <img class="lash-image" src="wimpern-softvolumen.jpeg" alt="Softvolumen 2D-5D — Wimpernverlängerung" loading="lazy" />
     <p class="service-card-desc">Mehrere feine Wimpern werden auf eine Naturwimper gesetzt. So entsteht ein weicher, vollerer Look.</p>
     <ul class="price-list">
       <li><span class="price-name">Neumodellage</span><span class="price-value">79 €</span></li>
@@ -1072,6 +1112,7 @@
 
   <div class="service-card">
     <h3>Volumen 5D–10D</h3>
+    <img class="lash-image" src="wimpern-volumen.jpeg" alt="Volumen 5D-10D — Wimpernverlängerung" loading="lazy" />
     <p class="service-card-desc">Diese Technik sorgt für deutlich mehr Fülle und einen glamourösen, intensiveren Augenaufschlag.</p>
     <ul class="price-list">
       <li><span class="price-name">Neumodellage</span><span class="price-value">89 €</span></li>
@@ -1401,9 +1442,25 @@
   <div class="legal-content">
     <button class="legal-close" onclick="closeLegal('datenschutz')" aria-label="Schließen">×</button>
     <h2>Datenschutz</h2>
-    <p>Personenbezogene Daten werden ausschließlich zur Terminvereinbarung und zur Kommunikation genutzt.</p>
-    <p>Eine Weitergabe an Dritte erfolgt nicht, außer wenn dies gesetzlich vorgeschrieben ist.</p>
-    <p>Du kannst jederzeit Auskunft, Berichtigung oder Löschung deiner Daten verlangen.</p>
+    <h3>Verantwortliche Stelle</h3>
+    <p>Delale – More Than Beauty<br />
+    Inhaberin: Döndü Pektas<br />
+    Heidelbergerstraße 28<br />
+    74821 Mosbach<br />
+    Telefon: 0176 82018696</p>
+
+```
+<h3>Erhebung und Verwendung von Daten</h3>
+<p>Personenbezogene Daten (z.B. Name, Telefonnummer) werden ausschließlich zur Terminvereinbarung und Kommunikation genutzt.</p>
+<p>Eine Weitergabe an Dritte erfolgt nicht, außer wenn dies gesetzlich vorgeschrieben ist.</p>
+
+<h3>Deine Rechte</h3>
+<p>Du kannst jederzeit Auskunft, Berichtigung oder Löschung deiner gespeicherten Daten verlangen. Wende dich dafür einfach per WhatsApp oder Telefon an mich.</p>
+
+<h3>Kontakt über WhatsApp &amp; Instagram</h3>
+<p>Bei der Kontaktaufnahme über WhatsApp oder Instagram gelten zusätzlich die Datenschutzbestimmungen der jeweiligen Anbieter.</p>
+```
+
   </div>
 </div>
 
@@ -1414,10 +1471,25 @@
     <button class="legal-close" onclick="closeLegal('impressum')" aria-label="Schließen">×</button>
     <h2>Impressum</h2>
     <h3>Angaben gemäß § 5 TMG</h3>
-    <p><strong>Verantwortlich:</strong><br />Delale – More Than Beauty</p>
-    <p><strong>Telefon:</strong> 0176 82018696<br /><strong>Instagram:</strong> @morethanbeauty2025</p>
-    <h3>Kleinunternehmer gemäß § 19 UStG</h3>
-    <p>Keine Gewähr für Vollständigkeit oder Aktualität der Inhalte.</p>
+    <p><strong>Delale – More Than Beauty</strong><br />
+    Inhaberin: Döndü Pektas<br />
+    Heidelbergerstraße 28<br />
+    74821 Mosbach<br />
+    Deutschland</p>
+
+```
+<h3>Kontakt</h3>
+<p>Telefon: 0176 82018696<br />
+WhatsApp: 0176 82018696<br />
+Instagram: @morethanbeauty2025</p>
+
+<h3>Umsatzsteuer</h3>
+<p>Kleinunternehmerin gemäß § 19 UStG — es wird keine Umsatzsteuer ausgewiesen.</p>
+
+<h3>Haftungsausschluss</h3>
+<p>Keine Gewähr für Vollständigkeit oder Aktualität der Inhalte.</p>
+```
+
   </div>
 </div>
 
