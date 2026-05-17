@@ -1,830 +1,1023 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" style="background-color:#fbd6e1;">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light only" />
+<meta name="supported-color-schemes" content="light" />
+<meta name="theme-color" content="#fbd6e1" />
+<meta name="robots" content="index, follow" />
 
-<title>Delale – More Than Beauty | Beauty Studio Mosbach</title>
-<meta name="description" content="Delale – More Than Beauty in Mosbach. UV Wimpernverlängerung, Permanent Make-up, Aquafacial, Microneedling, Zahnbleaching und Zahnschmuck. Jetzt Termin per WhatsApp." />
+<!-- Primary SEO -->
+<title>Delale – More Than Beauty | Beauty Studio Mosbach · Wimpern, PMU, Aquafacial</title>
+<meta name="description" content="Beauty Studio Delale in Mosbach: UV Wimpernverlängerung, Permanent Make-up, Aquafacial, Microneedling, Zahnbleaching und Zahnschmuck. Termine flexibel per WhatsApp." />
+<meta name="keywords" content="Beauty Studio Mosbach, UV Wimpernverlängerung Mosbach, Permanent Make-up Mosbach, PMU Mosbach, Aquafacial, Microneedling, Zahnbleaching, Zahnschmuck, Wimpern Volumen, Delale" />
+<meta name="author" content="Delale – More Than Beauty" />
+<link rel="canonical" href="https://balla-mia-studio.de/" />
 
+<!-- Open Graph / Social Sharing -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:site_name" content="Delale – More Than Beauty" />
+<meta property="og:title" content="Delale – More Than Beauty | Beauty Studio Mosbach" />
+<meta property="og:description" content="UV Wimpernverlängerung, Permanent Make-up, Aquafacial und mehr — in Mosbach. Termin per WhatsApp." />
+<meta property="og:url" content="https://balla-mia-studio.de/" />
+<meta property="og:image" content="https://balla-mia-studio.de/hero.webp" />
+<meta property="og:image:alt" content="Delale – More Than Beauty Studio in Mosbach" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Delale – More Than Beauty | Beauty Studio Mosbach" />
+<meta name="twitter:description" content="UV Wimpernverlängerung, Permanent Make-up, Aquafacial und mehr — in Mosbach." />
+<meta name="twitter:image" content="https://balla-mia-studio.de/hero.webp" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="alternate icon" href="favicon.ico" />
+
+<!--
+  Hinweis Google Fonts: Aktuell werden die Fonts von fonts.googleapis.com geladen.
+  DSGVO-konform ist nur das Selbst-Hosten der Fonts (siehe LG München I, Urteil v. 20.01.2022, Az. 3 O 17493/20).
+  Empfehlung: Fonts unter https://gwfh.mranftl.com/fonts herunterladen, im Ordner /fonts ablegen
+  und unten via @font-face einbinden. Dann die beiden <link>-Zeilen unten entfernen.
+-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+<!-- Strukturierte Daten: LocalBusiness (BeautySalon) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Delale – More Than Beauty",
+  "image": "https://balla-mia-studio.de/hero.webp",
+  "url": "https://balla-mia-studio.de/",
+  "telephone": "+49-176-82018696",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Heidelbergerstraße 28",
+    "addressLocality": "Mosbach",
+    "postalCode": "74821",
+    "addressCountry": "DE"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "description": "Nur nach Terminvereinbarung",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+  },
+  "sameAs": [
+    "https://instagram.com/morethanbeauty2025"
+  ],
+  "areaServed": "Mosbach und Umgebung",
+  "makesOffer": [
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"UV Wimpernverlängerung"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Permanent Make-up"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Aquafacial"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Microneedling"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Kosmetisches Zahnbleaching"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Zahnschmuck"}}
+  ]
+}
+</script>
+
 <style>
 :root{
---bg:#fbd6e1;
---bg-deep:#f5b8ca;
---rose-deep:#d06184;
---ink:#2a1a20;
---ink-soft:#5a3a44;
---gold:#a06820;
---cream:#fff5f8;
---line:rgba(160,104,32,.28);
---shadow:0 20px 40px rgba(180,80,110,.18);
+  color-scheme: light;
+  --bg:#fbd6e1;
+  --bg-deep:#f5b8ca;
+  --rose-deep:#d06184;
+  --ink:#2a1a20;
+  --ink-soft:#5a3a44;
+  --gold:#a06820;
+  --gold-bright:#a06820;
+  --cream:#fff5f8;
+  --line:rgba(160,104,32,.28);
+  --shadow:0 20px 40px rgba(180,80,110,.18);
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;background:var(--bg)}
-body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.6}
+html{scroll-behavior:smooth;background-color:#fbd6e1 !important;color-scheme:light}
+body{font-family:'Jost',sans-serif;background-color:#fbd6e1 !important;color:#2a1a20;overflow-x:hidden;line-height:1.6}
 
+/* Fokus-Stile für Tastatur-Navigation */
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+/* Skip-Link für Screenreader */
+.skip-link{
+  position:absolute;left:-9999px;top:0;
+  background:var(--ink);color:#fff;padding:.8rem 1.2rem;z-index:1000;
+  text-decoration:none;border-radius:0 0 6px 0;
+}
+.skip-link:focus{left:0}
+
+/* Navigation */
 .topbar{
-display:flex;
-justify-content:center;
-align-items:center;
-padding:1rem;
-background:rgba(255,245,248,.9);
-border-bottom:1px solid var(--line);
-box-shadow:0 6px 20px rgba(180,80,110,.08);
+  position:sticky;top:0;z-index:50;
+  display:flex;justify-content:center;align-items:center;
+  padding:1rem;
+  background:rgba(255,245,248,.95);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 6px 20px rgba(180,80,110,.08);
 }
 
-.topbar-buttons{display:flex;gap:2.5rem}
+.topbar-buttons{
+  display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;
+}
 
+.topbar-buttons a,
 .topbar-buttons button{
-background:none;
-border:none;
-font-family:'Jost',sans-serif;
-font-size:.78rem;
-letter-spacing:.16em;
-text-transform:uppercase;
-cursor:pointer;
-color:var(--ink);
-transition:.3s;
+  background:none;border:none;
+  font-family:'Jost',sans-serif;
+  font-size:.78rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  cursor:pointer;
+  color:var(--ink);
+  text-decoration:none;
+  padding:.4rem .2rem;
+  transition:color .3s;
 }
 
-.topbar-buttons button:hover{color:var(--gold)}
+.topbar-buttons a:hover,
+.topbar-buttons button:hover,
+.topbar-buttons a:focus-visible,
+.topbar-buttons button:focus-visible{color:var(--gold)}
 
 .top-dropdown{
-display:none;
-padding:4rem 2rem;
-background:var(--bg-deep);
-border-bottom:1px solid var(--line);
+  display:none;
+  padding:4rem 2rem;
+  background:var(--bg-deep);
+  border-bottom:1px solid var(--line);
 }
-
 .top-dropdown.active{display:block}
 
+/* Hero */
 .hero{
-padding:5rem 2rem 4rem;
-display:grid;
-grid-template-columns:1.1fr 1fr;
-gap:4rem;
-align-items:center;
-max-width:1400px;
-margin:auto;
+  padding:5rem 2rem 4rem;
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:4rem;
+  align-items:center;
+  max-width:1400px;
+  margin:auto;
+}
+
+.hero-eyebrow{
+  letter-spacing:.2em;text-transform:uppercase;
+  font-size:.72rem;color:var(--gold);margin-bottom:1rem;
 }
 
 .hero-title{
-font-family:'Cormorant Garamond',serif;
-font-size:clamp(4rem,9vw,7rem);
-color:var(--gold);
-line-height:.9;
-font-weight:500;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3.5rem,9vw,7rem);
+  color:var(--gold-bright);
+  line-height:.9;
+  font-weight:500;
 }
 
 .hero-tagline{
-font-family:'Cormorant Garamond',serif;
-font-size:2rem;
-color:var(--gold);
-font-style:italic;
-margin-top:.4rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.4rem,3vw,2rem);
+  color:var(--gold-bright);
+  font-style:italic;
+  margin-top:.4rem;
+}
+
+.hero-h1{
+  font-family:'Jost',sans-serif;
+  font-size:1.2rem;font-weight:500;
+  color:var(--ink-soft);
+  margin-top:1.2rem;letter-spacing:.05em;
 }
 
 .hero-sub{
-margin-top:1.5rem;
-font-size:1.1rem;
-line-height:1.8;
-color:var(--ink-soft);
-max-width:550px;
+  margin-top:1rem;font-size:1.05rem;line-height:1.8;
+  color:var(--ink-soft);max-width:550px;
 }
+
+.hero-cta{
+  display:inline-flex;align-items:center;gap:.5rem;
+  margin-top:2rem;padding:1rem 2rem;
+  background:var(--rose-deep);color:#fff;text-decoration:none;
+  letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;
+  border-radius:10px;transition:background .3s;
+}
+.hero-cta:hover,.hero-cta:focus-visible{background:var(--gold-bright)}
 
 .hero-image{
-width:100%;
-height:75vh;
-border-radius:20px;
-overflow:hidden;
-background:#fff5f8;
-box-shadow:var(--shadow);
+  width:100%;height:75vh;border-radius:20px;overflow:hidden;
+  background:#fff5f8;box-shadow:var(--shadow);
 }
+.hero-image img{width:100%;height:100%;object-fit:contain;padding:10px;display:block}
 
-.hero-image img{
-width:100%;
-height:100%;
-object-fit:contain;
-padding:10px;
-display:block;
-}
-
+/* Sections */
 .section{padding:6rem 2rem}
 .section-pink{background:var(--bg-deep)}
 .section-header{text-align:center;margin-bottom:4rem}
 
 .section-title{
-font-family:'Cormorant Garamond',serif;
-font-size:clamp(2.5rem,5vw,4rem);
-color:var(--ink);
-font-weight:400;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.5rem,5vw,4rem);
+  color:var(--ink);
+  font-weight:400;
 }
-
-.section-title em{color:var(--gold);font-style:italic}
+.section-title em{color:var(--gold-bright);font-style:italic}
 
 .section-sub{
-max-width:700px;
-margin:1rem auto 0;
-line-height:1.8;
-color:var(--ink-soft);
+  max-width:700px;margin:1rem auto 0;
+  line-height:1.8;color:var(--ink-soft);
 }
 
+/* Service Cards */
 .services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
-gap:2rem;
-max-width:1400px;
-margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
+  gap:2rem;
+  max-width:1400px;margin:auto;
 }
 
 .service-card{
-background:var(--cream);
-padding:2rem;
-border-radius:18px;
-border:1px solid var(--line);
-box-shadow:var(--shadow);
-display:flex;
-flex-direction:column;
+  background:var(--cream);padding:2rem;border-radius:18px;
+  border:1px solid var(--line);box-shadow:var(--shadow);
+  display:flex;flex-direction:column;
 }
 
 .service-card h3{
-font-family:'Cormorant Garamond',serif;
-font-size:2rem;
-margin-bottom:1rem;
-font-weight:500;
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;margin-bottom:1rem;font-weight:500;
 }
 
-.service-card p{
-line-height:1.8;
-color:var(--ink-soft);
-margin-bottom:1.4rem;
-}
+.service-card p{line-height:1.8;color:var(--ink-soft);margin-bottom:1.4rem}
 
 .service-card img{
-width:100%;
-height:260px;
-object-fit:contain;
-background:#fff;
-border-radius:14px;
-padding:10px;
-margin-bottom:1.5rem;
-border:1px solid var(--line);
+  width:100%;height:260px;object-fit:contain;background:#fff;
+  border-radius:14px;padding:10px;margin-bottom:1.5rem;
+  border:1px solid var(--line);
 }
 
 .price-list{list-style:none;margin-bottom:1.5rem}
-
 .price-list li{
-display:flex;
-justify-content:space-between;
-gap:1rem;
-padding:.7rem 0;
-border-bottom:1px dashed var(--line);
+  display:flex;justify-content:space-between;gap:1rem;
+  padding:.7rem 0;border-bottom:1px dashed var(--line);
 }
-
 .price-list strong{
-color:var(--gold);
-font-family:'Cormorant Garamond',serif;
-font-size:1.25rem;
-white-space:nowrap;
+  color:var(--gold);
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.25rem;white-space:nowrap;
 }
 
 .book-btn{
-margin-top:auto;
-display:inline-flex;
-justify-content:center;
-align-items:center;
-padding:1rem;
-background:var(--ink);
-color:white;
-text-decoration:none;
-letter-spacing:.14em;
-text-transform:uppercase;
-font-size:.75rem;
-transition:.3s;
-border-radius:10px;
+  margin-top:auto;display:inline-flex;justify-content:center;align-items:center;
+  padding:1rem;background:var(--rose-deep);color:#fff;text-decoration:none;
+  letter-spacing:.14em;text-transform:uppercase;font-size:.75rem;
+  border-radius:10px;transition:background .3s;
 }
+.book-btn:hover,.book-btn:focus-visible{background:var(--gold-bright)}
 
-.book-btn:hover{background:var(--gold)}
-
+/* FAQ */
 .faq-wrap{
-max-width:1000px;
-margin:auto;
-background:#fff5f8;
-padding:2rem;
-border-radius:20px;
-box-shadow:var(--shadow);
-border:1px solid var(--line);
+  max-width:1000px;margin:auto;background:#fff5f8;
+  padding:2rem;border-radius:20px;box-shadow:var(--shadow);
+  border:1px solid var(--line);
 }
-
 .faq-item{border-bottom:1px solid rgba(160,104,32,.2)}
 .faq-item:last-child{border:none}
 
 .faq-question{
-width:100%;
-background:none;
-border:none;
-padding:1.4rem 0;
-font-size:1.05rem;
-font-weight:600;
-cursor:pointer;
-text-align:left;
-font-family:'Jost',sans-serif;
-color:var(--ink);
+  width:100%;background:none;border:none;padding:1.4rem 0;
+  font-size:1.05rem;font-weight:600;cursor:pointer;text-align:left;
+  font-family:'Jost',sans-serif;color:var(--ink);
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
 }
-
-.faq-answer{
-display:none;
-padding-bottom:1.5rem;
-line-height:1.8;
-color:var(--ink-soft);
+.faq-question::after{
+  content:"+";font-size:1.5rem;color:var(--gold);transition:transform .3s;flex-shrink:0;
 }
+.faq-item.active .faq-question::after{transform:rotate(45deg)}
 
+.faq-answer{display:none;padding-bottom:1.5rem;line-height:1.8;color:var(--ink-soft)}
 .faq-item.active .faq-answer{display:block}
 
+/* Galerie */
 .gallery-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:18px;
-max-width:1400px;
-margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;max-width:1400px;margin:auto;
 }
-
 .gallery-grid img{
-width:100%;
-height:320px;
-object-fit:cover;
-border-radius:16px;
-background:white;
-padding:6px;
-box-shadow:var(--shadow);
-transition:.3s;
-border:1px solid var(--line);
+  width:100%;height:320px;object-fit:cover;border-radius:16px;
+  background:#fff;padding:6px;box-shadow:var(--shadow);
+  transition:transform .3s;border:1px solid var(--line);
 }
-
 .gallery-grid img:hover{transform:scale(1.03)}
 
-.contact{
-padding:6rem 2rem;
-text-align:center;
-}
+/* Kontakt */
+.contact{padding:6rem 2rem;text-align:center}
 
 .contact-boxes{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:2rem;
-max-width:1100px;
-margin:4rem auto 0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2rem;max-width:1100px;margin:4rem auto 0;
 }
 
 .contact-box{
-background:#fff5f8;
-padding:2rem;
-border-radius:18px;
-box-shadow:var(--shadow);
-border:1px solid var(--line);
-text-align:left;
+  background:#fff5f8;padding:2rem;border-radius:18px;
+  box-shadow:var(--shadow);border:1px solid var(--line);text-align:left;
 }
 
-.contact-box h4{
-font-family:'Cormorant Garamond',serif;
-font-size:2rem;
-margin-bottom:1rem;
-color:var(--gold);
-font-style:italic;
-font-weight:500;
+.contact-box h3{
+  font-family:'Cormorant Garamond',serif;font-size:2rem;
+  margin-bottom:1rem;color:var(--gold-bright);font-style:italic;font-weight:500;
 }
 
-.contact-box p{
-line-height:1.8;
-color:var(--ink-soft);
-}
+.contact-box p,.contact-box address{line-height:1.8;color:var(--ink-soft);font-style:normal}
 
-.contact-box a{
-color:var(--ink);
-text-decoration:none;
-border-bottom:1px solid var(--gold);
-}
+.contact-box a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold)}
+.contact-box a:hover,.contact-box a:focus-visible{color:var(--gold)}
 
+/* Legal Modal */
 .legal-modal{
-display:none;
-position:fixed;
-inset:0;
-z-index:999;
-background:rgba(60,40,35,.6);
-align-items:center;
-justify-content:center;
-padding:2rem;
+  display:none;position:fixed;inset:0;z-index:999;
+  background:rgba(60,40,35,.6);
+  align-items:center;justify-content:center;padding:2rem;
 }
-
 .legal-modal.active{display:flex}
 
 .legal-content{
-background:var(--cream);
-max-width:700px;
-width:100%;
-max-height:85vh;
-overflow-y:auto;
-padding:3rem;
-border-radius:14px;
-position:relative;
-border:1px solid var(--line);
+  background:var(--cream);max-width:760px;width:100%;
+  max-height:85vh;overflow-y:auto;padding:3rem;border-radius:14px;
+  position:relative;border:1px solid var(--line);
 }
 
 .legal-close{
-position:absolute;
-right:1.5rem;
-top:1.5rem;
-background:none;
-border:none;
-font-size:1.8rem;
-cursor:pointer;
-color:var(--ink);
+  position:absolute;right:1.2rem;top:1.2rem;
+  background:none;border:none;font-size:1.8rem;cursor:pointer;
+  color:var(--ink);width:2.5rem;height:2.5rem;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
 }
+.legal-close:hover,.legal-close:focus-visible{background:rgba(0,0,0,.05)}
 
 .legal-content h2{
-font-family:'Cormorant Garamond',serif;
-font-size:2.4rem;
-color:var(--gold);
-margin-bottom:1rem;
+  font-family:'Cormorant Garamond',serif;font-size:2.4rem;
+  color:var(--gold-bright);margin-bottom:1rem;
 }
-
 .legal-content h3{
-font-family:'Cormorant Garamond',serif;
-font-size:1.4rem;
-margin-top:1.5rem;
-margin-bottom:.6rem;
+  font-family:'Cormorant Garamond',serif;font-size:1.4rem;
+  margin-top:1.5rem;margin-bottom:.6rem;color:var(--ink);
 }
+.legal-content p,.legal-content li{color:var(--ink-soft);line-height:1.8}
+.legal-content ul{margin-left:1.5rem;margin-bottom:1rem}
 
-.legal-content p{color:var(--ink-soft);line-height:1.8}
-
+/* Footer */
 footer{
-background:var(--rose-deep);
-color:white;
-padding:4rem 2rem 2rem;
-text-align:center;
-margin-top:4rem;
+  background:var(--rose-deep);color:#fff;
+  padding:4rem 2rem 2rem;text-align:center;margin-top:4rem;
 }
-
-footer h3{
-font-family:'Cormorant Garamond',serif;
-font-size:2.5rem;
-margin-bottom:1rem;
-font-weight:400;
-}
-
-footer p{opacity:.9;line-height:1.8}
+footer h2{font-family:'Cormorant Garamond',serif;font-size:2.5rem;margin-bottom:1rem;font-weight:400}
+footer p{opacity:.95;line-height:1.8}
 
 .footer-links{
-margin-top:1.5rem;
-display:flex;
-justify-content:center;
-gap:1.5rem;
-flex-wrap:wrap;
+  margin-top:1.5rem;display:flex;justify-content:center;
+  gap:1.5rem;flex-wrap:wrap;
+}
+.footer-links a,.footer-links button{
+  background:none;border:none;color:#fff;text-decoration:underline;
+  cursor:pointer;font-family:'Jost',sans-serif;font-size:.9rem;padding:.3rem;
 }
 
-.footer-links a,
-.footer-links button{
-background:none;
-border:none;
-color:white;
-text-decoration:none;
-cursor:pointer;
-font-family:'Jost',sans-serif;
-font-size:.9rem;
-}
-
+/* Responsive */
 @media(max-width:900px){
-.hero{grid-template-columns:1fr;padding:4rem 1.2rem}
-.hero-image{height:55vh}
-.gallery-grid{grid-template-columns:repeat(2,1fr);gap:12px}
-.gallery-grid img{height:220px}
-.section{padding:5rem 1.2rem}
-.top-dropdown,.contact{padding:5rem 1.2rem}
-.topbar-buttons{gap:2rem}
+  .hero{grid-template-columns:1fr;padding:4rem 1.2rem;gap:2.5rem}
+  .hero-image{height:55vh}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .gallery-grid img{height:220px}
+  .section{padding:5rem 1.2rem}
+  .top-dropdown,.contact{padding:5rem 1.2rem}
+  .topbar-buttons{gap:1.2rem}
+  .topbar-buttons a,.topbar-buttons button{font-size:.7rem}
+  .legal-content{padding:2rem 1.5rem}
+}
+
+/* Floating WhatsApp Button */
+.wa-float{
+  position:fixed;
+  right:1.2rem;
+  bottom:1.2rem;
+  z-index:100;
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  background:#25D366;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 24px rgba(37,211,102,.5),0 4px 12px rgba(0,0,0,.15);
+  text-decoration:none;
+  transition:transform .25s;
+}
+.wa-float:hover,.wa-float:focus-visible{transform:scale(1.08)}
+.wa-float svg{width:34px;height:34px;fill:#fff}
+.wa-float::before{
+  content:"";
+  position:absolute;
+  inset:-4px;
+  border-radius:50%;
+  border:2px solid #25D366;
+  opacity:.6;
+  animation:waPulse 2s ease-out infinite;
+}
+@keyframes waPulse{
+  0%{transform:scale(.95);opacity:.7}
+  70%{transform:scale(1.25);opacity:0}
+  100%{transform:scale(1.25);opacity:0}
+}
+@media(max-width:600px){
+  .wa-float{width:56px;height:56px;right:1rem;bottom:1rem}
+  .wa-float svg{width:30px;height:30px}
+}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
 </style>
 </head>
 
-<body>
+<body style="background-color:#fbd6e1 !important;color:#2a1a20;">
 
-<header class="topbar">
-<div class="topbar-buttons">
-<button type="button" onclick="toggleFAQ()">FAQ</button>
-<button type="button" onclick="toggleGallery()">Galerie</button>
-</div>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="topbar" role="banner">
+<nav class="topbar-buttons" aria-label="Hauptnavigation">
+<a href="#behandlungen">Behandlungen</a>
+<button type="button" id="faq-toggle" aria-expanded="false" aria-controls="faq-section">FAQ</button>
+<button type="button" id="gallery-toggle" aria-expanded="false" aria-controls="gallery-section">Galerie</button>
+<a href="#kontakt">Kontakt</a>
+</nav>
 </header>
 
-<section class="top-dropdown" id="faq-section">
+<main id="main">
+
+<section class="top-dropdown" id="faq-section" aria-labelledby="faq-heading" hidden>
 <div class="section-header">
-<h2 class="section-title">Häufige <em>Fragen</em></h2>
+<h2 id="faq-heading" class="section-title">Häufige <em>Fragen</em></h2>
 <p class="section-sub">Tippe auf eine Frage, um die Antwort zu öffnen.</p>
 </div>
 
 <div class="faq-wrap">
 
-<div class="faq-item active">
-<button class="faq-question">Kann ich mit UV Wimpernverlängerung duschen?</button>
+<div class="faq-item">
+<button class="faq-question" aria-expanded="false">Kann ich mit UV Wimpernverlängerung duschen?</button>
 <div class="faq-answer">Ja. Durch die UV-Methode musst du nicht 24–48 Stunden warten, sondern kannst alles wie gewohnt ausführen.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Wie viele Nuancen werden meine Zähne heller?</button>
+<button class="faq-question" aria-expanded="false">Wie viele Nuancen werden meine Zähne heller?</button>
 <div class="faq-answer">Das Ergebnis ist individuell – meist 2–9 Nuancen heller.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Wäre eine Zahnreinigung vor dem Zahnbleaching sinnvoll?</button>
+<button class="faq-question" aria-expanded="false">Wäre eine Zahnreinigung vor dem Zahnbleaching sinnvoll?</button>
 <div class="faq-answer">Definitiv ja, so entsteht ein gleichmäßigeres Gesamtbild.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Wie lange hält eine UV Wimpernverlängerung?</button>
+<button class="faq-question" aria-expanded="false">Wie lange hält eine UV Wimpernverlängerung?</button>
 <div class="faq-answer">In der Regel 2–4 Wochen – je nach Wachstumszyklus deiner Naturwimpern und Pflege.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Ist eine PMU Nachbehandlung notwendig?</button>
+<button class="faq-question" aria-expanded="false">Ist eine PMU Nachbehandlung notwendig?</button>
 <div class="faq-answer">Ja, eine Auffrischung nach ca. 4–8 Wochen ist wichtig für ein perfektes und langanhaltendes Ergebnis.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Kann man PMU wieder entfernen?</button>
+<button class="faq-question" aria-expanded="false">Kann man PMU wieder entfernen?</button>
 <div class="faq-answer">Ja, mit speziellen Methoden ist eine Entfernung oder Aufhellung möglich.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Wie lange hält Permanent Make-up?</button>
+<button class="faq-question" aria-expanded="false">Wie lange hält Permanent Make-up?</button>
 <div class="faq-answer">Je nach Hauttyp und Pflege ca. 1–3 Jahre.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Muss ich etwas vor dem Wimpernverlängerungstermin beachten?</button>
+<button class="faq-question" aria-expanded="false">Muss ich etwas vor dem Wimpernverlängerungstermin beachten?</button>
 <div class="faq-answer">Bitte komme ohne Augen-Make-up und verwende am Termin-Tag keine ölhaltigen Produkte im Augenbereich. Keinen Kaffee oder Energydrink davor trinken, das minimiert das Zucken der Augen und die Behandlung kann schneller verlaufen.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Kosmetisches Zahnbleaching: Wie lange hält das Ergebnis?</button>
+<button class="faq-question" aria-expanded="false">Kosmetisches Zahnbleaching: Wie lange hält das Ergebnis?</button>
 <div class="faq-answer">Je nach Lebensstil und Zahnpflege ca. 3–12 Monate.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Tut die PMU Behandlung weh?</button>
+<button class="faq-question" aria-expanded="false">Tut die PMU Behandlung weh?</button>
 <div class="faq-answer">Das Empfinden ist individuell, kann je nach Region etwas mehr oder weniger wehtun.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Kosmetisches Zahnbleaching: Tut die Behandlung weh?</button>
+<button class="faq-question" aria-expanded="false">Kosmetisches Zahnbleaching: Tut die Behandlung weh?</button>
 <div class="faq-answer">In der Regel nicht. Manche Personen verspüren vorübergehend eine leichte Empfindlichkeit.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Für wen ist eine Wimpernverlängerung nicht geeignet?</button>
+<button class="faq-question" aria-expanded="false">Für wen ist eine Wimpernverlängerung nicht geeignet?</button>
 <div class="faq-answer">Bei akuten Augenentzündungen, Allergien gegen Kleber oder Tapes oder sehr geschwächten Naturwimpern sollte vorher Rücksprache gehalten werden.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Ist kosmetisches Zahnbleaching das gleiche wie beim Zahnarzt?</button>
+<button class="faq-question" aria-expanded="false">Ist kosmetisches Zahnbleaching das gleiche wie beim Zahnarzt?</button>
 <div class="faq-answer">Nein, kosmetisches Zahnbleaching ist eine ästhetische Behandlung und ersetzt keine zahnärztliche Therapie.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Ist das Zahnbleaching für jeden geeignet?</button>
+<button class="faq-question" aria-expanded="false">Ist das Zahnbleaching für jeden geeignet?</button>
 <div class="faq-answer">Nicht geeignet bei Schwangerschaft, Stillzeit, starken Zahnschäden oder unbehandelten Zahnproblemen. Ab 18 Jahren.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Was sollte ich nach der Zahnbleaching Behandlung beachten?</button>
+<button class="faq-question" aria-expanded="false">Was sollte ich nach der Zahnbleaching Behandlung beachten?</button>
 <div class="faq-answer">24–48 Stunden auf stark färbende Lebensmittel, Getränke und Zigaretten verzichten, zum Beispiel Kaffee, Rotwein oder Cola.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Schadet eine Wimpernverlängerung meinen Naturwimpern?</button>
+<button class="faq-question" aria-expanded="false">Schadet eine Wimpernverlängerung meinen Naturwimpern?</button>
 <div class="faq-answer">Nein, bei professioneller und korrekter Anwendung werden deine Naturwimpern nicht geschädigt.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Darf ich danach Mascara nach der Wimpernverlängerung benutzen?</button>
+<button class="faq-question" aria-expanded="false">Darf ich nach der Wimpernverlängerung Mascara benutzen?</button>
 <div class="faq-answer">Bitte nicht. Mascara kann die Wimpern belasten und ist ein Zeichen dafür, dass du beim nächsten Mal eventuell etwas mehr Volumen haben möchtest.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Gibt es eine Ausfallzeit bei der PMU Behandlung?</button>
+<button class="faq-question" aria-expanded="false">Gibt es eine Ausfallzeit bei der PMU Behandlung?</button>
 <div class="faq-answer">Leichte Rötungen oder Schwellungen sind möglich, klingen jedoch meist schnell ab.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Für wen ist PMU nicht geeignet?</button>
+<button class="faq-question" aria-expanded="false">Für wen ist PMU nicht geeignet?</button>
 <div class="faq-answer">Nicht geeignet bei Schwangerschaft, Stillzeit, akuten Hauterkrankungen oder bestimmten Vorerkrankungen – eine individuelle Beratung ist wichtig.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Wie lange dauert eine Zahnbleaching Behandlung?</button>
+<button class="faq-question" aria-expanded="false">Wie lange dauert eine Zahnbleaching Behandlung?</button>
 <div class="faq-answer">Etwa 15–60 Minuten, je nach gewünschter Aufhellung.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Was darf ich nach der UV Wimpernbehandlung nicht machen?</button>
+<button class="faq-question" aria-expanded="false">Was darf ich nach der UV Wimpernbehandlung nicht machen?</button>
 <div class="faq-answer">Nicht zu nah ans Feuer gehen. Wimpern können verbrennen und das kann sehr schmerzhaft sein.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Wie sieht es direkt nach der PMU Behandlung aus?</button>
+<button class="faq-question" aria-expanded="false">Wie sieht es direkt nach der PMU Behandlung aus?</button>
 <div class="faq-answer">Die Farbe wirkt zunächst etwas intensiver und wird innerhalb weniger Tage weicher und natürlicher.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Wie lange dauert eine PMU Behandlung?</button>
+<button class="faq-question" aria-expanded="false">Wie lange dauert eine PMU Behandlung?</button>
 <div class="faq-answer">In der Regel 2–3 Stunden inklusive Beratung und Vorzeichnung.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Wie lange dauert eine Wimpernverlängerung Neuanlage?</button>
+<button class="faq-question" aria-expanded="false">Wie lange dauert eine Wimpernverlängerung Neuanlage?</button>
 <div class="faq-answer">Je nach Technik und Menge an Eigenwimpern ca. 1,5 bis 3 Stunden. Ein Beratungsgespräch wird davor geführt.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Ist kosmetisches Zahnbleaching schädlich?</button>
+<button class="faq-question" aria-expanded="false">Ist kosmetisches Zahnbleaching schädlich?</button>
 <div class="faq-answer">Bei fachgerechter Anwendung und gesunden Zähnen ist es schonend und unbedenklich.</div>
 </div>
 
 </div>
 </section>
 
-<section class="top-dropdown" id="gallery-section">
+<section class="top-dropdown" id="gallery-section" aria-labelledby="gallery-heading" hidden>
 <div class="section-header">
-<h2 class="section-title">Unsere <em>Galerie</em></h2>
-
+<h2 id="gallery-heading" class="section-title">Unsere <em>Galerie</em></h2>
+<p class="section-sub">Eindrücke aus unserem Studio in Mosbach.</p>
 </div>
 
 <div class="gallery-grid">
-<img src="galerie1.jpeg" alt="Galerie Bild 1" loading="lazy">
-<img src="galerie2.jpeg" alt="Galerie Bild 2" loading="lazy">
-<img src="galerie3.jpeg" alt="Galerie Bild 3" loading="lazy">
-<img src="galerie4.jpeg" alt="Galerie Bild 4" loading="lazy">
-<img src="galerie5.jpeg" alt="Galerie Bild 5" loading="lazy">
-<img src="galerie6.jpeg" alt="Galerie Bild 6" loading="lazy">
-<img src="galerie7.jpeg" alt="Galerie Bild 7" loading="lazy">
-<img src="galerie8.jpeg" alt="Galerie Bild 8" loading="lazy">
-<img src="galerie9.jpeg" alt="Galerie Bild 9" loading="lazy">
-<img src="galerie10.jpeg" alt="Galerie Bild 10" loading="lazy">
-<img src="galerie11.jpeg" alt="Galerie Bild 11" loading="lazy">
-<img src="galerie12.jpeg" alt="Galerie Bild 12" loading="lazy">
-<img src="galerie13.jpeg" alt="Galerie Bild 13" loading="lazy">
-<img src="galerie14.jpeg" alt="Galerie Bild 14" loading="lazy">
-<img src="galerie15.jpeg" alt="Galerie Bild 15" loading="lazy">
-<img src="galerie16.jpeg" alt="Galerie Bild 16" loading="lazy">
-<img src="galerie17.jpeg" alt="Galerie Bild 17" loading="lazy">
-<img src="galerie18.jpeg" alt="Galerie Bild 18" loading="lazy">
-<img src="galerie19.jpeg" alt="Galerie Bild 19" loading="lazy">
-<img src="galerie20.jpeg" alt="Galerie Bild 20" loading="lazy">
-<img src="galerie21.jpeg" alt="Galerie Bild 21" loading="lazy">
-<img src="galerie22.jpeg" alt="Galerie Bild 22" loading="lazy">
-<img src="galerie23.jpeg" alt="Galerie Bild 23" loading="lazy">
-<img src="galerie24.jpeg" alt="Galerie Bild 24" loading="lazy">
-<img src="galerie25.jpeg" alt="Galerie Bild 25" loading="lazy">
-<img src="galerie26.jpeg" alt="Galerie Bild 26" loading="lazy">
-<img src="galerie27.jpeg" alt="Galerie Bild 27" loading="lazy">
-<img src="galerie28.jpeg" alt="Galerie Bild 28" loading="lazy">
-<img src="galerie29.jpeg" alt="Galerie Bild 29" loading="lazy">
-<img src="galerie30.jpeg" alt="Galerie Bild 30" loading="lazy">
-<img src="galerie31.jpeg" alt="Galerie Bild 31" loading="lazy">
-<img src="galerie32.jpeg" alt="Galerie Bild 32" loading="lazy">
-<img src="galerie33.jpeg" alt="Galerie Bild 33" loading="lazy">
-<img src="galerie34.jpeg" alt="Galerie Bild 34" loading="lazy">
-<img src="galerie35.jpeg" alt="Galerie Bild 35" loading="lazy">
-<img src="galerie36.jpeg" alt="Galerie Bild 36" loading="lazy">
-<img src="galerie37.jpeg" alt="Galerie Bild 37" loading="lazy">
-<img src="galerie38.jpeg" alt="Galerie Bild 38" loading="lazy">
-<img src="galerie39.jpeg" alt="Galerie Bild 39" loading="lazy">
-<img src="galerie40.jpeg" alt="Galerie Bild 40" loading="lazy">
+<img src="galerie1.jpeg" alt="Beauty-Behandlung – Eindruck 1 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie2.jpeg" alt="Beauty-Behandlung – Eindruck 2 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie3.jpeg" alt="Beauty-Behandlung – Eindruck 3 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie4.jpeg" alt="Beauty-Behandlung – Eindruck 4 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie5.jpeg" alt="Beauty-Behandlung – Eindruck 5 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie6.jpeg" alt="Beauty-Behandlung – Eindruck 6 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie7.jpeg" alt="Beauty-Behandlung – Eindruck 7 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie8.jpeg" alt="Beauty-Behandlung – Eindruck 8 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie9.jpeg" alt="Beauty-Behandlung – Eindruck 9 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie10.jpeg" alt="Beauty-Behandlung – Eindruck 10 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie11.jpeg" alt="Beauty-Behandlung – Eindruck 11 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie12.jpeg" alt="Beauty-Behandlung – Eindruck 12 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie13.jpeg" alt="Beauty-Behandlung – Eindruck 13 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie14.jpeg" alt="Beauty-Behandlung – Eindruck 14 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie15.jpeg" alt="Beauty-Behandlung – Eindruck 15 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie16.jpeg" alt="Beauty-Behandlung – Eindruck 16 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie17.jpeg" alt="Beauty-Behandlung – Eindruck 17 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie18.jpeg" alt="Beauty-Behandlung – Eindruck 18 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie19.jpeg" alt="Beauty-Behandlung – Eindruck 19 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie20.jpeg" alt="Beauty-Behandlung – Eindruck 20 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie21.jpeg" alt="Beauty-Behandlung – Eindruck 21 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie22.jpeg" alt="Beauty-Behandlung – Eindruck 22 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie23.jpeg" alt="Beauty-Behandlung – Eindruck 23 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie24.jpeg" alt="Beauty-Behandlung – Eindruck 24 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie25.jpeg" alt="Beauty-Behandlung – Eindruck 25 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie26.jpeg" alt="Beauty-Behandlung – Eindruck 26 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie27.jpeg" alt="Beauty-Behandlung – Eindruck 27 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie28.jpeg" alt="Beauty-Behandlung – Eindruck 28 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie29.jpeg" alt="Beauty-Behandlung – Eindruck 29 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie30.jpeg" alt="Beauty-Behandlung – Eindruck 30 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie31.jpeg" alt="Beauty-Behandlung – Eindruck 31 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie32.jpeg" alt="Beauty-Behandlung – Eindruck 32 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie33.jpeg" alt="Beauty-Behandlung – Eindruck 33 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie34.jpeg" alt="Beauty-Behandlung – Eindruck 34 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie35.jpeg" alt="Beauty-Behandlung – Eindruck 35 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie36.jpeg" alt="Beauty-Behandlung – Eindruck 36 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie37.jpeg" alt="Beauty-Behandlung – Eindruck 37 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie38.jpeg" alt="Beauty-Behandlung – Eindruck 38 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie39.jpeg" alt="Beauty-Behandlung – Eindruck 39 aus dem Studio Delale" loading="lazy" width="600" height="600">
+<img src="galerie40.jpeg" alt="Beauty-Behandlung – Eindruck 40 aus dem Studio Delale" loading="lazy" width="600" height="600">
 </div>
 </section>
 
 <section class="hero">
 <div>
-<div style="letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;color:var(--gold);margin-bottom:1rem;">
-Beauty Studio · Mosbach
-</div>
+<p class="hero-eyebrow">Beauty Studio · Mosbach</p>
 
-<h1 class="hero-title">Delale</h1>
-<div class="hero-tagline">More Than Beauty</div>
+<p class="hero-title">Delale</p>
+<p class="hero-tagline">More Than Beauty</p>
+
+<h1 class="hero-h1">Dein Beauty Studio in Mosbach</h1>
 
 <p class="hero-sub">
 Schön, dass du da bist – hier findest du meine Behandlungen und Preise auf einen Blick. Lass dich verwöhnen mit ausdrucksstarken UV Wimpernverlängerungen, perfektem Permanent Make-up, glatter Haut und einem strahlenden Lächeln.
 </p>
+
+<a class="hero-cta" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Termin per WhatsApp</a>
 </div>
 
 <div class="hero-image">
-<img src="hero.webp" alt="Delale Beauty Studio">
+<img src="hero.webp" alt="Delale Beauty Studio – Mosbach" width="800" height="800" fetchpriority="high">
 </div>
 </section>
 
-<section class="section section-pink" id="wimpern">
+<section class="section section-pink" id="behandlungen" aria-labelledby="wimpern-heading">
 <div class="section-header">
-<h2 class="section-title">UV <em>Wimpernverlängerung</em></h2>
+<h2 id="wimpern-heading" class="section-title">UV <em>Wimpernverlängerung</em></h2>
 <p class="section-sub">Ausdrucksstarke Augen und Looks für jeden Stil.</p>
 </div>
 
 <div class="services-grid">
 
-<div class="service-card">
+<article class="service-card">
 <h3>1:1 Technik</h3>
-<img src="wimpern-1zu1.jpeg" alt="1:1 Technik">
+<img src="wimpern-1zu1.jpeg" alt="UV Wimpernverlängerung 1:1 Technik – natürlicher Look" loading="lazy" width="600" height="400">
 <p>Besonders natürlicher und eleganter Look.</p>
 <ul class="price-list">
-<li><span>Neumodellage</span><strong>69 €</strong></li>
-<li><span>Auffüllen nach 2 Wochen</span><strong>39 €</strong></li>
-<li><span>Auffüllen nach 3 Wochen</span><strong>49 €</strong></li>
-<li><span>Auffüllen nach 4 Wochen</span><strong>59 €</strong></li>
+<li><span>Neumodellage</span><strong>69&nbsp;€</strong></li>
+<li><span>Auffüllen nach 2 Wochen</span><strong>39&nbsp;€</strong></li>
+<li><span>Auffüllen nach 3 Wochen</span><strong>49&nbsp;€</strong></li>
+<li><span>Auffüllen nach 4 Wochen</span><strong>59&nbsp;€</strong></li>
 </ul>
-<a class="book-btn" href="https://wa.me/4917682018696" target="_blank">Buchen</a>
-</div>
+<a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Buchen</a>
+</article>
 
-<div class="service-card">
+<article class="service-card">
 <h3>Softvolumen 2D–5D</h3>
-<img src="wimpern-softvolumen.jpeg" alt="Softvolumen 2D-5D">
+<img src="wimpern-softvolumen.jpeg" alt="UV Wimpernverlängerung Softvolumen 2D bis 5D" loading="lazy" width="600" height="400">
 <p>Weicher, voller und femininer Look.</p>
 <ul class="price-list">
-<li><span>Neumodellage</span><strong>79 €</strong></li>
-<li><span>Auffüllen nach 2 Wochen</span><strong>49 €</strong></li>
-<li><span>Auffüllen nach 3 Wochen</span><strong>59 €</strong></li>
-<li><span>Auffüllen nach 4 Wochen</span><strong>69 €</strong></li>
+<li><span>Neumodellage</span><strong>79&nbsp;€</strong></li>
+<li><span>Auffüllen nach 2 Wochen</span><strong>49&nbsp;€</strong></li>
+<li><span>Auffüllen nach 3 Wochen</span><strong>59&nbsp;€</strong></li>
+<li><span>Auffüllen nach 4 Wochen</span><strong>69&nbsp;€</strong></li>
 </ul>
-<a class="book-btn" href="https://wa.me/4917682018696" target="_blank">Buchen</a>
-</div>
+<a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Buchen</a>
+</article>
 
-<div class="service-card">
+<article class="service-card">
 <h3>Volumen 5D–10D</h3>
-<img src="wimpern-volumen.jpeg" alt="Volumen 5D-10D">
+<img src="wimpern-volumen.jpeg" alt="UV Wimpernverlängerung Volumen 5D bis 10D – glamouröser Look" loading="lazy" width="600" height="400">
 <p>Glamouröser und intensiver Augenaufschlag.</p>
 <ul class="price-list">
-<li><span>Neumodellage</span><strong>89 €</strong></li>
-<li><span>Auffüllen nach 2 Wochen</span><strong>59 €</strong></li>
-<li><span>Auffüllen nach 3 Wochen</span><strong>69 €</strong></li>
-<li><span>Auffüllen nach 4 Wochen</span><strong>79 €</strong></li>
+<li><span>Neumodellage</span><strong>89&nbsp;€</strong></li>
+<li><span>Auffüllen nach 2 Wochen</span><strong>59&nbsp;€</strong></li>
+<li><span>Auffüllen nach 3 Wochen</span><strong>69&nbsp;€</strong></li>
+<li><span>Auffüllen nach 4 Wochen</span><strong>79&nbsp;€</strong></li>
 </ul>
-<a class="book-btn" href="https://wa.me/4917682018696" target="_blank">Buchen</a>
-</div>
+<a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Buchen</a>
+</article>
 
-<div class="service-card">
+<article class="service-card">
 <h3>Megavolumen ab 10D</h3>
+<img src="wimpern-megavolumen.jpeg" alt="UV Wimpernverlängerung Megavolumen ab 10D – dramatischer Look" loading="lazy" width="600" height="400" onerror="this.style.display='none'">
 <p>Für einen auffälligen, dramatischen Look mit maximaler Dichte.</p>
 <ul class="price-list">
-<li><span>Neumodellage</span><strong>99 €</strong></li>
-<li><span>Auffüllen nach 2 Wochen</span><strong>69 €</strong></li>
-<li><span>Auffüllen nach 3 Wochen</span><strong>79 €</strong></li>
-<li><span>Auffüllen nach 4 Wochen</span><strong>89 €</strong></li>
+<li><span>Neumodellage</span><strong>99&nbsp;€</strong></li>
+<li><span>Auffüllen nach 2 Wochen</span><strong>69&nbsp;€</strong></li>
+<li><span>Auffüllen nach 3 Wochen</span><strong>79&nbsp;€</strong></li>
+<li><span>Auffüllen nach 4 Wochen</span><strong>89&nbsp;€</strong></li>
 </ul>
-<a class="book-btn" href="https://wa.me/4917682018696" target="_blank">Buchen</a>
-</div>
+<a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Buchen</a>
+</article>
 
 </div>
 </section>
 
-<section class="section">
+<section class="section" aria-labelledby="pmu-heading">
 <div class="section-header">
-<h2 class="section-title">Permanent <em>Make-up</em></h2>
+<h2 id="pmu-heading" class="section-title">Permanent <em>Make-up</em></h2>
 <p class="section-sub">Schönheit, die bleibt.</p>
 </div>
 
 <div class="services-grid">
-<div class="service-card"><h3>Lippen</h3><p>Dauerhafte Lippenpigmentierung für mehr Farbe, Frische und eine schöne Lippenkontur.</p><ul class="price-list"><li><span>Preis</span><strong>350 €</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank">Buchen</a></div>
-<div class="service-card"><h3>Augenbrauen</h3><p>Für dauerhaft definierte, gepflegte und natürlich schöne Augenbrauen.</p><ul class="price-list"><li><span>Preis</span><strong>350 €</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank">Buchen</a></div>
-<div class="service-card"><h3>Eyeliner</h3><p>Dauerhafte Betonung der Augen für einen ausdrucksstarken Blick.</p><ul class="price-list"><li><span>Preis</span><strong>200 €</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank">Buchen</a></div>
-<div class="service-card"><h3>Nachbehandlung</h3><p>Nachbehandlung zur Auffrischung oder Korrektur des Ergebnisses.</p><ul class="price-list"><li><span>Preis</span><strong>65 €</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank">Buchen</a></div>
+<article class="service-card"><h3>Lippen</h3><p>Dauerhafte Lippenpigmentierung für mehr Farbe, Frische und eine schöne Lippenkontur.</p><ul class="price-list"><li><span>Preis</span><strong>350&nbsp;€</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Buchen</a></article>
+<article class="service-card"><h3>Augenbrauen</h3><p>Für dauerhaft definierte, gepflegte und natürlich schöne Augenbrauen.</p><ul class="price-list"><li><span>Preis</span><strong>350&nbsp;€</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Buchen</a></article>
+<article class="service-card"><h3>Eyeliner</h3><p>Dauerhafte Betonung der Augen für einen ausdrucksstarken Blick.</p><ul class="price-list"><li><span>Preis</span><strong>200&nbsp;€</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Buchen</a></article>
+<article class="service-card"><h3>Nachbehandlung</h3><p>Nachbehandlung zur Auffrischung oder Korrektur des Ergebnisses.</p><ul class="price-list"><li><span>Preis</span><strong>65&nbsp;€</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Buchen</a></article>
 </div>
 </section>
 
-<section class="section section-pink">
+<section class="section section-pink" aria-labelledby="skincare-heading">
 <div class="section-header">
-<h2 class="section-title">Skincare & <em>Zahn</em></h2>
+<h2 id="skincare-heading" class="section-title">Skincare & <em>Zahn</em></h2>
 <p class="section-sub">Für strahlende Haut und ein schönes Lächeln.</p>
 </div>
 
 <div class="services-grid">
-<div class="service-card"><h3>Aquafacial</h3><p>Tiefenreinigung, Peeling und Feuchtigkeitsversorgung für ein frisches Hautbild.</p><ul class="price-list"><li><span>Preis</span><strong>auf Anfrage</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank">Buchen</a></div>
-<div class="service-card"><h3>Microneedling</h3><p>Zur Verbesserung des Hautbildes, für mehr Frische und feinere Poren.</p><ul class="price-list"><li><span>Preis</span><strong>auf Anfrage</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank">Buchen</a></div>
-<div class="service-card"><h3>Zahnbleaching</h3><p>Schonende Zahnaufhellung für ein frischeres, strahlenderes Lächeln.</p><ul class="price-list"><li><span>Preis</span><strong>ab 70 €</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank">Buchen</a></div>
-<div class="service-card"><h3>Zahnschmuck</h3><p>Swarovski-Steine, Gold-/Silberfiguren und individuelle Designs.</p><ul class="price-list"><li><span>Swarovski-Steine</span><strong>ab 35 €</strong></li><li><span>Gold-/Silberfiguren</span><strong>ab 70 €</strong></li><li><span>Individuelle Designs</span><strong>auf Anfrage</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank">Buchen</a></div>
+<article class="service-card"><h3>Aquafacial</h3><p>Tiefenreinigung, Peeling und Feuchtigkeitsversorgung für ein frisches Hautbild.</p><ul class="price-list"><li><span>Preis</span><strong>auf Anfrage</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Buchen</a></article>
+<article class="service-card"><h3>Microneedling</h3><p>Zur Verbesserung des Hautbildes, für mehr Frische und feinere Poren.</p><ul class="price-list"><li><span>Preis</span><strong>auf Anfrage</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Buchen</a></article>
+<article class="service-card"><h3>Zahnbleaching</h3><p>Schonende kosmetische Zahnaufhellung für ein frischeres, strahlenderes Lächeln.</p><ul class="price-list"><li><span>Preis</span><strong>ab 70&nbsp;€</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Buchen</a></article>
+<article class="service-card"><h3>Zahnschmuck</h3><p>Swarovski-Steine, Gold-/Silberfiguren und individuelle Designs.</p><ul class="price-list"><li><span>Swarovski-Steine</span><strong>ab 35&nbsp;€</strong></li><li><span>Gold-/Silberfiguren</span><strong>ab 70&nbsp;€</strong></li><li><span>Individuelle Designs</span><strong>auf Anfrage</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Buchen</a></article>
 </div>
 </section>
 
-<section class="section">
+<section class="section" aria-labelledby="extras-heading">
 <div class="section-header">
-<h2 class="section-title"><em>Extras</em></h2>
+<h2 id="extras-heading" class="section-title"><em>Extras</em></h2>
 <p class="section-sub">Zusatzleistungen für deine Behandlung.</p>
 </div>
 
 <div class="services-grid">
-<div class="service-card"><h3>Abschminken</h3><p>Vorbereitung der Behandlung durch Abschminken vor Ort.</p><ul class="price-list"><li><span>Preis</span><strong>10 €</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank">Buchen</a></div>
-<div class="service-card"><h3>UV Wimpern entfernen</h3><p>Schonendes Entfernen vorhandener Wimpernextensions.</p><ul class="price-list"><li><span>Preis</span><strong>15 €</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank">Buchen</a></div>
+<article class="service-card"><h3>Abschminken</h3><p>Vorbereitung der Behandlung durch Abschminken vor Ort.</p><ul class="price-list"><li><span>Preis</span><strong>10&nbsp;€</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Buchen</a></article>
+<article class="service-card"><h3>UV Wimpern entfernen</h3><p>Schonendes Entfernen vorhandener Wimpernextensions.</p><ul class="price-list"><li><span>Preis</span><strong>15&nbsp;€</strong></li></ul><a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Buchen</a></article>
 </div>
 </section>
 
-<section class="contact" id="kontakt">
+<section class="contact" id="kontakt" aria-labelledby="kontakt-heading">
 <div class="section-header">
-<h2 class="section-title">Kontakt & <em>Termin</em></h2>
+<h2 id="kontakt-heading" class="section-title">Kontakt & <em>Termin</em></h2>
 <p class="section-sub">Für deine persönliche Terminvereinbarung erreichst du mich direkt über WhatsApp oder Instagram.</p>
 </div>
 
 <div class="contact-boxes">
-<div class="contact-box"><h4>Standort</h4><p>Heidelbergerstraße 28<br>74821 Mosbach<br><br><a href="https://www.google.com/maps?q=Heidelbergerstra%C3%9Fe+28,+74821+Mosbach" target="_blank">Route öffnen</a></p></div>
-<div class="contact-box"><h4>Erreichbarkeit</h4><p><a href="tel:+4917682018696">0176 82018696</a><br><a href="https://wa.me/4917682018696" target="_blank">WhatsApp Chat</a><br><a href="https://instagram.com/morethanbeauty2025" target="_blank">@morethanbeauty2025</a></p></div>
-<div class="contact-box"><h4>Öffnungszeiten</h4><p>Nur nach Terminvereinbarung.<br><br>Termine flexibel nach Absprache.</p></div>
-<div class="contact-box"><h4>Zahlung</h4><p>Aktuell nur Barzahlung möglich.</p></div>
+
+<div class="contact-box">
+<h3>Standort</h3>
+<address>
+Heidelbergerstraße 28<br>
+74821 Mosbach<br><br>
+<a href="https://www.google.com/maps?q=Heidelbergerstra%C3%9Fe+28,+74821+Mosbach" target="_blank" rel="noopener noreferrer">Route öffnen</a>
+</address>
 </div>
 
-<div style="margin-top:3rem;color:var(--ink-soft);line-height:1.8;">
+<div class="contact-box">
+<h3>Erreichbarkeit</h3>
+<p>
+<a href="tel:+4917682018696">0176 82018696</a><br>
+<a href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">WhatsApp Chat</a><br>
+<a href="https://instagram.com/morethanbeauty2025" target="_blank" rel="noopener noreferrer">@morethanbeauty2025</a>
+</p>
+</div>
+
+<div class="contact-box">
+<h3>Öffnungszeiten</h3>
+<p>Nur nach Terminvereinbarung.<br><br>Termine flexibel nach Absprache.</p>
+</div>
+
+<div class="contact-box">
+<h3>Zahlung</h3>
+<p>Aktuell nur Barzahlung möglich.</p>
+</div>
+
+</div>
+
+<p style="margin-top:3rem;color:var(--ink-soft);line-height:1.8;">
 Bitte Termine mindestens <strong>24 Stunden vorher</strong> absagen.<br>
 Bei kurzfristigen Absagen behalten wir uns vor, eine Ausfallgebühr zu berechnen.
-</div>
+</p>
 </section>
 
-<footer>
-<h3>Delale</h3>
+</main>
+
+<footer role="contentinfo">
+<h2>Delale</h2>
 <p>More Than Beauty · Mosbach</p>
 
 <div class="footer-links">
-<a href="https://wa.me/4917682018696" target="_blank">WhatsApp</a>
-<a href="https://instagram.com/morethanbeauty2025" target="_blank">Instagram</a>
-<button onclick="openLegal('datenschutz')">Datenschutz</button>
-<button onclick="openLegal('impressum')">Impressum</button>
+<a href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+<a href="https://instagram.com/morethanbeauty2025" target="_blank" rel="noopener noreferrer">Instagram</a>
+<button type="button" onclick="openLegal('datenschutz')">Datenschutz</button>
+<button type="button" onclick="openLegal('impressum')">Impressum</button>
 </div>
 
-<p style="margin-top:2rem;">© 2026 bella-mia-studio.de</p>
+<p style="margin-top:2rem;">© 2026 balla-mia-studio.de</p>
 </footer>
 
-<div class="legal-modal" id="datenschutz-modal">
+<!-- ============ DATENSCHUTZ MODAL ============ -->
+<div class="legal-modal" id="datenschutz-modal" role="dialog" aria-modal="true" aria-labelledby="datenschutz-title">
 <div class="legal-content">
-<button class="legal-close" onclick="closeLegal('datenschutz')">×</button>
-<h2>Datenschutz</h2>
-<h3>Verantwortliche Stelle</h3>
-<p>Delale – More Than Beauty<br>Inhaberin: Döndü Pektas<br>Heidelbergerstraße 28<br>74821 Mosbach<br>Telefon: 0176 82018696</p>
-<h3>Erhebung und Verwendung von Daten</h3>
-<p>Personenbezogene Daten, zum Beispiel Name und Telefonnummer, werden ausschließlich zur Terminvereinbarung und Kommunikation genutzt.</p>
-<h3>Kontakt über WhatsApp und Instagram</h3>
-<p>Bei der Kontaktaufnahme über WhatsApp oder Instagram gelten zusätzlich die Datenschutzbestimmungen der jeweiligen Anbieter.</p>
+<button class="legal-close" onclick="closeLegal('datenschutz')" aria-label="Datenschutz schließen">×</button>
+<h2 id="datenschutz-title">Datenschutzerklärung</h2>
+
+<h3>1. Verantwortliche Stelle</h3>
+<p>
+Delale – More Than Beauty<br>
+Inhaberin: Döndü Pektas<br>
+Heidelbergerstraße 28, 74821 Mosbach<br>
+Telefon: 0176 82018696<br>
+E-Mail: <a href="mailto:info@balla-mia-studio.de">info@balla-mia-studio.de</a>
+</p>
+
+<h3>2. Erhebung und Speicherung personenbezogener Daten</h3>
+<p>Wir verarbeiten personenbezogene Daten nur, soweit dies für die Erbringung unserer Leistungen erforderlich ist. Bei einer Kontaktaufnahme (per Telefon, WhatsApp, Instagram oder E-Mail) werden die übermittelten Daten – insbesondere Name, Kontaktdaten und der Inhalt der Nachricht – zur Bearbeitung der Anfrage und für den Fall von Anschlussfragen gespeichert.</p>
+
+<h3>3. Rechtsgrundlage</h3>
+<p>Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung und -erfüllung) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an effizienter Terminorganisation).</p>
+
+<h3>4. Speicherdauer</h3>
+<p>Die Daten werden gelöscht, sobald sie für die Zweckerreichung nicht mehr erforderlich sind, sofern keine gesetzlichen Aufbewahrungspflichten (z. B. steuerrechtlich, 6–10 Jahre) entgegenstehen.</p>
+
+<h3>5. Weitergabe von Daten</h3>
+<p>Eine Übermittlung an Dritte findet nicht statt, außer wir sind gesetzlich dazu verpflichtet oder es ist zur Vertragsabwicklung erforderlich.</p>
+
+<h3>6. Hosting</h3>
+<p>Diese Website wird bei einem deutschen/europäischen Hoster betrieben. Beim Aufruf der Website werden technisch notwendige Daten (Server-Logfiles wie IP-Adresse, Datum, Uhrzeit, Browsertyp) durch den Hoster verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+<h3>7. Schriftarten (Google Fonts)</h3>
+<p>Diese Website verwendet zur einheitlichen Darstellung Schriftarten von Google Fonts. Beim Aufruf wird ggf. eine Verbindung zu den Servern von Google in den USA aufgebaut. Wir empfehlen, Fonts lokal einzubinden – bitte beachte, dass diese Aussage angepasst werden muss, sobald die Fonts selbst gehostet werden.</p>
+
+<h3>8. Kontakt über WhatsApp und Instagram</h3>
+<p>Bei der Kontaktaufnahme über WhatsApp (Meta Platforms Ireland Ltd.) oder Instagram gelten zusätzlich die Datenschutzbestimmungen der jeweiligen Anbieter. Bitte beachte, dass dabei Daten in Drittländer (z. B. USA) übermittelt werden können.</p>
+
+<h3>9. Deine Rechte</h3>
+<p>Du hast jederzeit das Recht auf:</p>
+<ul>
+<li>Auskunft (Art. 15 DSGVO)</li>
+<li>Berichtigung (Art. 16 DSGVO)</li>
+<li>Löschung (Art. 17 DSGVO)</li>
+<li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+<li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+<li>Widerspruch (Art. 21 DSGVO)</li>
+<li>Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO)</li>
+</ul>
+
+<h3>10. Zuständige Aufsichtsbehörde</h3>
+<p>Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg, Königstraße 10a, 70173 Stuttgart.</p>
+
+<h3>11. Cookies</h3>
+<p>Diese Website setzt keine Cookies und kein Tracking ein. Sollte sich dies ändern, wird diese Erklärung entsprechend angepasst.</p>
 </div>
 </div>
 
-<div class="legal-modal" id="impressum-modal">
+<!-- ============ IMPRESSUM MODAL ============ -->
+<div class="legal-modal" id="impressum-modal" role="dialog" aria-modal="true" aria-labelledby="impressum-title">
 <div class="legal-content">
-<button class="legal-close" onclick="closeLegal('impressum')">×</button>
-<h2>Impressum</h2>
+<button class="legal-close" onclick="closeLegal('impressum')" aria-label="Impressum schließen">×</button>
+<h2 id="impressum-title">Impressum</h2>
+
 <h3>Angaben gemäß § 5 TMG</h3>
-<p><strong>Delale – More Than Beauty</strong><br>Inhaberin: Döndü Pektas<br>Heidelbergerstraße 28<br>74821 Mosbach<br>Deutschland</p>
+<p>
+<strong>Delale – More Than Beauty</strong><br>
+Inhaberin: Döndü Pektas<br>
+Heidelbergerstraße 28<br>
+74821 Mosbach<br>
+Deutschland
+</p>
+
 <h3>Kontakt</h3>
-<p>Telefon: 0176 82018696<br>WhatsApp: 0176 82018696<br>Instagram: @morethanbeauty2025</p>
+<p>
+Telefon: 0176 82018696<br>
+WhatsApp: 0176 82018696<br>
+E-Mail: <a href="mailto:info@balla-mia-studio.de">info@balla-mia-studio.de</a><br>
+Instagram: @morethanbeauty2025
+</p>
+
 <h3>Umsatzsteuer</h3>
-<p>Kleinunternehmerin gemäß § 19 UStG — es wird keine Umsatzsteuer ausgewiesen.</p>
+<p>Kleinunternehmerin gemäß § 19 UStG – es wird keine Umsatzsteuer ausgewiesen.</p>
+
+<h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+<p>Döndü Pektas (Anschrift wie oben)</p>
+
+<h3>EU-Streitschlichtung</h3>
+<p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+<h3>Haftung für Inhalte</h3>
+<p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</p>
+
+<h3>Haftung für Links</h3>
+<p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte können wir keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich.</p>
+
+<h3>Urheberrecht</h3>
+<p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung der jeweiligen Verfasserin.</p>
+
+<p style="margin-top:1.5rem;font-size:.85rem;opacity:.8;"><em>Hinweis: Die Angaben (insbesondere E-Mail-Adresse) bitte vor Veröffentlichung prüfen und ggf. anpassen.</em></p>
 </div>
 </div>
 
-<script>
-function toggleFAQ(){
-const faq=document.getElementById('faq-section');
-const gallery=document.getElementById('gallery-section');
-gallery.classList.remove('active');
-faq.classList.toggle('active');
-}
+<script defer>
+(function(){
+  'use strict';
 
-function toggleGallery(){
-const gallery=document.getElementById('gallery-section');
-const faq=document.getElementById('faq-section');
-faq.classList.remove('active');
-gallery.classList.toggle('active');
-}
+  // ============ Topbar-Toggles für FAQ + Galerie ============
+  const faqToggle = document.getElementById('faq-toggle');
+  const galleryToggle = document.getElementById('gallery-toggle');
+  const faqSection = document.getElementById('faq-section');
+  const gallerySection = document.getElementById('gallery-section');
 
-document.querySelectorAll('.faq-question').forEach(button=>{
-button.addEventListener('click',()=>{
-button.parentElement.classList.toggle('active');
-});
-});
+  function setOpen(section, button, open){
+    section.classList.toggle('active', open);
+    section.hidden = !open;
+    button.setAttribute('aria-expanded', String(open));
+  }
 
-function openLegal(id){
-document.getElementById(id+'-modal').classList.add('active');
-document.body.style.overflow='hidden';
-}
+  faqToggle.addEventListener('click', () => {
+    const willOpen = !faqSection.classList.contains('active');
+    setOpen(gallerySection, galleryToggle, false);
+    setOpen(faqSection, faqToggle, willOpen);
+    if (willOpen) faqSection.scrollIntoView({behavior:'smooth', block:'start'});
+  });
 
-function closeLegal(id){
-document.getElementById(id+'-modal').classList.remove('active');
-document.body.style.overflow='';
-}
+  galleryToggle.addEventListener('click', () => {
+    const willOpen = !gallerySection.classList.contains('active');
+    setOpen(faqSection, faqToggle, false);
+    setOpen(gallerySection, galleryToggle, willOpen);
+    if (willOpen) gallerySection.scrollIntoView({behavior:'smooth', block:'start'});
+  });
 
-document.querySelectorAll('.legal-modal').forEach(modal=>{
-modal.addEventListener('click',(e)=>{
-if(e.target===modal){
-modal.classList.remove('active');
-document.body.style.overflow='';
-}
-});
-});
+  // ============ Einzelne FAQ-Items ============
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      const isOpen = item.classList.toggle('active');
+      button.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+
+  // ============ Legal-Modals ============
+  let lastFocused = null;
+
+  window.openLegal = function(id){
+    lastFocused = document.activeElement;
+    const modal = document.getElementById(id + '-modal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    // Fokus in das Modal verschieben
+    const closeBtn = modal.querySelector('.legal-close');
+    if (closeBtn) closeBtn.focus();
+  };
+
+  window.closeLegal = function(id){
+    const modal = document.getElementById(id + '-modal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  };
+
+  // Backdrop-Klick schließt Modal
+  document.querySelectorAll('.legal-modal').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal){
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        if (lastFocused) lastFocused.focus();
+      }
+    });
+  });
+
+  // ESC-Taste schließt offene Modals
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape'){
+      document.querySelectorAll('.legal-modal.active').forEach(modal => {
+        modal.classList.remove('active');
+      });
+      document.body.style.overflow = '';
+      if (lastFocused) lastFocused.focus();
+    }
+  });
+})();
 </script>
+
+<!-- Floating WhatsApp Button -->
+<a class="wa-float" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Kontakt öffnen">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
 
 </body>
 </html>
