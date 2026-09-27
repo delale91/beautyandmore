@@ -50,7 +50,7 @@
   },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "description": "Nur nach Terminvereinbarung",
+    "description": "Montag bis Samstag nach Absprache",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
   },
   "sameAs": [
@@ -235,6 +235,16 @@ body{
   transition:color .3s;
 }
 
+.topbar-ig{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.topbar-ig svg{
+  width:18px;
+  height:18px;
+  display:block;
+}
 .topbar-buttons a:hover,
 .topbar-buttons button:hover,
 .topbar-buttons a:focus-visible,
@@ -538,6 +548,30 @@ body{
   display:block;
 }
 
+
+.gallery-more[hidden]{display:none !important;}
+.gallery-more{margin-top:18px;}
+.gallery-more-wrap{
+  display:flex;
+  justify-content:center;
+  margin-top:1.6rem;
+}
+.gallery-more-btn{
+  background:var(--rose-deep);
+  color:#fff;
+  border:0;
+  border-radius:999px;
+  padding:.85rem 1.6rem;
+  font-size:.82rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  cursor:pointer;
+  box-shadow:0 8px 22px rgba(208,97,132,.28);
+}
+.gallery-more-btn:hover,
+.gallery-more-btn:focus-visible{
+  transform:translateY(-2px);
+}
 .gallery-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -1160,7 +1194,7 @@ footer{
   }
 
   .gallery-grid img{
-    height:220px;
+    height:170px;
   }
 
   .section{
@@ -1406,8 +1440,11 @@ body{
 <a href="#behandlungen">Behandlungen</a>
 <a href="#massagen">Massagen</a>
 <button type="button" id="faq-toggle" aria-expanded="false" aria-controls="faq-section">FAQ</button>
-<button type="button" id="gallery-toggle" aria-expanded="false" aria-controls="gallery-section">Galerie</button>
+<a href="#gallery-section">Galerie</a>
 <a href="#kontakt">Kontakt</a>
+<a class="topbar-ig" href="https://instagram.com/bella_mia_studio" target="_blank" rel="noopener noreferrer" aria-label="Instagram Bella Mia Beautylounge">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2m-.2 2C5.6 4 4 5.6 4 7.6v8.8C4 18.4 5.6 20 7.6 20h8.8c2 0 3.6-1.6 3.6-3.6V7.6C20 5.6 18.4 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+</a>
 </nav>
 </header>
 
@@ -1546,56 +1583,6 @@ body{
 <div class="faq-answer">Bei fachgerechter Anwendung und gesunden Zähnen ist es schonend und unbedenklich.</div>
 </div>
 
-</div>
-</section>
-
-<section class="top-dropdown" id="gallery-section" aria-labelledby="gallery-heading" hidden>
-<div class="section-header">
-<h2 id="gallery-heading" class="section-title">Unsere <em>Galerie</em></h2>
-<p class="section-sub">Eindrücke aus unserem Studio in Mosbach.</p>
-</div>
-
-<div class="gallery-grid">
-<img src="galerie1.jpeg" alt="Beauty-Behandlung – Eindruck 1 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie2.jpeg" alt="Beauty-Behandlung – Eindruck 2 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie3.jpeg" alt="Beauty-Behandlung – Eindruck 3 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie4.jpeg" alt="Beauty-Behandlung – Eindruck 4 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie5.jpeg" alt="Beauty-Behandlung – Eindruck 5 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie6.jpeg" alt="Beauty-Behandlung – Eindruck 6 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie7.jpeg" alt="Beauty-Behandlung – Eindruck 7 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie8.jpeg" alt="Beauty-Behandlung – Eindruck 8 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie9.jpeg" alt="Beauty-Behandlung – Eindruck 9 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie10.jpeg" alt="Beauty-Behandlung – Eindruck 10 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie11.jpeg" alt="Beauty-Behandlung – Eindruck 11 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie12.jpeg" alt="Beauty-Behandlung – Eindruck 12 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie13.jpeg" alt="Beauty-Behandlung – Eindruck 13 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie14.jpeg" alt="Beauty-Behandlung – Eindruck 14 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie15.jpeg" alt="Beauty-Behandlung – Eindruck 15 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie16.jpeg" alt="Beauty-Behandlung – Eindruck 16 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie17.jpeg" alt="Beauty-Behandlung – Eindruck 17 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie18.jpeg" alt="Beauty-Behandlung – Eindruck 18 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie19.jpeg" alt="Beauty-Behandlung – Eindruck 19 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie20.jpeg" alt="Beauty-Behandlung – Eindruck 20 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie21.jpeg" alt="Beauty-Behandlung – Eindruck 21 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie22.jpeg" alt="Beauty-Behandlung – Eindruck 22 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie23.jpeg" alt="Beauty-Behandlung – Eindruck 23 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie24.jpeg" alt="Beauty-Behandlung – Eindruck 24 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie25.jpeg" alt="Beauty-Behandlung – Eindruck 25 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie26.jpeg" alt="Beauty-Behandlung – Eindruck 26 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie27.jpeg" alt="Beauty-Behandlung – Eindruck 27 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie28.jpeg" alt="Beauty-Behandlung – Eindruck 28 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie29.jpeg" alt="Beauty-Behandlung – Eindruck 29 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie30.jpeg" alt="Beauty-Behandlung – Eindruck 30 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie31.jpeg" alt="Beauty-Behandlung – Eindruck 31 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie32.jpeg" alt="Beauty-Behandlung – Eindruck 32 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie33.jpeg" alt="Beauty-Behandlung – Eindruck 33 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie34.jpeg" alt="Beauty-Behandlung – Eindruck 34 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie35.jpeg" alt="Beauty-Behandlung – Eindruck 35 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie36.jpeg" alt="Beauty-Behandlung – Eindruck 36 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie37.jpeg" alt="Beauty-Behandlung – Eindruck 37 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie38.jpeg" alt="Beauty-Behandlung – Eindruck 38 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie39.jpeg" alt="Beauty-Behandlung – Eindruck 39 aus dem Studio Bella Mia Beautylounge" loading="lazy">
-<img src="galerie40.jpeg" alt="Beauty-Behandlung – Eindruck 40 aus dem Studio Bella Mia Beautylounge" loading="lazy">
 </div>
 </section>
 
@@ -2001,6 +1988,62 @@ body{
 
 </section>
 
+<section class="section" id="gallery-section" aria-labelledby="gallery-heading">
+<div class="section-header">
+<h2 id="gallery-heading" class="section-title">Unsere <em>Galerie</em></h2>
+<p class="section-sub">Eindrücke aus unserem Studio in Mosbach.</p>
+</div>
+
+<div class="gallery-grid">
+<img src="galerie1.jpeg" alt="Beauty-Behandlung – Eindruck 1 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie2.jpeg" alt="Beauty-Behandlung – Eindruck 2 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie3.jpeg" alt="Beauty-Behandlung – Eindruck 3 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie4.jpeg" alt="Beauty-Behandlung – Eindruck 4 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie5.jpeg" alt="Beauty-Behandlung – Eindruck 5 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie6.jpeg" alt="Beauty-Behandlung – Eindruck 6 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+</div>
+<div class="gallery-grid gallery-more" id="gallery-more" hidden>
+<img src="galerie7.jpeg" alt="Beauty-Behandlung – Eindruck 7 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie8.jpeg" alt="Beauty-Behandlung – Eindruck 8 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie9.jpeg" alt="Beauty-Behandlung – Eindruck 9 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie10.jpeg" alt="Beauty-Behandlung – Eindruck 10 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie11.jpeg" alt="Beauty-Behandlung – Eindruck 11 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie12.jpeg" alt="Beauty-Behandlung – Eindruck 12 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie13.jpeg" alt="Beauty-Behandlung – Eindruck 13 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie14.jpeg" alt="Beauty-Behandlung – Eindruck 14 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie15.jpeg" alt="Beauty-Behandlung – Eindruck 15 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie16.jpeg" alt="Beauty-Behandlung – Eindruck 16 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie17.jpeg" alt="Beauty-Behandlung – Eindruck 17 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie18.jpeg" alt="Beauty-Behandlung – Eindruck 18 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie19.jpeg" alt="Beauty-Behandlung – Eindruck 19 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie20.jpeg" alt="Beauty-Behandlung – Eindruck 20 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie21.jpeg" alt="Beauty-Behandlung – Eindruck 21 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie22.jpeg" alt="Beauty-Behandlung – Eindruck 22 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie23.jpeg" alt="Beauty-Behandlung – Eindruck 23 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie24.jpeg" alt="Beauty-Behandlung – Eindruck 24 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie25.jpeg" alt="Beauty-Behandlung – Eindruck 25 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie26.jpeg" alt="Beauty-Behandlung – Eindruck 26 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie27.jpeg" alt="Beauty-Behandlung – Eindruck 27 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie28.jpeg" alt="Beauty-Behandlung – Eindruck 28 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie29.jpeg" alt="Beauty-Behandlung – Eindruck 29 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie30.jpeg" alt="Beauty-Behandlung – Eindruck 30 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie31.jpeg" alt="Beauty-Behandlung – Eindruck 31 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie32.jpeg" alt="Beauty-Behandlung – Eindruck 32 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie33.jpeg" alt="Beauty-Behandlung – Eindruck 33 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie34.jpeg" alt="Beauty-Behandlung – Eindruck 34 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie35.jpeg" alt="Beauty-Behandlung – Eindruck 35 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie36.jpeg" alt="Beauty-Behandlung – Eindruck 36 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie37.jpeg" alt="Beauty-Behandlung – Eindruck 37 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie38.jpeg" alt="Beauty-Behandlung – Eindruck 38 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie39.jpeg" alt="Beauty-Behandlung – Eindruck 39 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+<img src="galerie40.jpeg" alt="Beauty-Behandlung – Eindruck 40 aus dem Studio Bella Mia Beautylounge" loading="lazy">
+</div>
+<div class="gallery-more-wrap">
+<button type="button" class="gallery-more-btn" id="gallery-more-btn" aria-expanded="false" aria-controls="gallery-more">Weitere Bilder anzeigen</button>
+</div>
+</div>
+</section>
+
 <section class="reviews-section" id="bewertungen" aria-labelledby="reviews-heading">
 
 <div class="section-header">
@@ -2024,7 +2067,6 @@ Google Bewertungen
 <div class="review-avatar">B</div>
 <div>
 <div class="review-name">Bengü Sünbül</div>
-<div class="review-time">vor 2 Monaten</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2036,7 +2078,6 @@ Google Bewertungen
 <div class="review-avatar">S</div>
 <div>
 <div class="review-name">Stefanie Gmoser</div>
-<div class="review-time">vor 2 Monaten</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2048,7 +2089,6 @@ Google Bewertungen
 <div class="review-avatar">T</div>
 <div>
 <div class="review-name">Taliye Isilti</div>
-<div class="review-time">vor 2 Monaten</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2060,7 +2100,6 @@ Google Bewertungen
 <div class="review-avatar">S</div>
 <div>
 <div class="review-name">Steffi</div>
-<div class="review-time">vor einem Monat</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2072,7 +2111,6 @@ Google Bewertungen
 <div class="review-avatar">R</div>
 <div>
 <div class="review-name">Raffaela Benvieni</div>
-<div class="review-time">vor 2 Monaten</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2084,7 +2122,6 @@ Google Bewertungen
 <div class="review-avatar">M</div>
 <div>
 <div class="review-name">Mandy Kerber</div>
-<div class="review-time">vor 2 Monaten</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2096,7 +2133,6 @@ Google Bewertungen
 <div class="review-avatar">M</div>
 <div>
 <div class="review-name">M L</div>
-<div class="review-time">vor 3 Tagen</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2108,7 +2144,6 @@ Google Bewertungen
 <div class="review-avatar">S</div>
 <div>
 <div class="review-name">Sunny Ferru</div>
-<div class="review-time">vor 3 Tagen</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2120,7 +2155,6 @@ Google Bewertungen
 <div class="review-avatar">K</div>
 <div>
 <div class="review-name">Kira Blitz</div>
-<div class="review-time">vor 3 Tagen</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2132,7 +2166,6 @@ Google Bewertungen
 <div class="review-avatar">Ö</div>
 <div>
 <div class="review-name">Özge Öztürk</div>
-<div class="review-time">vor 2 Monaten</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2144,7 +2177,6 @@ Google Bewertungen
 <div class="review-avatar">Z</div>
 <div>
 <div class="review-name">Zetrix LP</div>
-<div class="review-time">vor 2 Monaten</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2156,7 +2188,6 @@ Google Bewertungen
 <div class="review-avatar">M</div>
 <div>
 <div class="review-name">Mea</div>
-<div class="review-time">vor 2 Monaten</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2168,7 +2199,6 @@ Google Bewertungen
 <div class="review-avatar">S</div>
 <div>
 <div class="review-name">Shote Ferizi</div>
-<div class="review-time">vor 2 Monaten</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2180,7 +2210,6 @@ Google Bewertungen
 <div class="review-avatar">G</div>
 <div>
 <div class="review-name">Gabo bart</div>
-<div class="review-time">vor 2 Monaten</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2192,7 +2221,6 @@ Google Bewertungen
 <div class="review-avatar">P</div>
 <div>
 <div class="review-name">Pivoine</div>
-<div class="review-time">vor 2 Monaten</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2204,7 +2232,6 @@ Google Bewertungen
 <div class="review-avatar">V</div>
 <div>
 <div class="review-name">Valeria Furnari</div>
-<div class="review-time">vor 2 Monaten</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2216,7 +2243,6 @@ Google Bewertungen
 <div class="review-avatar">V</div>
 <div>
 <div class="review-name">vivi bart</div>
-<div class="review-time">vor 2 Monaten</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2228,7 +2254,6 @@ Google Bewertungen
 <div class="review-avatar">B</div>
 <div>
 <div class="review-name">Babett Schlachtovszki</div>
-<div class="review-time">vor 2 Stunden</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
@@ -2307,8 +2332,8 @@ Heidelberger Straße 28<br>
 <h3>Öffnungszeiten</h3>
 
 <p>
-Nur nach Terminvereinbarung.<br><br>
-Termine flexibel nach Absprache.
+Montag bis Samstag nach Absprache.<br><br>
+Termine nur nach Vereinbarung.
 </p>
 </div>
 
@@ -2349,22 +2374,13 @@ Bei kurzfristigen Absagen behalten wir uns vor, eine Ausfallgebühr zu berechnen
 'use strict';
 
 const faqToggle=document.getElementById('faq-toggle');
-const galleryToggle=document.getElementById('gallery-toggle');
 const faqSection=document.getElementById('faq-section');
-const gallerySection=document.getElementById('gallery-section');
-
-function setOpen(section,button,open){
-  section.classList.toggle('active',open);
-  section.hidden=!open;
-  button.setAttribute('aria-expanded',String(open));
-}
 
 faqToggle.addEventListener('click',()=>{
   const willOpen=!faqSection.classList.contains('active');
-
-  setOpen(gallerySection,galleryToggle,false);
-  setOpen(faqSection,faqToggle,willOpen);
-
+  faqSection.classList.toggle('active',willOpen);
+  faqSection.hidden=!willOpen;
+  faqToggle.setAttribute('aria-expanded',String(willOpen));
   if(willOpen){
     faqSection.scrollIntoView({
       behavior:'smooth',
@@ -2373,20 +2389,24 @@ faqToggle.addEventListener('click',()=>{
   }
 });
 
-galleryToggle.addEventListener('click',()=>{
-  const willOpen=!gallerySection.classList.contains('active');
 
-  setOpen(faqSection,faqToggle,false);
-  setOpen(gallerySection,galleryToggle,willOpen);
-
-  if(willOpen){
-    gallerySection.scrollIntoView({
-      behavior:'smooth',
-      block:'start'
-    });
-  }
-});
-
+const moreBtn=document.getElementById('gallery-more-btn');
+const moreBox=document.getElementById('gallery-more');
+if(moreBtn && moreBox){
+  moreBtn.addEventListener('click',()=>{
+    const open=moreBox.hasAttribute('hidden');
+    if(open){
+      moreBox.removeAttribute('hidden');
+      moreBtn.setAttribute('aria-expanded','true');
+      moreBtn.textContent='Weniger Bilder zeigen';
+    }else{
+      moreBox.setAttribute('hidden','');
+      moreBtn.setAttribute('aria-expanded','false');
+      moreBtn.textContent='Weitere Bilder anzeigen';
+      document.getElementById('gallery-section').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  });
+}
 document.querySelectorAll('.faq-question').forEach(button=>{
   button.addEventListener('click',()=>{
     const item=button.parentElement;
