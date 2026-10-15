@@ -700,48 +700,32 @@ body{
 }
 
 .reviews-slider{
-  display:flex;
-  gap:1.1rem;
-  max-width:1320px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.2rem;
+  max-width:1100px;
   margin:auto;
-  overflow-x:auto;
   padding:.5rem 1rem 1.6rem;
-  scroll-snap-type:x mandatory;
-  -webkit-overflow-scrolling:touch;
-  scrollbar-width:thin;
-  scrollbar-color:var(--rose-deep) transparent;
-}
-
-.reviews-slider::-webkit-scrollbar{
-  height:6px;
-}
-
-.reviews-slider::-webkit-scrollbar-thumb{
-  background:var(--rose-deep);
-  border-radius:999px;
 }
 
 .review-card{
   background:var(--cream);
   border:1px solid var(--line);
-  border-radius:10px;
+  border-radius:16px;
   box-shadow:var(--shadow);
-  padding:.75rem;
-  flex:0 0 auto;
-  width:165px;
-  scroll-snap-align:start;
+  padding:1.3rem 1.4rem;
 }
 
 .review-head{
   display:flex;
   align-items:center;
-  gap:.4rem;
-  margin-bottom:.3rem;
+  gap:.7rem;
+  margin-bottom:.55rem;
 }
 
 .review-avatar{
-  width:22px;
-  height:22px;
+  width:36px;
+  height:36px;
   border-radius:50%;
   background:var(--rose-deep);
   color:#fff;
@@ -749,33 +733,33 @@ body{
   align-items:center;
   justify-content:center;
   font-weight:700;
-  font-size:.62rem;
+  font-size:.9rem;
   flex-shrink:0;
 }
 
 .review-name{
   font-weight:700;
   color:var(--ink);
-  font-size:.72rem;
+  font-size:1rem;
 }
 
 .review-time{
-  font-size:.6rem;
+  font-size:.75rem;
   color:var(--ink-soft);
   opacity:.8;
 }
 
 .review-stars{
   color:#f5b400;
-  font-size:.68rem;
-  letter-spacing:.06em;
-  margin-bottom:.3rem;
+  font-size:1rem;
+  letter-spacing:.1em;
+  margin-bottom:.55rem;
 }
 
 .review-text{
   color:var(--ink-soft);
-  line-height:1.4;
-  font-size:.68rem;
+  line-height:1.65;
+  font-size:.98rem;
 }
 
 /* Kontakt & Reservierung */
@@ -1627,7 +1611,7 @@ body{
 
 <div class="section-header">
 <h2 class="section-title">UV-<em>Wimpernverlängerung</em></h2>
-<p class="section-sub">Ausdrucksstarke Augen und Looks für jeden Stil.</p>
+<p class="section-sub">Ausdrucksstarke Augen und Looks für jeden Stil.<br><span style="font-size:.92rem;color:var(--ink-soft);">Preise ab 01.11.2026 für Neukundinnen. Bestandskundinnen behalten vorerst ihre bisherigen Preise. Auffüllen nur innerhalb von 4 Wochen.</span></p>
 </div>
 
 <div class="services-grid">
@@ -1637,10 +1621,10 @@ body{
 <img src="wimpern-1zu1.jpeg" alt="UV-Wimpernverlängerung 1:1 Technik" loading="lazy">
 <p>Besonders natürlicher und eleganter Look.</p>
 <ul class="price-list">
-<li><span>Neumodellage</span><strong>69&nbsp;€</strong></li>
-<li><span>Auffüllen nach 2 Wochen</span><strong>39&nbsp;€</strong></li>
-<li><span>Auffüllen nach 3 Wochen</span><strong>49&nbsp;€</strong></li>
-<li><span>Auffüllen nach 4 Wochen</span><strong>59&nbsp;€</strong></li>
+<li><span>Neumodellage</span><strong>89&nbsp;€</strong></li>
+<li><span>Auffüllen nach 2 Wochen</span><strong>49&nbsp;€</strong></li>
+<li><span>Auffüllen nach 3 Wochen</span><strong>59&nbsp;€</strong></li>
+<li><span>Auffüllen nach 4 Wochen</span><strong>69&nbsp;€</strong></li>
 </ul>
 <a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Jetzt anfragen</a>
 </article>
@@ -1650,10 +1634,10 @@ body{
 <img src="wimpern-softvolumen.jpeg" alt="UV-Wimpernverlängerung Softvolumen 2D bis 5D" loading="lazy">
 <p>Weicher, voller und femininer Look.</p>
 <ul class="price-list">
-<li><span>Neumodellage</span><strong>79&nbsp;€</strong></li>
-<li><span>Auffüllen nach 2 Wochen</span><strong>49&nbsp;€</strong></li>
-<li><span>Auffüllen nach 3 Wochen</span><strong>59&nbsp;€</strong></li>
-<li><span>Auffüllen nach 4 Wochen</span><strong>69&nbsp;€</strong></li>
+<li><span>Neumodellage</span><strong>99&nbsp;€</strong></li>
+<li><span>Auffüllen nach 2 Wochen</span><strong>59&nbsp;€</strong></li>
+<li><span>Auffüllen nach 3 Wochen</span><strong>69&nbsp;€</strong></li>
+<li><span>Auffüllen nach 4 Wochen</span><strong>79&nbsp;€</strong></li>
 </ul>
 <a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Jetzt anfragen</a>
 </article>
@@ -1663,10 +1647,10 @@ body{
 <img src="wimpern-volumen.jpeg" alt="UV-Wimpernverlängerung Volumen 5D bis 10D" loading="lazy">
 <p>Glamouröser und intensiver Augenaufschlag.</p>
 <ul class="price-list">
-<li><span>Neumodellage</span><strong>89&nbsp;€</strong></li>
-<li><span>Auffüllen nach 2 Wochen</span><strong>59&nbsp;€</strong></li>
-<li><span>Auffüllen nach 3 Wochen</span><strong>69&nbsp;€</strong></li>
-<li><span>Auffüllen nach 4 Wochen</span><strong>79&nbsp;€</strong></li>
+<li><span>Neumodellage</span><strong>109&nbsp;€</strong></li>
+<li><span>Auffüllen nach 2 Wochen</span><strong>69&nbsp;€</strong></li>
+<li><span>Auffüllen nach 3 Wochen</span><strong>79&nbsp;€</strong></li>
+<li><span>Auffüllen nach 4 Wochen</span><strong>89&nbsp;€</strong></li>
 </ul>
 <a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Jetzt anfragen</a>
 </article>
@@ -1676,10 +1660,10 @@ body{
 <img src="megavolumen-10d.jpeg" alt="UV-Wimpernverlängerung Megavolumen ab 10D" loading="lazy" onerror="this.style.display='none'">
 <p>Für einen auffälligen, dramatischen Look mit maximaler Dichte.</p>
 <ul class="price-list">
-<li><span>Neumodellage</span><strong>99&nbsp;€</strong></li>
-<li><span>Auffüllen nach 2 Wochen</span><strong>69&nbsp;€</strong></li>
-<li><span>Auffüllen nach 3 Wochen</span><strong>79&nbsp;€</strong></li>
-<li><span>Auffüllen nach 4 Wochen</span><strong>89&nbsp;€</strong></li>
+<li><span>Neumodellage</span><strong>119&nbsp;€</strong></li>
+<li><span>Auffüllen nach 2 Wochen</span><strong>79&nbsp;€</strong></li>
+<li><span>Auffüllen nach 3 Wochen</span><strong>89&nbsp;€</strong></li>
+<li><span>Auffüllen nach 4 Wochen</span><strong>99&nbsp;€</strong></li>
 </ul>
 <a class="book-btn" href="https://wa.me/4917682018696" target="_blank" rel="noopener noreferrer">Jetzt anfragen</a>
 </article>
@@ -2064,189 +2048,13 @@ Google Bewertungen
 
 <article class="review-card">
 <div class="review-head">
-<div class="review-avatar">B</div>
-<div>
-<div class="review-name">Bengü Sünbül</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Ich bin sehr zufrieden mit meiner Wimpernverlängerung bei Bella Mia Beautylounge. Die Behandlung wurde professionell und sorgfältig durchgeführt. Das Ergebnis sieht wunderschön und natürlich aus und hält sehr gut. Klare Empfehlung!</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">S</div>
-<div>
-<div class="review-name">Stefanie Gmoser</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Habe beides (Wimpernverlängerung sowie Massage) schon genießen dürfen. Absolut präzise Wimpernarbeit mit viel Gefühl und die Massage einfach nur Wohltat! Wärmstens weiterempfohlen!!!</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">T</div>
-<div>
-<div class="review-name">Taliye Isilti</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Besser geht es nicht! Kompetent, super Produkte, tolle Ergebnisse und eine sehr angenehme Atmosphäre. Ich habe mich rundum verwöhnt gefühlt und werde definitiv zur Stammkundin. Absolute Empfehlung!</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">S</div>
-<div>
-<div class="review-name">Steffi</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Das Studio ist wunderschön und sehr geschmackvoll eingerichtet. Die Inhaberin ist unglaublich nett, herzlich, direkt und total lustig – ich habe mich vom ersten Moment an wohlgefühlt. Ich komme auf jeden Fall wieder!</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">R</div>
-<div>
-<div class="review-name">Raffaela Benvieni</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Absolute Empfehlung! Die Wimpern sind wunderschön geworden und halten hervorragend. Die Massage war ein Traum – genau die richtige Mischung aus Entspannung und Wohlfühlmoment.</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">M</div>
-<div>
-<div class="review-name">Mandy Kerber</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Bei der Wimpernverlängerung ein wunderschönes Ergebnis. Tolle Atmosphäre und eine ganz liebe Person. Auch bei der Massage habe ich mich wohlgefühlt.</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">M</div>
-<div>
-<div class="review-name">M L</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Mega schöne Wimpern, Dankeschön 🥰 bin so zufrieden ☺️</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">S</div>
-<div>
-<div class="review-name">Sunny Ferru</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Super Arbeit 👌😊 Nur zu empfehlen 😊</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">K</div>
-<div>
-<div class="review-name">Kira Blitz</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Ein toller Mensch mit viel Talent. Hier ist wohlfühlen angesagt. Viele verschiedene Anwendungen und Beauty-Angebote, professionelle, sehr gute Umsetzung. Von mir eine klare Empfehlung!</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">Ö</div>
-<div>
-<div class="review-name">Özge Öztürk</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Habe eine Kombination von Lymphmassage und Fußreflexzone gehabt... sie hat sehr sanft massiert... war sehr zufrieden und entspannt danach.</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">Z</div>
-<div>
-<div class="review-name">Zetrix LP</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Sehr schöne Atmosphäre und auch gute Massage. Kundenwünsche werden freundlich und kompetent angenommen und umgesetzt.</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">M</div>
-<div>
-<div class="review-name">Mea</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Mega Service! War sehr oft dort, die Wimpern sind ein Traum und die Haltbarkeit ist unumstritten die Beste.</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">S</div>
-<div>
-<div class="review-name">Shote Ferizi</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Meine Wimpernstylistin hat wirklich Goldhände. Man fühlt sich vom ersten Moment an wohl. Das Ergebnis ist jedes Mal wunderschön, hält super und ich bekomme ständig Komplimente dafür.</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">G</div>
-<div>
-<div class="review-name">Gabo bart</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Toller Ort zum Entspannen, die Fußreflexzonen-Massage tat gut, bin während dessen eingeschlafen.</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
 <div class="review-avatar">P</div>
 <div>
 <div class="review-name">Pivoine</div>
 </div>
 </div>
 <div class="review-stars">★★★★★</div>
-<p class="review-text">Ich bin absolut begeistert von meiner Wimpernverlängerung bei Döndü! Sie arbeitet sehr präzise, nimmt sich Zeit und achtet darauf, dass das Ergebnis perfekt zum Gesicht passt. Absolute Empfehlung!</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">V</div>
-<div>
-<div class="review-name">Valeria Furnari</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Bin sehr begeistert von den Lashes. Bis jetzt hatte ich immer allergisch auf den Kleber reagiert, aber mit dieser Technik hatte ich keine Probleme mehr. Halten super und sehen toll aus!</p>
-</article>
-
-<article class="review-card">
-<div class="review-head">
-<div class="review-avatar">V</div>
-<div>
-<div class="review-name">vivi bart</div>
-</div>
-</div>
-<div class="review-stars">★★★★★</div>
-<p class="review-text">Sehr freundlich und kompetent. Ich habe mich von Anfang an wohlgefühlt und bin mit dem Ergebnis mehr als zufrieden. Klare Empfehlung!</p>
+<p class="review-text">Ich bin absolut begeistert von meiner Wimpernverlängerung bei Döndü! Man merkt sofort, wie viel Leidenschaft, Sorgfalt und Liebe zum Detail sie in ihre Arbeit steckt. Sie arbeitet sehr präzise, nimmt sich Zeit und achtet darauf, dass das Ergebnis perfekt zum Gesicht passt. Meine Wimpern sehen wunderschön, natürlich und gleichzeitig ausdrucksstark aus – und halten super. Absolute Empfehlung!</p>
 </article>
 
 <article class="review-card">
@@ -2260,7 +2068,29 @@ Google Bewertungen
 <p class="review-text">Döndü kreiert unglaublich haltbare und schöne Wimpern. Selbst bei Kundinnen mit extrem öliger Haut halten ihre Arbeiten fantastisch – im Gegensatz zu vielen anderen Salons.</p>
 </article>
 
+<article class="review-card">
+<div class="review-head">
+<div class="review-avatar">V</div>
+<div>
+<div class="review-name">Valeria Furnari</div>
 </div>
+</div>
+<div class="review-stars">★★★★★</div>
+<p class="review-text">Bin sehr begeistert von den Lashes. Bis jetzt hatte ich immer allergisch auf den Kleber reagiert, aber mit dieser Technik hatte ich keine Probleme mehr. Halten super und sehen toll aus – von mir die Note 1.</p>
+</article>
+
+<article class="review-card">
+<div class="review-head">
+<div class="review-avatar">S</div>
+<div>
+<div class="review-name">Stefanie Gmoser</div>
+</div>
+</div>
+<div class="review-stars">★★★★★</div>
+<p class="review-text">Habe beides (Wimpernverlängerung sowie Massage) schon genießen dürfen. Absolut präzise Wimpernarbeit mit viel Gefühl und die Massage einfach nur Wohltat! Wärmstens weiterempfohlen!!!</p>
+</article>
+
+</div></div>
 </section>
 
 <section class="reservation-section" id="reservierung" aria-labelledby="reservation-heading">
@@ -2349,8 +2179,9 @@ Aktuell nur Barzahlung möglich.
 </div>
 
 <p class="contact-note">
-Bitte Termine mindestens <strong>24 Stunden vorher</strong> absagen.<br>
-Bei kurzfristigen Absagen behalten wir uns vor, eine Ausfallgebühr zu berechnen.
+Terminabsage bis <strong>24 Stunden vorher</strong> kostenlos.<br>
+Unter 24 Stunden vorher: 50&nbsp;% Ausfallgebühr.<br>
+Bei Nichterscheinen: 100&nbsp;% Ausfallgebühr.
 </p>
 
 </section>
